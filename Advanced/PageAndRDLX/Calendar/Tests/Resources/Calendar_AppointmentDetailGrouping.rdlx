@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://cdn.grapecity.com/ActiveReports/reporting/2022/01/reportdefinition">
+	<ReportSections>
+		<ReportSection Name="ReportSection1">
+			<Body>
+				<Height>5.5in</Height>
+				<ReportItems>
+					<CustomReportItem Name="Calendar1">
+						<Type>Calendar</Type>
+						<Width>7.25in</Width>
+						<Height>5.5in</Height>
+						<CustomData>
+							<DataSetName>DataSet1</DataSetName>
+							<DataRowGroupings>
+								<DataGroupings>
+									<DataGrouping>
+										<Group Name="Calendar1_Detail_Group">
+											<GroupExpressions>
+												<GroupExpression>=Fields!EventID.Value</GroupExpression>
+											</GroupExpressions>
+										</Group>
+										<CustomProperties>
+											<CustomProperty>
+												<Name>calendar:Event.Value</Name>
+												<Value>=Fields!EventID.Value</Value>
+											</CustomProperty>
+											<CustomProperty>
+												<Name>calendar:Event.EndDate</Name>
+												<Value>=Max(Fields!Date.Value)</Value>
+											</CustomProperty>
+											<CustomProperty>
+												<Name>calendar:Event.StartDate</Name>
+												<Value>=Min(Fields!Date.Value)</Value>
+											</CustomProperty>
+										</CustomProperties>
+									</DataGrouping>
+								</DataGroupings>
+							</DataRowGroupings>
+						</CustomData>
+					</CustomReportItem>
+				</ReportItems>
+			</Body>
+			<Page />
+			<Width>7.375in</Width>
+		</ReportSection>
+	</ReportSections>
+	<DataSources>
+		<DataSource Name="DataSource1">
+			<ConnectionProperties>
+				<ConnectString>Path=Calendar_AppointmentDetailGrouping.csv;Locale=en-US;TextQualifier=";ColumnsSeparator=,;RowsSeparator=\r\n;Columns=EventID,Date;JoinRowsSeparators=True;HasHeaders=True</ConnectString>
+				<DataProvider>CSV</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="DataSet1">
+			<Fields>
+				<Field Name="EventID">
+					<DataField>EventID</DataField>
+				</Field>
+				<Field Name="Date">
+					<DataField>Date</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText />
+				<DataSourceName>DataSource1</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

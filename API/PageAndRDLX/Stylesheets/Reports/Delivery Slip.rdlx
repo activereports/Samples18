@@ -1,0 +1,940 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Delivery Slip</dd:Name>
+	<Body>
+		<Height>11.69in</Height>
+		<ReportItems>
+			<FixedPage Name="FixedPage1">
+				<Pages>
+					<Page>
+						<ReportItems>
+							<Textbox Name="lblTitle">
+								<Left>11.7475cm</Left>
+								<Width>4.9515cm</Width>
+								<Height>1.5875cm</Height>
+								<Style>
+									<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Title</dd:StyleName>
+								</Style>
+								<ZIndex>5</ZIndex>
+								<Value>=Theme.Constants("EnText")</Value>
+							</Textbox>
+							<Textbox Name="TextBox2">
+								<Top>1.085in</Top>
+								<Left>0.8989606cm</Left>
+								<Width>6.6675cm</Width>
+								<Height>1.7cm</Height>
+								<Style>
+									<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+								</Style>
+								<ZIndex>8</ZIndex>
+								<Value>=IIF(Fields!BuildingName.Value &lt;&gt; "", Fields!BuildingName.Value &amp; vbcrlf , "") &amp; IIF(Fields!Address.Value &lt;&gt; "", Fields!Address.Value &amp; vbcrlf, "") &amp; Fields!City.Value &amp; " " &amp; Fields!State.Value &amp; " " &amp; Fields!PostalCode.Value</Value>
+							</Textbox>
+							<Textbox Name="TextBox3">
+								<Top>2.268402cm</Top>
+								<Left>0.8989606cm</Left>
+								<Width>6.67cm</Width>
+								<Height>0.48cm</Height>
+								<Style>
+									<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+								</Style>
+								<ZIndex>9</ZIndex>
+								<Value>=Fields!CompanyName.Value</Value>
+							</Textbox>
+							<Textbox Name="lblCompanyAddress">
+								<Left>2.744094in</Left>
+								<Width>4.76cm</Width>
+								<Height>1.6334cm</Height>
+								<Style>
+									<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">PageHeaderAddress</dd:StyleName>
+								</Style>
+								<ZIndex>11</ZIndex>
+								<Value>720 4th Avenue, Suite 220
+Kirkland WA 98033
+Phone: (425) 828-4440
+fax: (425) 828-4441</Value>
+							</Textbox>
+							<Textbox Name="lblCustomerID">
+								<Top>1.75in</Top>
+								<Left>0.353921in</Left>
+								<Width>2.164cm</Width>
+								<Height>0.5cm</Height>
+								<Style>
+									<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+								</Style>
+								<ZIndex>16</ZIndex>
+								<Value>Customer ID</Value>
+							</Textbox>
+							<Textbox Name="txtCustomerID">
+								<Top>1.75in</Top>
+								<Left>1.208333in</Left>
+								<Width>1.61cm</Width>
+								<Height>0.5cm</Height>
+								<Style>
+									<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+								</Style>
+								<ZIndex>17</ZIndex>
+								<Value>=Fields!CustomerID.Value</Value>
+							</Textbox>
+							<Textbox Name="txtYear">
+								<Top>1.75in</Top>
+								<Left>3.228921in</Left>
+								<Width>2.9375cm</Width>
+								<Height>0.5cm</Height>
+								<Style>
+									<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+								</Style>
+								<ZIndex>18</ZIndex>
+								<Value>=System.DateTime.Today.Year &amp; "/" &amp; System.DateTime.Today.Month &amp; "/" &amp; System.DateTime.Today.Day</Value>
+							</Textbox>
+							<Textbox Name="txtEstimateID">
+								<Top>1.75in</Top>
+								<Left>5.353921in</Left>
+								<Width>2.305cm</Width>
+								<Height>0.5cm</Height>
+								<Style>
+									<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+								</Style>
+								<ZIndex>25</ZIndex>
+								<Value>="No. " &amp; Fields!EstimateID.Value</Value>
+							</Textbox>
+							<Table Name="Table2">
+								<Top>7.5in</Top>
+								<Left>0.353921in</Left>
+								<Width>15.07828cm</Width>
+								<Height>1.22cm</Height>
+								<Style>
+									<BorderColor>
+										<Default>=Theme.Colors!Accent4</Default>
+									</BorderColor>
+								</Style>
+								<ZIndex>28</ZIndex>
+								<DataSetName>DataSet1</DataSetName>
+								<Header>
+									<TableRows>
+										<TableRow>
+											<Height>0.61cm</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox10">
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TableHeading-Copy</dd:StyleName>
+															</Style>
+															<Value>Product ID</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox11">
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TableHeading-Copy</dd:StyleName>
+															</Style>
+															<Value>Product Name</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox12">
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TableHeading-Copy</dd:StyleName>
+															</Style>
+															<Value>Units</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox13">
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TableHeading-Copy</dd:StyleName>
+															</Style>
+															<Value>Price</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Header>
+								<Details>
+									<TableRows>
+										<TableRow>
+											<Height>0.61cm</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox15">
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DetailNumericValue-Copy</dd:StyleName>
+															</Style>
+															<Value>=Fields!ProductID.Value</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox16">
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DetailValue-Copy</dd:StyleName>
+															</Style>
+															<Value>=Fields!ProductName.Value &amp; "(" &amp; Fields!Quantity.Value &amp; " license pack)"</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox17">
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DetailNumericValue-Copy</dd:StyleName>
+															</Style>
+															<Value>=Fields!Unit.Value</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox18">
+															<Style>
+																<Format>$#,##0.00</Format>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DetailNumericValue-Copy</dd:StyleName>
+															</Style>
+															<Value>=Fields!ExtendedPrice.Value</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Details>
+								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">5.5cm</dd:FixedHeight>
+								<dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">15.14cm</dd:FixedWidth>
+								<dd:RepeatToFill xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">true</dd:RepeatToFill>
+								<dd:RepeatBlankRows xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FillPage</dd:RepeatBlankRows>
+								<TableColumns>
+									<TableColumn>
+										<Width>1.83883cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>8.47493cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>2.222065cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>2.542475cm</Width>
+									</TableColumn>
+								</TableColumns>
+							</Table>
+							<Rectangle Name="Container1">
+								<Top>4.2in</Top>
+								<Left>0.925419cm</Left>
+								<Width>15.24cm</Width>
+								<Height>1.016cm</Height>
+								<ReportItems>
+									<Textbox Name="lblTotal">
+										<Width>3.4925cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TableHeading</dd:StyleName>
+										</Style>
+										<ZIndex>16</ZIndex>
+										<Value>Total</Value>
+									</Textbox>
+									<Textbox Name="txtTotalPrice">
+										<Left>4.7625cm</Left>
+										<Width>2.8575cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<Format>$#,##0.00</Format>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterValues</dd:StyleName>
+										</Style>
+										<ZIndex>17</ZIndex>
+										<Value>=Sum(Fields!ExtendedPrice.Value)</Value>
+									</Textbox>
+									<Textbox Name="txtTax">
+										<Left>8.5725cm</Left>
+										<Width>2.54cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<Format>$#,##0.00</Format>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterValues</dd:StyleName>
+										</Style>
+										<ZIndex>20</ZIndex>
+										<Value>=Sum(Fields!ExtendedPrice.Value)*0.05</Value>
+									</Textbox>
+									<Textbox Name="txtPretax">
+										<Left>12.7cm</Left>
+										<Width>2.54cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<Format>$#,##0.00</Format>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterValues</dd:StyleName>
+										</Style>
+										<ZIndex>21</ZIndex>
+										<Value>=Sum(Fields!ExtendedPrice.Value) + (Sum(Fields!ExtendedPrice.Value)*0.05)</Value>
+									</Textbox>
+									<Textbox Name="TextBox6">
+										<Left>11.1125cm</Left>
+										<Width>1.5875cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterHeadings</dd:StyleName>
+										</Style>
+										<ZIndex>19</ZIndex>
+										<Value>Grand Total</Value>
+									</Textbox>
+									<Textbox Name="lblTaxPrice1">
+										<Left>7.62cm</Left>
+										<Width>0.9525cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterHeadings</dd:StyleName>
+										</Style>
+										<ZIndex>18</ZIndex>
+										<Value>Tax</Value>
+									</Textbox>
+									<Textbox Name="TextBox5">
+										<Left>3.488542cm</Left>
+										<Width>1.27cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterHeadings</dd:StyleName>
+										</Style>
+										<ZIndex>22</ZIndex>
+										<Value>Before Tax</Value>
+									</Textbox>
+								</ReportItems>
+							</Rectangle>
+							<Rectangle Name="Container2">
+								<Top>5.354331in</Top>
+								<Width>6.625in</Width>
+								<Height>4.7776in</Height>
+								<Style>
+									<BackgroundColor>WhiteSmoke</BackgroundColor>
+								</Style>
+								<ZIndex>1</ZIndex>
+								<ReportItems>
+									<Textbox Name="TextBox35">
+										<Left>4.625in</Left>
+										<Width>4.9515cm</Width>
+										<Height>1.7979cm</Height>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">Title-Copy</dd:StyleName>
+										</Style>
+										<ZIndex>3</ZIndex>
+										<Value>=Theme.Constants("EnText2")</Value>
+									</Textbox>
+									<Textbox Name="TextBox33">
+										<Left>2.75in</Left>
+										<Width>4.76cm</Width>
+										<Height>1.7979cm</Height>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">PageHeaderAddress</dd:StyleName>
+										</Style>
+										<ZIndex>24</ZIndex>
+										<Value>720 4th Avenue, Suite 220
+Kirkland WA 98033
+Phone: (425) 828-4440
+fax: (425) 828-4441</Value>
+									</Textbox>
+									<Textbox Name="TextBox19">
+										<Top>1.895833in</Top>
+										<Left>1.210937in</Left>
+										<Width>1.61cm</Width>
+										<Height>0.5cm</Height>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+										</Style>
+										<ZIndex>15</ZIndex>
+										<Value>=Fields!Price.Value</Value>
+									</Textbox>
+									<Textbox Name="TextBox21">
+										<Top>1.020833in</Top>
+										<Left>0.35392in</Left>
+										<Width>6.67cm</Width>
+										<Height>0.48cm</Height>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+										</Style>
+										<ZIndex>7</ZIndex>
+										<Value>=Fields!CompanyName.Value</Value>
+									</Textbox>
+									<Textbox Name="TextBox22">
+										<Top>1.895833in</Top>
+										<Left>5.35392in</Left>
+										<Width>2.305cm</Width>
+										<Height>0.5cm</Height>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+										</Style>
+										<ZIndex>23</ZIndex>
+										<Value>="No. " &amp; Fields!EstimateID.Value</Value>
+									</Textbox>
+									<Textbox Name="TextBox24">
+										<Top>1.895833in</Top>
+										<Left>3.22892in</Left>
+										<Width>2.9375cm</Width>
+										<Height>0.5cm</Height>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+										</Style>
+										<ZIndex>16</ZIndex>
+										<Value>=System.DateTime.Today.Year &amp; "/" &amp; System.DateTime.Today.Month &amp; "/" &amp; System.DateTime.Today.Day</Value>
+									</Textbox>
+									<Textbox Name="TextBox26">
+										<Top>1.895833in</Top>
+										<Left>0.35392in</Left>
+										<Width>2.164cm</Width>
+										<Height>0.5cm</Height>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+										</Style>
+										<ZIndex>14</ZIndex>
+										<Value>Customer ID</Value>
+									</Textbox>
+									<Textbox Name="TextBox27">
+										<Top>1.208333in</Top>
+										<Left>0.35392in</Left>
+										<Width>6.6675cm</Width>
+										<Height>1.7425cm</Height>
+										<Style>
+											<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">MasterValues</dd:StyleName>
+										</Style>
+										<ZIndex>6</ZIndex>
+										<Value>=IIF(Fields!BuildingName.Value &lt;&gt; "", Fields!BuildingName.Value &amp; vbcrlf , "") &amp; IIF(Fields!Address.Value &lt;&gt; "", Fields!Address.Value &amp; vbcrlf, "") &amp; Fields!City.Value &amp; " " &amp; Fields!State.Value &amp; " " &amp; Fields!PostalCode.Value</Value>
+									</Textbox>
+									<Rectangle Name="Container3">
+										<Top>4.34375in</Top>
+										<Left>0.364583in</Left>
+										<Width>15.12cm</Width>
+										<Height>1.016cm</Height>
+										<Style>
+											<BorderColor>
+												<Default>White</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Default>None</Default>
+											</BorderStyle>
+										</Style>
+										<ZIndex>25</ZIndex>
+										<ReportItems>
+											<Textbox Name="TextBox39">
+												<Width>3.4925cm</Width>
+												<Height>0.9525cm</Height>
+												<Style>
+													<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TableHeading-Copy</dd:StyleName>
+												</Style>
+												<ZIndex>2</ZIndex>
+												<Value>Total</Value>
+											</Textbox>
+											<Textbox Name="TextBox41">
+												<Left>1.885417in</Left>
+												<Width>2.831cm</Width>
+												<Height>0.9525cm</Height>
+												<Style>
+													<Format>$#,##0.00</Format>
+													<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterValues-Copy</dd:StyleName>
+												</Style>
+												<ZIndex>4</ZIndex>
+												<Value>=Sum(Fields!ExtendedPrice.Value)</Value>
+											</Textbox>
+											<Textbox Name="TextBox43">
+												<Left>3.385417in</Left>
+												<Width>2.5135cm</Width>
+												<Height>0.9525cm</Height>
+												<Style>
+													<Format>$#,##0.00</Format>
+													<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterValues-Copy</dd:StyleName>
+												</Style>
+												<ZIndex>6</ZIndex>
+												<Value>=Sum(Fields!ExtendedPrice.Value)*0.05</Value>
+											</Textbox>
+											<Textbox Name="TextBox45">
+												<Left>12.69996cm</Left>
+												<Width>2.286cm</Width>
+												<Height>0.9525cm</Height>
+												<Style>
+													<Format>$#,##0.00</Format>
+													<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterValues-Copy</dd:StyleName>
+												</Style>
+												<ZIndex>8</ZIndex>
+												<Value>=Sum(Fields!ExtendedPrice.Value) + (Sum(Fields!ExtendedPrice.Value)*0.05)</Value>
+											</Textbox>
+											<Textbox Name="TextBox44">
+												<Left>4.374984in</Left>
+												<Width>1.5875cm</Width>
+												<Height>0.9525cm</Height>
+												<Style>
+													<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterHeadings-Copy</dd:StyleName>
+												</Style>
+												<ZIndex>7</ZIndex>
+												<Value>Grand Total</Value>
+											</Textbox>
+											<Textbox Name="TextBox42">
+												<Left>3.010417in</Left>
+												<Width>0.926cm</Width>
+												<Height>0.9525cm</Height>
+												<Style>
+													<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterHeadings-Copy</dd:StyleName>
+												</Style>
+												<ZIndex>5</ZIndex>
+												<Value>Tax</Value>
+											</Textbox>
+											<Textbox Name="TextBox40">
+												<Left>3.4925cm</Left>
+												<Width>1.27cm</Width>
+												<Height>0.9525cm</Height>
+												<Style>
+													<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FooterHeadings-Copy</dd:StyleName>
+												</Style>
+												<ZIndex>3</ZIndex>
+												<Value>Before Tax</Value>
+											</Textbox>
+										</ReportItems>
+									</Rectangle>
+								</ReportItems>
+							</Rectangle>
+							<Table Name="Table1">
+								<Top>2.010417in</Top>
+								<Left>0.3541667in</Left>
+								<Width>6.010417in</Width>
+								<Height>0.4791667in</Height>
+								<Style>
+									<BorderColor>
+										<Default>=Theme.Colors!Accent4</Default>
+									</BorderColor>
+								</Style>
+								<ZIndex>26</ZIndex>
+								<DataSetName>DataSet1</DataSetName>
+								<Header>
+									<TableRows>
+										<TableRow>
+											<Height>0.61cm</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox1">
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TableHeading</dd:StyleName>
+															</Style>
+															<Value>Product ID</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox4">
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TableHeading</dd:StyleName>
+															</Style>
+															<Value>Product Name</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox7">
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TableHeading</dd:StyleName>
+															</Style>
+															<Value>Units</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox8">
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">TableHeading</dd:StyleName>
+															</Style>
+															<Value>Price</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Header>
+								<Details>
+									<TableRows>
+										<TableRow>
+											<Height>0.61cm</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox9">
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DetailNumericValues</dd:StyleName>
+															</Style>
+															<Value>=Fields!ProductID.Value</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox14">
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DetailValues</dd:StyleName>
+															</Style>
+															<Value>=Fields!ProductName.Value &amp; "(" &amp; Fields!Quantity.Value &amp; " license pack)"</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox20">
+															<Style>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DetailNumericValues</dd:StyleName>
+															</Style>
+															<Value>=Fields!Unit.Value</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox23">
+															<Style>
+																<Format>$#,##0.00</Format>
+																<dd:StyleName xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DetailNumericValues</dd:StyleName>
+															</Style>
+															<Value>=Fields!ExtendedPrice.Value</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Details>
+								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">5.5cm</dd:FixedHeight>
+								<dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">15.14cm</dd:FixedWidth>
+								<dd:RepeatToFill xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">true</dd:RepeatToFill>
+								<dd:RepeatBlankRows xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FillPage</dd:RepeatBlankRows>
+								<TableColumns>
+									<TableColumn>
+										<Width>1.862143cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>8.582377cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>2.250237cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>1.012481in</Width>
+									</TableColumn>
+								</TableColumns>
+							</Table>
+							<Line Name="lnDivider">
+								<Height>0in</Height>
+								<Style>
+									<BorderStyle>
+										<Default>DashDotDot</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>0.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<Top>5in</Top>
+								<Width>6.695197in</Width>
+								<ZIndex>29</ZIndex>
+							</Line>
+						</ReportItems>
+					</Page>
+				</Pages>
+				<DataSetName>DataSet1</DataSetName>
+				<Grouping Name="FixedPage1_Group">
+					<GroupExpressions>
+						<GroupExpression>=Fields!EstimateID.Value</GroupExpression>
+					</GroupExpressions>
+				</Grouping>
+			</FixedPage>
+		</ReportItems>
+	</Body>
+	<BottomMargin>0.6879166cm</BottomMargin>
+	<LeftMargin>2cm</LeftMargin>
+	<RightMargin>2cm</RightMargin>
+	<TopMargin>0.9260417cm</TopMargin>
+	<PageHeight>11.69in</PageHeight>
+	<PageWidth>8.27in</PageWidth>
+	<Width>8.27in</Width>
+	<dd:EmbeddedStyleSheets xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<EmbeddedStyleSheet Name="BaseStyle">
+			<Data>﻿&lt;dd:StyleSheet xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition"&gt;
+  &lt;Style&gt;
+    &lt;BackgroundColor&gt;Blue&lt;/BackgroundColor&gt;
+    &lt;Color&gt;White&lt;/Color&gt;
+    &lt;FontFamily&gt;Arial&lt;/FontFamily&gt;
+    &lt;FontSize&gt;8.25pt&lt;/FontSize&gt;
+    &lt;FontStyle&gt;Normal&lt;/FontStyle&gt;
+    &lt;FontWeight&gt;400&lt;/FontWeight&gt;
+    &lt;PaddingBottom&gt;2pt&lt;/PaddingBottom&gt;
+    &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+    &lt;PaddingRight&gt;2pt&lt;/PaddingRight&gt;
+    &lt;PaddingTop&gt;2pt&lt;/PaddingTop&gt;
+    &lt;TextAlign&gt;Center&lt;/TextAlign&gt;
+    &lt;VerticalAlign&gt;Middle&lt;/VerticalAlign&gt;
+    &lt;dd:Name&gt;TextLabels&lt;/dd:Name&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderColor&gt;
+      &lt;Default&gt;SteelBlue&lt;/Default&gt;
+    &lt;/BorderColor&gt;
+    &lt;BorderStyle&gt;
+      &lt;Default&gt;Solid&lt;/Default&gt;
+    &lt;/BorderStyle&gt;
+    &lt;BorderWidth&gt;
+      &lt;Default&gt;1pt&lt;/Default&gt;
+    &lt;/BorderWidth&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;FontFamily&gt;Arial&lt;/FontFamily&gt;
+    &lt;FontSize&gt;16pt&lt;/FontSize&gt;
+    &lt;FontStyle&gt;Normal&lt;/FontStyle&gt;
+    &lt;FontWeight&gt;700&lt;/FontWeight&gt;
+    &lt;dd:Name&gt;Title&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;TextLabels&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;BackgroundColor&gt;Lavender&lt;/BackgroundColor&gt;
+    &lt;Color&gt;Black&lt;/Color&gt;
+    &lt;FontFamily&gt;Arial&lt;/FontFamily&gt;
+    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+    &lt;FontStyle&gt;Normal&lt;/FontStyle&gt;
+    &lt;FontWeight&gt;700&lt;/FontWeight&gt;
+    &lt;dd:Name&gt;TableHeading&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;TextLabels&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderColor&gt;
+      &lt;Default&gt;SteelBlue&lt;/Default&gt;
+    &lt;/BorderColor&gt;
+    &lt;BorderStyle&gt;
+      &lt;Default&gt;Solid&lt;/Default&gt;
+    &lt;/BorderStyle&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;BackgroundColor&gt;Transparent&lt;/BackgroundColor&gt;
+    &lt;Color&gt;Blue&lt;/Color&gt;
+    &lt;dd:Name&gt;FooterHeadings&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;TextLabels&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderColor&gt;
+      &lt;Default&gt;SteelBlue&lt;/Default&gt;
+    &lt;/BorderColor&gt;
+    &lt;BorderStyle&gt;
+      &lt;Default&gt;Solid&lt;/Default&gt;
+    &lt;/BorderStyle&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;Color&gt;Black&lt;/Color&gt;
+    &lt;TextAlign&gt;Right&lt;/TextAlign&gt;
+    &lt;dd:Name&gt;FooterValues&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;FooterHeadings&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;BackgroundColor&gt;=""&lt;/BackgroundColor&gt;
+    &lt;Color&gt;Black&lt;/Color&gt;
+    &lt;PaddingLeft&gt;10pt&lt;/PaddingLeft&gt;
+    &lt;TextAlign&gt;Left&lt;/TextAlign&gt;
+    &lt;dd:Name&gt;DetailValues&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;TextLabels&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;PaddingRight&gt;10pt&lt;/PaddingRight&gt;
+    &lt;TextAlign&gt;Right&lt;/TextAlign&gt;
+    &lt;dd:Name&gt;DetailNumericValues&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;DetailValues&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;BackgroundColor&gt;Transparent&lt;/BackgroundColor&gt;
+    &lt;Color&gt;Black&lt;/Color&gt;
+    &lt;FontFamily&gt;Arial&lt;/FontFamily&gt;
+    &lt;FontSize&gt;9pt&lt;/FontSize&gt;
+    &lt;FontStyle&gt;Normal&lt;/FontStyle&gt;
+    &lt;FontWeight&gt;400&lt;/FontWeight&gt;
+    &lt;TextAlign&gt;Left&lt;/TextAlign&gt;
+    &lt;dd:Name&gt;MasterValues&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;TextLabels&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderStyle&gt;
+      &lt;Default&gt;None&lt;/Default&gt;
+    &lt;/BorderStyle&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;BackgroundColor&gt;Transparent&lt;/BackgroundColor&gt;
+    &lt;Color&gt;Black&lt;/Color&gt;
+    &lt;FontFamily&gt;Arial&lt;/FontFamily&gt;
+    &lt;FontSize&gt;7pt&lt;/FontSize&gt;
+    &lt;FontStyle&gt;Normal&lt;/FontStyle&gt;
+    &lt;FontWeight&gt;400&lt;/FontWeight&gt;
+    &lt;TextAlign&gt;Left&lt;/TextAlign&gt;
+    &lt;dd:Name&gt;PageHeaderAddress&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;TextLabels&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderStyle&gt;
+      &lt;Default&gt;None&lt;/Default&gt;
+    &lt;/BorderStyle&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;BackgroundColor&gt;Transparent&lt;/BackgroundColor&gt;
+    &lt;Color&gt;Black&lt;/Color&gt;
+    &lt;FontFamily&gt;Arial&lt;/FontFamily&gt;
+    &lt;FontSize&gt;10pt&lt;/FontSize&gt;
+    &lt;FontStyle&gt;Normal&lt;/FontStyle&gt;
+    &lt;FontWeight&gt;900&lt;/FontWeight&gt;
+    &lt;TextAlign&gt;Left&lt;/TextAlign&gt;
+    &lt;VerticalAlign&gt;Top&lt;/VerticalAlign&gt;
+    &lt;dd:Name&gt;PageHeaderCompanyName&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;TextLabels&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderStyle&gt;
+      &lt;Default&gt;None&lt;/Default&gt;
+    &lt;/BorderStyle&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;BackgroundColor&gt;DarkSeaGreen&lt;/BackgroundColor&gt;
+    &lt;dd:Name&gt;Title-Copy&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;Title&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderColor&gt;
+      &lt;Default&gt;MediumSeaGreen&lt;/Default&gt;
+    &lt;/BorderColor&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;BackgroundColor&gt;LightCyan&lt;/BackgroundColor&gt;
+    &lt;dd:Name&gt;TableHeading-Copy&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;TableHeading&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderColor&gt;
+      &lt;Default&gt;MediumSeaGreen&lt;/Default&gt;
+    &lt;/BorderColor&gt;
+    &lt;BorderStyle&gt;
+      &lt;Default&gt;Solid&lt;/Default&gt;
+    &lt;/BorderStyle&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;Color&gt;DarkSeaGreen&lt;/Color&gt;
+    &lt;dd:Name&gt;FooterHeadings-Copy&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;FooterHeadings&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderColor&gt;
+      &lt;Default&gt;MediumSeaGreen&lt;/Default&gt;
+    &lt;/BorderColor&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;dd:Name&gt;FooterValues-Copy&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;FooterValues&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderColor&gt;
+      &lt;Default&gt;MediumSeaGreen&lt;/Default&gt;
+    &lt;/BorderColor&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;dd:Name&gt;DetailValue-Copy&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;DetailValues&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+    &lt;BorderColor&gt;
+      &lt;Default&gt;MediumSeaGreen&lt;/Default&gt;
+    &lt;/BorderColor&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;PaddingLeft&gt;2pt&lt;/PaddingLeft&gt;
+    &lt;PaddingRight&gt;10pt&lt;/PaddingRight&gt;
+    &lt;TextAlign&gt;Right&lt;/TextAlign&gt;
+    &lt;dd:Name&gt;DetailNumericValue-Copy&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;DetailValue-Copy&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;dd:Name&gt;MasterValues-Copy&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;MasterValues&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;dd:Name&gt;PageHeaderAddress-Copy&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;PageHeaderAddress&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+  &lt;/Style&gt;
+  &lt;Style&gt;
+    &lt;dd:Name&gt;PageHeaderCompanyName-Copy&lt;/dd:Name&gt;
+    &lt;dd:Parent&gt;PageHeaderCompanyName&lt;/dd:Parent&gt;
+    &lt;dd:Type&gt;Text&lt;/dd:Type&gt;
+  &lt;/Style&gt;
+&lt;/dd:StyleSheet&gt;</Data>
+		</EmbeddedStyleSheet>
+	</dd:EmbeddedStyleSheets>
+	<DataSources>
+		<DataSource Name="DataSource1">
+			<ConnectionProperties>
+				<ConnectString>data source=..\\..\\..\\..\\..\\..\\..\\..\\..\\Data\\Seikyu2.db;</ConnectString>
+				<DataProvider>SQLITE</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="DataSet1">
+			<Fields>
+				<Field Name="EstimateID">
+					<DataField>EstimateID</DataField>
+				</Field>
+				<Field Name="ProductName">
+					<DataField>ProductName</DataField>
+				</Field>
+				<Field Name="Price">
+					<DataField>Price</DataField>
+				</Field>
+				<Field Name="QuantityPerUnit">
+					<DataField>QuantityPerUnit</DataField>
+				</Field>
+				<Field Name="Quantity">
+					<DataField>Quantity</DataField>
+				</Field>
+				<Field Name="Unit">
+					<DataField>Unit</DataField>
+				</Field>
+				<Field Name="ExtendedPrice">
+					<DataField>ExtendedPrice</DataField>
+				</Field>
+				<Field Name="PostalCode">
+					<DataField>PostalCode</DataField>
+				</Field>
+				<Field Name="Address">
+					<DataField>Address</DataField>
+				</Field>
+				<Field Name="BuildingName">
+					<DataField>BuildingName</DataField>
+				</Field>
+				<Field Name="City">
+					<DataField>City</DataField>
+				</Field>
+				<Field Name="State">
+					<DataField>State</DataField>
+				</Field>
+				<Field Name="CompanyName">
+					<DataField>CompanyName</DataField>
+				</Field>
+				<Field Name="CustomerID">
+					<DataField>CustomerID</DataField>
+				</Field>
+				<Field Name="ProductID">
+					<DataField>ProductID</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>SELECT Estimate.EstimateID, Products.ProductName, Products.Price, [Quantity] &amp; ' * ' &amp; [Unit] AS QuantityPerUnit,[Quantity], [Unit],  [Quantity]*Products.Price AS ExtendedPrice, Customers.PostalCode, Customers.Address, Customers.BuildingName, Customers.City, Customers.State, Customers.CompanyName, Customers.CustomerID, Products.ProductID FROM (Customers INNER JOIN Estimate ON Customers.CustomerID = Estimate.CustomerID) INNER JOIN Products ON Estimate.ProductID = Products.ProductID ORDER BY Estimate.EstimateID </CommandText>
+				<DataSourceName>DataSource1</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<dd:CollateBy xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">ValueIndex</dd:CollateBy>
+	<dd:ReportThemes xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<ThemeUri>Theme1.rdlx-theme</ThemeUri>
+	</dd:ReportThemes>
+	<dd:ReportStyleSheet xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<StyleSheetSource>Embedded</StyleSheetSource>
+		<StyleSheetValue>BaseStyle</StyleSheetValue>
+	</dd:ReportStyleSheet>
+</Report>

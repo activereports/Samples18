@@ -1,0 +1,89 @@
+﻿<Report xmlns="http://cdn.grapecity.com/ActiveReports/reporting/2023/08/reportdefinition">
+	<Name>Radar</Name>
+	<ReportSections>
+		<ReportSection Name="ReportSection1">
+			<Body>
+				<Height>10cm</Height>
+				<ReportItems>
+					<CustomReportItem Name="MostExpensiveProductsChart">
+						<Type>RadarChart</Type>
+						<Top>1.5cm</Top>
+						<Left>4cm</Left>
+						<Width>8cm</Width>
+						<Height>8cm</Height>
+						<CustomProperties>
+							<CustomProperty>
+								<Name>DataSetName</Name>
+								<Value>MostExpensiveProducts</Value>
+							</CustomProperty>
+						</CustomProperties>
+						<CustomData>
+							<DataSetName>MostExpensiveProducts</DataSetName>
+							<DataRowGroupings>
+								<DataGroupings>
+									<DataGrouping>
+										<CustomProperties>
+											<CustomProperty>
+												<Name>SeriesValue</Name>
+												<Value>=Fields!UnitPrice.Value</Value>
+											</CustomProperty>
+										</CustomProperties>
+									</DataGrouping>
+								</DataGroupings>
+							</DataRowGroupings>
+						</CustomData>
+					</CustomReportItem>
+					<Textbox Name="Header">
+						<Top>0.6cm</Top>
+						<Left>6.2cm</Left>
+						<Width>4.4cm</Width>
+						<Height>0.75cm</Height>
+						<Style>
+							<PaddingBottom>2pt</PaddingBottom>
+							<PaddingLeft>2pt</PaddingLeft>
+							<PaddingRight>2pt</PaddingRight>
+							<PaddingTop>2pt</PaddingTop>
+						</Style>
+						<ZIndex>1</ZIndex>
+						<CanGrow>true</CanGrow>
+						<Value>Most expensive products</Value>
+					</Textbox>
+				</ReportItems>
+			</Body>
+			<Page>
+				<PageHeight>27.9cm</PageHeight>
+				<PageWidth>21.6cm</PageWidth>
+				<TopMargin>2.5cm</TopMargin>
+				<BottomMargin>2.5cm</BottomMargin>
+				<LeftMargin>2.5cm</LeftMargin>
+				<RightMargin>2.5cm</RightMargin>
+			</Page>
+			<Width>16cm</Width>
+			<DataElementName>ReportSection1</DataElementName>
+		</ReportSection>
+	</ReportSections>
+	<DataSources>
+		<DataSource Name="NWind">
+			<ConnectionProperties>
+				<ConnectString>data source=..\\..\\..\\..\\..\\..\\..\\..\\..\\Data\\NWIND.db</ConnectString>
+				<DataProvider>SQLITE</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="MostExpensiveProducts">
+			<Fields>
+				<Field Name="TenMostExpensiveProducts">
+					<DataField>TenMostExpensiveProducts</DataField>
+				</Field>
+				<Field Name="UnitPrice">
+					<DataField>UnitPrice</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>select * from Ten_Most_Expensive_Products</CommandText>
+				<DataSourceName>NWind</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk.Web" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Title>ActiveReports Sample</Title>
+    <NeutralLanguage>en-US</NeutralLanguage>
+    <Description>ActiveReports Sample</Description>
+    <Copyright>Â© MESCIUS inc. All rights reserved.</Copyright>
+    <Product>ActiveReports Sample</Product>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>CustomPreview</RootNamespace>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="MESCIUS.ActiveReports.Export.Html">
+      <Version>18.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="MESCIUS.ActiveReports.Export.Pdf">
+      <Version>18.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="MESCIUS.ActiveReports">
+      <Version>18.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Data.SQLite.Core">
+      <Version>1.0.118</Version>
+    </PackageReference>
+    <PackageReference Include="System.Text.Encoding.CodePages">
+      <Version>6.0.0</Version>
+    </PackageReference>
+    <PackageReference Include="System.Resources.Extensions">
+      <Version>6.0.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Web.config">
+      <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Resources\Resources.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Resources\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>

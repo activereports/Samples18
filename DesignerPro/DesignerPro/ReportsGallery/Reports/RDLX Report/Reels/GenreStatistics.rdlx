@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://cdn.grapecity.com/ActiveReports/reporting/2022/01/reportdefinition">
+	<ReportSections>
+		<ReportSection Name="ReportSection1">
+			<Body>
+				<Height>0in</Height>
+				<ReportItems>
+					<CustomReportItem Name="mainContent">
+						<Type>ContentPlaceHolder</Type>
+						<Width>6.5in</Width>
+						<Height>2.5in</Height>
+						<CustomProperties>
+							<CustomProperty>
+								<Name>Text</Name>
+								<Value>Add content here</Value>
+							</CustomProperty>
+							<CustomProperty>
+								<Name>ID</Name>
+								<Value>1</Value>
+							</CustomProperty>
+						</CustomProperties>
+						<Container>
+							<ReportItems>
+								<Table Name="Table1">
+									<Width>6.5in</Width>
+									<Height>0.5in</Height>
+									<DataSetName>GenreStats</DataSetName>
+									<Header>
+										<TableRows>
+											<TableRow>
+												<Height>0.25in</Height>
+												<TableCells>
+													<TableCell>
+														<ReportItems>
+															<Textbox Name="TextBox3">
+																<Style>
+																	<Color>DarkGray</Color>
+																	<FontWeight>700</FontWeight>
+																	<PaddingBottom>2pt</PaddingBottom>
+																	<PaddingLeft>2pt</PaddingLeft>
+																	<PaddingRight>2pt</PaddingRight>
+																	<PaddingTop>2pt</PaddingTop>
+																	<Border>
+																		<Width>1 pt</Width>
+																	</Border>
+																</Style>
+																<CanGrow>true</CanGrow>
+																<Value>Genre</Value>
+															</Textbox>
+														</ReportItems>
+													</TableCell>
+													<TableCell>
+														<ReportItems>
+															<Textbox Name="TextBox4">
+																<Style>
+																	<Color>DarkGray</Color>
+																	<FontWeight>700</FontWeight>
+																	<PaddingBottom>2pt</PaddingBottom>
+																	<PaddingLeft>2pt</PaddingLeft>
+																	<PaddingRight>2pt</PaddingRight>
+																	<PaddingTop>2pt</PaddingTop>
+																	<Border>
+																		<Width>1 pt</Width>
+																	</Border>
+																</Style>
+																<CanGrow>true</CanGrow>
+																<Value>Most Popular Title</Value>
+															</Textbox>
+														</ReportItems>
+													</TableCell>
+													<TableCell>
+														<ReportItems>
+															<Textbox Name="TextBox5">
+																<Style>
+																	<Color>DarkGray</Color>
+																	<FontWeight>700</FontWeight>
+																	<PaddingBottom>2pt</PaddingBottom>
+																	<PaddingLeft>2pt</PaddingLeft>
+																	<PaddingRight>2pt</PaddingRight>
+																	<PaddingTop>2pt</PaddingTop>
+																	<TextAlign>Right</TextAlign>
+																	<Border>
+																		<Width>1 pt</Width>
+																	</Border>
+																</Style>
+																<CanGrow>true</CanGrow>
+																<Value>Median Price</Value>
+															</Textbox>
+														</ReportItems>
+													</TableCell>
+												</TableCells>
+											</TableRow>
+										</TableRows>
+									</Header>
+									<Details>
+										<Group Name="Table1_Detail_Group">
+											<GroupExpressions>
+												<GroupExpression>=Fields!GenreName.Value</GroupExpression>
+											</GroupExpressions>
+										</Group>
+										<TableRows>
+											<TableRow>
+												<Height>0.25in</Height>
+												<TableCells>
+													<TableCell>
+														<ReportItems>
+															<Textbox Name="TextBox6">
+																<Style>
+																	<PaddingBottom>2pt</PaddingBottom>
+																	<PaddingLeft>2pt</PaddingLeft>
+																	<PaddingRight>2pt</PaddingRight>
+																	<PaddingTop>2pt</PaddingTop>
+																	<Border>
+																		<Width>1 pt</Width>
+																	</Border>
+																</Style>
+																<CanGrow>true</CanGrow>
+																<Value>=Fields!GenreName.Value</Value>
+															</Textbox>
+														</ReportItems>
+													</TableCell>
+													<TableCell>
+														<ReportItems>
+															<Textbox Name="TextBox7">
+																<Style>
+																	<PaddingBottom>2pt</PaddingBottom>
+																	<PaddingLeft>2pt</PaddingLeft>
+																	<PaddingRight>2pt</PaddingRight>
+																	<PaddingTop>2pt</PaddingTop>
+																	<Border>
+																		<Width>1 pt</Width>
+																	</Border>
+																</Style>
+																<CanGrow>true</CanGrow>
+																<Value>=Mode(Fields!Title.Value)</Value>
+															</Textbox>
+														</ReportItems>
+													</TableCell>
+													<TableCell>
+														<ReportItems>
+															<Textbox Name="TextBox8">
+																<Style>
+																	<Format>$#,##0.00</Format>
+																	<PaddingBottom>2pt</PaddingBottom>
+																	<PaddingLeft>2pt</PaddingLeft>
+																	<PaddingRight>2pt</PaddingRight>
+																	<PaddingTop>2pt</PaddingTop>
+																	<TextAlign>Right</TextAlign>
+																	<Border>
+																		<Width>1 pt</Width>
+																	</Border>
+																</Style>
+																<CanGrow>true</CanGrow>
+																<Value>=Median(Fields!Price.Value)</Value>
+															</Textbox>
+														</ReportItems>
+													</TableCell>
+												</TableCells>
+											</TableRow>
+										</TableRows>
+									</Details>
+									<TableColumns>
+										<TableColumn>
+											<Width>1in</Width>
+										</TableColumn>
+										<TableColumn>
+											<Width>4.5in</Width>
+										</TableColumn>
+										<TableColumn>
+											<Width>1in</Width>
+										</TableColumn>
+									</TableColumns>
+								</Table>
+							</ReportItems>
+						</Container>
+					</CustomReportItem>
+				</ReportItems>
+			</Body>
+			<Page>
+				<PageHeader>
+					<Height>0in</Height>
+					<ReportItems>
+						<CustomReportItem Name="ContentPlaceHolder1">
+							<Type>ContentPlaceHolder</Type>
+							<Width>4.875in</Width>
+							<Height>1in</Height>
+							<ZIndex>1</ZIndex>
+							<CustomProperties>
+								<CustomProperty>
+									<Name>ID</Name>
+									<Value>2</Value>
+								</CustomProperty>
+								<CustomProperty>
+									<Name>Text</Name>
+									<Value>Add page header</Value>
+								</CustomProperty>
+							</CustomProperties>
+							<Container>
+								<ReportItems>
+									<Textbox Name="TextBox12">
+										<Width>4.875in</Width>
+										<Height>0.625in</Height>
+										<Style>
+											<FontSize>24pt</FontSize>
+											<FontWeight>700</FontWeight>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+										</Style>
+										<CanGrow>true</CanGrow>
+										<Value>Genre Statistics</Value>
+									</Textbox>
+								</ReportItems>
+							</Container>
+						</CustomReportItem>
+					</ReportItems>
+				</PageHeader>
+			</Page>
+			<Width>0in</Width>
+		</ReportSection>
+	</ReportSections>
+	<DataSets>
+		<DataSet Name="GenreStats">
+			<Fields>
+				<Field Name="GenreName">
+					<DataField>GenreName</DataField>
+				</Field>
+				<Field Name="Title">
+					<DataField>Title</DataField>
+				</Field>
+				<Field Name="Price">
+					<DataField>Price:1</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>SELECT Genre.GenreName, Movie.Title, SaleDetails.Price
+FROM Sale INNER JOIN ((Product INNER JOIN (Genre INNER JOIN ((Movie INNER JOIN MovieProduct ON Movie.MovieID = MovieProduct.MovieID) INNER JOIN MovieGenres ON Movie.MovieID = MovieGenres.MovieID) ON Genre.GenreID = MovieGenres.GenreID) ON Product.ProductID = MovieProduct.ProductID) INNER JOIN SaleDetails ON Product.ProductID = SaleDetails.ProductID) ON Sale.SalesID = SaleDetails.SaleID;
+</CommandText>
+				<DataSourceName>Reels</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<CustomProperties>
+		<CustomProperty>
+			<Name>MasterReport</Name>
+			<Value>ReelsConfidential.rdlx-master</Value>
+		</CustomProperty>
+	</CustomProperties>
+</Report>

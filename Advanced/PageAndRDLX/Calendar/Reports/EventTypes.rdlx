@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://cdn.grapecity.com/ActiveReports/reporting/2022/01/reportdefinition">
+	<ReportSections>
+		<ReportSection Name="ReportSection1">
+			<Body>
+				<Height>3.625in</Height>
+				<ReportItems>
+					<CustomReportItem Name="Calendar1">
+						<Type>Calendar</Type>
+						<Top>0.125in</Top>
+						<Left>0.125in</Left>
+						<Width>6.2396in</Width>
+						<Height>3.375in</Height>
+						<CustomProperties>
+							<CustomProperty>
+								<Name>calendar:MonthTitle.Format</Name>
+								<Value>MMMM yyyy</Value>
+							</CustomProperty>
+						</CustomProperties>
+						<CustomData>
+							<DataSetName>DataSet1</DataSetName>
+							<DataRowGroupings>
+								<DataGroupings>
+									<DataGrouping>
+										<CustomProperties>
+											<CustomProperty>
+												<Name>calendar:Event.StartDate</Name>
+												<Value>=Fields!EventDate.Value</Value>
+											</CustomProperty>
+											<CustomProperty>
+												<Name>calendar:Event.Value</Name>
+												<Value>=Fields!Title.Value</Value>
+											</CustomProperty>
+											<CustomProperty>
+												<Name>calendar:Event.FontFamily</Name>
+												<Value>Microsoft Sans Serif</Value>
+											</CustomProperty>
+											<CustomProperty>
+												<Name>calendar:Event.Backcolor</Name>
+												<Value>=Switch(Fields!EventType.Value="Family events","CornflowerBlue",Fields!EventType.Value="Music events","MediumSeaGreen",Fields!EventType.Value="Cultural events","IndianRed")</Value>
+											</CustomProperty>
+										</CustomProperties>
+									</DataGrouping>
+								</DataGroupings>
+							</DataRowGroupings>
+						</CustomData>
+					</CustomReportItem>
+				</ReportItems>
+			</Body>
+			<Page>
+				<PageHeader>
+					<Height>0.75in</Height>
+					<PrintOnFirstPage>true</PrintOnFirstPage>
+					<PrintOnLastPage>true</PrintOnLastPage>
+					<ReportItems>
+						<Textbox Name="TextBox1">
+							<Left>0.25in</Left>
+							<Width>6in</Width>
+							<Height>0.375in</Height>
+							<Style>
+								<FontFamily>Microsoft Sans Serif</FontFamily>
+								<FontSize>18pt</FontSize>
+								<FontWeight>400</FontWeight>
+								<PaddingBottom>2pt</PaddingBottom>
+								<PaddingLeft>2pt</PaddingLeft>
+								<PaddingRight>2pt</PaddingRight>
+								<PaddingTop>2pt</PaddingTop>
+								<TextAlign>Center</TextAlign>
+							</Style>
+							<CanGrow>true</CanGrow>
+							<Value>2015 Events</Value>
+						</Textbox>
+						<Textbox Name="TextBox2">
+							<Top>0.425in</Top>
+							<Left>0.625in</Left>
+							<Width>0.6875in</Width>
+							<Height>0.325in</Height>
+							<Style>
+								<FontFamily>Microsoft Sans Serif</FontFamily>
+								<FontSize>12pt</FontSize>
+								<PaddingBottom>2pt</PaddingBottom>
+								<PaddingLeft>2pt</PaddingLeft>
+								<PaddingRight>2pt</PaddingRight>
+								<PaddingTop>2pt</PaddingTop>
+							</Style>
+							<ZIndex>1</ZIndex>
+							<CanGrow>true</CanGrow>
+							<Value>Legend:</Value>
+						</Textbox>
+						<Textbox Name="TextBox3">
+							<Top>0.425in</Top>
+							<Left>1.875in</Left>
+							<Width>1in</Width>
+							<Height>0.25in</Height>
+							<Style>
+								<FontFamily>Microsoft Sans Serif</FontFamily>
+								<FontSize>9.75pt</FontSize>
+								<PaddingBottom>2pt</PaddingBottom>
+								<PaddingLeft>2pt</PaddingLeft>
+								<PaddingRight>2pt</PaddingRight>
+								<PaddingTop>2pt</PaddingTop>
+							</Style>
+							<ZIndex>3</ZIndex>
+							<CanGrow>true</CanGrow>
+							<Value>Family events</Value>
+						</Textbox>
+						<Rectangle Name="Rectangle2">
+							<Top>0.425in</Top>
+							<Left>3in</Left>
+							<Width>0.25in</Width>
+							<Height>0.25in</Height>
+							<Style>
+								<BackgroundColor>MediumSeaGreen</BackgroundColor>
+							</Style>
+							<ZIndex>2</ZIndex>
+							<CanGrow>true</CanGrow>
+						</Rectangle>
+						<Textbox Name="TextBox4">
+							<Top>0.425in</Top>
+							<Left>3.375in</Left>
+							<Width>1in</Width>
+							<Height>0.25in</Height>
+							<Style>
+								<FontFamily>Microsoft Sans Serif</FontFamily>
+								<FontSize>9.75pt</FontSize>
+								<PaddingBottom>2pt</PaddingBottom>
+								<PaddingLeft>2pt</PaddingLeft>
+								<PaddingRight>2pt</PaddingRight>
+								<PaddingTop>2pt</PaddingTop>
+							</Style>
+							<ZIndex>3</ZIndex>
+							<CanGrow>true</CanGrow>
+							<Value>Music events</Value>
+						</Textbox>
+						<Rectangle Name="Rectangle3">
+							<Top>0.425in</Top>
+							<Left>4.5in</Left>
+							<Width>0.25in</Width>
+							<Height>0.25in</Height>
+							<Style>
+								<BackgroundColor>IndianRed</BackgroundColor>
+							</Style>
+							<ZIndex>2</ZIndex>
+							<CanGrow>true</CanGrow>
+						</Rectangle>
+						<Textbox Name="TextBox5">
+							<Top>0.425in</Top>
+							<Left>4.875in</Left>
+							<Width>1in</Width>
+							<Height>0.25in</Height>
+							<Style>
+								<FontFamily>Microsoft Sans Serif</FontFamily>
+								<FontSize>9.75pt</FontSize>
+								<PaddingBottom>2pt</PaddingBottom>
+								<PaddingLeft>2pt</PaddingLeft>
+								<PaddingRight>2pt</PaddingRight>
+								<PaddingTop>2pt</PaddingTop>
+							</Style>
+							<ZIndex>3</ZIndex>
+							<CanGrow>true</CanGrow>
+							<Value>Cultural events</Value>
+						</Textbox>
+						<Rectangle Name="Rectangle1">
+							<Top>0.425in</Top>
+							<Left>1.5in</Left>
+							<Width>0.25in</Width>
+							<Height>0.25in</Height>
+							<Style>
+								<BackgroundColor>CornflowerBlue</BackgroundColor>
+							</Style>
+							<ZIndex>2</ZIndex>
+							<CanGrow>true</CanGrow>
+						</Rectangle>
+					</ReportItems>
+				</PageHeader>
+				<PageHeight>11in</PageHeight>
+				<PageWidth>8.5in</PageWidth>
+				<TopMargin>1in</TopMargin>
+				<BottomMargin>1in</BottomMargin>
+				<LeftMargin>1in</LeftMargin>
+				<RightMargin>1in</RightMargin>
+			</Page>
+			<Width>6.5in</Width>
+		</ReportSection>
+	</ReportSections>
+	<DataSources>
+		<DataSource Name="Events">
+			<ConnectionProperties>
+				<ConnectString>XmlData=&lt;Events&gt;  &lt;Event&gt;    &lt;Title&gt;Bethabara Concert Band and Family Evening&lt;/Title&gt;    &lt;EventType&gt;Family events&lt;/EventType&gt;    &lt;EventDate&gt;2015-08-14&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;Boise State University Annual Family Holiday Concert&lt;/Title&gt;    &lt;EventType&gt;Family events&lt;/EventType&gt;    &lt;EventDate&gt;2015-12-07&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;Dogwood Jamboree Country Music Concert&lt;/Title&gt;    &lt;EventType&gt;Music events&lt;/EventType&gt;    &lt;EventDate&gt;2015-03-01&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;An Irish Celebration - A Celtic Concert in the Green&lt;/Title&gt;    &lt;EventType&gt;Cultural events&lt;/EventType&gt;    &lt;EventDate&gt;2015-03-15&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;Third Thursday Concert Series&lt;/Title&gt;    &lt;EventType&gt;Music events&lt;/EventType&gt;    &lt;EventDate&gt;2015-06-19&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;Appalachian Evening Music Concert Series&lt;/Title&gt;    &lt;EventType&gt;Music events&lt;/EventType&gt;    &lt;EventDate&gt;2015-08-23&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;Independence Day Concert on The Square&lt;/Title&gt;    &lt;EventType&gt;Family events&lt;/EventType&gt;    &lt;EventDate&gt;2015-06-30&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;South Lawn Concert Series&lt;/Title&gt;    &lt;EventType&gt;Music events&lt;/EventType&gt;    &lt;EventDate&gt;2015-05-18&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;Fall Starlight Concert Series&lt;/Title&gt;    &lt;EventType&gt;Music events&lt;/EventType&gt;    &lt;EventDate&gt;2015-10-14&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;Alive After Five Concert Series&lt;/Title&gt;    &lt;EventType&gt;Music events&lt;/EventType&gt;    &lt;EventDate&gt;2015-07-24&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;Summer Nights Concert Series&lt;/Title&gt;    &lt;EventType&gt;Family events&lt;/EventType&gt;    &lt;EventDate&gt;2015-05-22&lt;/EventDate&gt;  &lt;/Event&gt;  &lt;Event&gt;    &lt;Title&gt;Lions Club Barbeque, Concert and Fireworks&lt;/Title&gt;    &lt;EventType&gt;Music events&lt;/EventType&gt;    &lt;EventDate&gt;2015-08-08&lt;/EventDate&gt;  &lt;/Event&gt;&lt;/Events&gt;</ConnectString>
+				<DataProvider>XML</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="DataSet1">
+			<Fields>
+				<Field Name="Title">
+					<DataField>Title</DataField>
+				</Field>
+				<Field Name="EventType">
+					<DataField>EventType</DataField>
+				</Field>
+				<Field Name="EventDate">
+					<DataField>EventDate</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>//Event</CommandText>
+				<DataSourceName>Events</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

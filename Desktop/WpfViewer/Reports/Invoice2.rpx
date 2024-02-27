@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.5" PrintWidth="8640" DocumentName="ActiveReports Document" ScriptLang="C#" MasterReport="0" culture="en-US" CompatibilityMode="CrossPlatform">
+  <StyleSheet>
+    <Style Name="Normal" Value="font-style: normal; text-decoration: none; font-weight: normal; color: Black; vertical-align: top; font-size: 10pt; font-family: &quot;Arial&quot;; ddo-char-set: 186" />
+    <Style Name="style1" Value="font-size: 12pt; font-weight: bold; ddo-char-set: 204" />
+    <Style Name="style2" Value="font-size: 14pt; font-weight: bold; ddo-char-set: 204" />
+    <Style Name="style3" Value="font-size: 12pt; font-weight: bold; font-style: italic; ddo-char-set: 204" />
+    <Style Name="style4" Value="font-size: 20.5pt; font-weight: bold; text-align: center; vertical-align: middle; color: Indigo; ddo-char-set: 204; background-color: Thistle" />
+    <Style Name="style5" Value="font-weight: bold; vertical-align: middle; color: Indigo; ddo-char-set: 204" />
+    <Style Name="style6" Value="font-family: &quot;ＭＳ Ｐ明朝&quot;; vertical-align: middle; font-size: 9pt; ddo-char-set: 204" />
+    <Style Name="style7" Value="font-size: 8pt; font-weight: bold; vertical-align: middle; color: Indigo; ddo-char-set: 204" />
+    <Style Name="style8" Value="color: #FFFFFF; font-weight: bold; vertical-align: middle; text-align: center; background-color: Indigo; ddo-char-set: 204" />
+    <Style Name="style9" Value="font-size: 8.25pt; font-weight: bold; vertical-align: middle; text-align: center; color: Indigo; ddo-char-set: 204" />
+    <Style Name="style10" Value="font-family: &quot;ＭＳ 明朝&quot;; font-size: 8.25pt; text-align: right; vertical-align: middle; ddo-char-set: 204" />
+  </StyleSheet>
+  <Sections>
+    <Section Type="GroupHeader" Name="GroupHeader1" Height="3211" DataField="EstimateID" BackColor="16777215" CanGrow="0">
+      <Control Type="AR.Label" Name="lblPrice" Left="6796.8" Top="2894.4" Width="1670.4" Height="302.4" Caption="Price" ClassName="style5" Style="font-family: Arial Unicode MS; text-align: right" PaddingRight="10" />
+      <Control Type="AR.Label" Name="lblProductID" Left="57.6" Top="2894.4" Width="1008" Height="302.4" Caption="ProductID" ClassName="style5" Style="font-family: Arial Unicode MS; font-size: 9pt; text-align: right; ddo-char-set: 1" PaddingRight="3" />
+      <Control Type="AR.Label" Name="lblProductName" Left="1137.6" Top="2894.4" Width="3600" Height="302.4" Caption="ProductName" ClassName="style5" Style="font-family: Arial Unicode MS; text-align: justify; text-justify: distribute-all-lines" PaddingLeft="30" PaddingRight="30" />
+      <Control Type="AR.Label" Name="lblQtyPerUnit" Left="4809.6" Top="2894.4" Width="1900.8" Height="302.4" Caption="QuantityPerUnit" ClassName="style5" Style="font-family: Arial Unicode MS; text-align: center" />
+      <Control Type="AR.Label" Name="lblTitle" BorderTopStyle="13" BorderTopColor="33023" BorderBottomStyle="13" BorderBottomColor="33023" Left="4605.12" Top="89.28" Width="3870" Height="540" Caption="Invoice" Style="background-color: Thistle; color: Indigo; font-family: Arial Unicode MS; font-size: 20.5pt; font-weight: bold; text-align: center; text-justify: distribute-all-lines; vertical-align: middle; ddo-char-set: 1" />
+      <Control Type="AR.Label" Name="lblCompanyAddress" Left="5774.399" Top="1349.28" Width="2700" Height="270" Caption=" 4th Avenue, Suite 220, Kirkland" Style="font-family: Arial Unicode MS; font-size: 9pt; vertical-align: middle" />
+      <Control Type="AR.Label" Name="lblCompanyZipCode" Left="5774.399" Top="1619.28" Width="2700" Height="270" Caption="〒981-3205" Style="font-family: Arial Unicode MS; font-size: 9pt; vertical-align: middle" />
+      <Control Type="AR.Label" Name="lblCompanyTEL" Left="5774.399" Top="1889.28" Width="2700" Height="270" Caption="Phone: 022-777-8210" Style="font-family: Arial Unicode MS; font-size: 9pt; vertical-align: middle" />
+      <Control Type="AR.Label" Name="lblCompanyFAX" Left="5774.399" Top="2159.28" Width="2700" Height="270" Caption="Fax: 022-777-8231" Style="font-family: Arial Unicode MS; font-size: 9pt; vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtPostal" DataField="PostalCode" Left="1440" Top="839.52" Width="2070" Height="270" Text="txtPostal" Style="font-family: Arial Unicode MS; vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtAddress1" DataField="Address" Left="1440" Top="1080" Width="3780" Height="270" Text="txtAddress1" Style="font-family: Arial Unicode MS; vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtAddress2" DataField="BuildingName" Left="1440" Top="1484.64" Width="4108.32" Height="404.64" Text="txtAddress2" Style="font-family: Arial Unicode MS; vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtName" DataField="CompanyName" Left="1440" Top="1889.28" Width="3780" Height="270" Text="txtName" Style="font-family: Arial Unicode MS; vertical-align: middle" />
+      <Control Type="AR.Label" Name="lblCustomerID" Left="0" Top="2550.24" Width="990" Height="240.4801" Caption="Cust ID:" Style="font-family: Arial Unicode MS; font-size: 8.25pt; vertical-align: middle" />
+      <Control Type="AR.Label" Name="lblYear" Left="2671.937" Top="2309.76" Width="150.8028" Height="240.4801" Caption="-" Style="font-size: 8.25pt; vertical-align: middle" />
+      <Control Type="AR.Label" Name="lblMonth" Left="3164.031" Top="2309.76" Width="120.7559" Height="240.4801" Caption="-" Style="font-family: Arial Unicode MS; font-size: 8.25pt; vertical-align: middle" />
+      <Control Type="AR.Label" Name="lblEstimateID" Left="4063.68" Top="2550.24" Width="389.5203" Height="240.4801" Caption="No:" Style="font-family: Arial Unicode MS; font-size: 8.25pt" />
+      <Control Type="AR.Field" Name="txtCustomerID" DataField="CustomerID" Left="1080" Top="2550.24" Width="1471.68" Height="240.4801" Text="CustomerID" Style="font-family: Arial Unicode MS; font-size: 8.25pt; vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtYear" Left="2175.84" Top="2309.714" Width="496.0969" Height="240.4801" Text="XXXX" Style="font-family: ＭＳ PGothic; font-size: 8.25pt; vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtMonth" Left="2822.74" Top="2309.76" Width="341.2914" Height="240.4801" Text="XX" Style="font-family: ＭＳ PGothic; font-size: 8.25pt; vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtDay" Left="3284.788" Top="2309.76" Width="600.48" Height="240.4801" Text="XX" Style="font-family: ＭＳ PGothic; font-size: 8.25pt; vertical-align: middle" />
+      <Control Type="AR.Field" Name="txtEstimateID" DataField="EstimateID" Left="4453.92" Top="2550.24" Width="945.36" Height="240.4801" Text="EstimateID" Style="font-family: Arial Unicode MS; font-size: 8.25pt" />
+      <Control Type="AR.CrossSectionBox" Name="csbDetail" Left="0" Top="2851.2" Right="8568" Bottom="475.2" LineColor="8519755" LineWeight="3" />
+      <Control Type="AR.CrossSectionLine" Name="cslDetail1" Left="1094.4" Top="2851.2" Right="1094.4" Bottom="0" LineColor="8519755" />
+      <Control Type="AR.CrossSectionLine" Name="cslDetail2" Left="4766.4" Top="2851.2" Right="4766.4" Bottom="0" LineColor="8519755" />
+      <Control Type="AR.CrossSectionLine" Name="cslDetail3" Left="6753.6" Top="2851.2" Right="6753.6" Bottom="0" LineColor="8519755" />
+      <Control Type="AR.Label" Name="Label1" Left="1440" Top="2309.76" Width="630.9581" Height="240.48" Caption="Date:" Style="font-family: ＭＳ PGothic; font-size: 8.25pt; vertical-align: middle" />
+    </Section>
+    <Section Type="Detail" Name="Detail" Height="323.0001" BackColor="16777215" KeepTogether="1" CanGrow="0">
+      <Control Type="AR.Shape" Name="shpDetailBack" Left="0" Top="0" Width="8553.6" Height="720" BackColor="16777215" LineColor="16777215" />
+      <Control Type="AR.Field" Name="txtProductId" DataField="ProductID" Left="57.6" Top="28.8" Width="1008" Height="270" Text="ProductID" CanGrow="0" ClassName="style6" Style="font-family: Arial Unicode MS; text-align: right" PaddingRight="3" />
+      <Control Type="AR.Field" Name="txtProductName" DataField="ProductName" Left="1137.6" Top="28.8" Width="3600" Height="270" Text="ProductName" CanGrow="0" ClassName="style6" Style="font-family: Arial Unicode MS" PaddingLeft="10" />
+      <Control Type="AR.Field" Name="txtQuantitPerUnit" DataField="QuantityPerUnit" Left="4809.6" Top="28.8" Width="1900.8" Height="270" Text="QuantityPerUnit" CanGrow="0" ClassName="style6" Style="font-family: Arial Unicode MS; text-align: center" />
+      <Control Type="AR.Field" Name="txtPrice" DataField="Price" Left="6796.8" Top="30" Width="1670.4" Height="270" Text="Price" OutputFormat="$#,##0" CanGrow="0" ClassName="style6" Style="font-family: Arial Unicode MS; text-align: right" PaddingRight="10" />
+    </Section>
+    <Section Type="GroupFooter" Name="GroupFooter1" Height="569.4" BackColor="16777215" NewPage="2">
+      <Control Type="AR.Field" Name="txtTax" BorderLeftStyle="1" BorderLeftColor="33023" BorderRightStyle="1" BorderRightColor="33023" Left="5548.32" Top="36" Width="935.9999" Height="432" Text="Tax" OutputFormat="$#,##0" Style="font-family: Arial Unicode MS" PaddingRight="2" />
+      <Control Type="AR.Label" Name="lblTotalPrice1" Left="2373.12" Top="0" Width="686.4004" Height="403.2" Caption="Before Tax" ClassName="style7" Style="font-family: Arial Unicode MS" />
+      <Control Type="AR.Label" Name="lblTotal" Left="1709.28" Top="7.2" Width="554.4" Height="453.6" Caption="Total" ClassName="style8" Style="font-family: Arial Unicode MS" />
+      <Control Type="AR.Label" Name="lblTaxPrice1" Left="4993.92" Top="36" Width="479.5202" Height="403.2" Caption="Tax" ClassName="style7" Style="font-family: Arial Unicode MS" />
+      <Control Type="AR.Label" Name="lblPretaxPrice1" Left="6575.04" Top="37.44" Width="560.1606" Height="403.2" Caption="After Tax" ClassName="style7" Style="font-family: Arial Unicode MS" />
+      <Control Type="AR.Line" Name="linBorder" X1="8568" Y1="0" X2="9.999999" Y2="0" LineColor="33023" />
+      <Control Type="AR.Field" Name="txtTotalPrice" DataField="Price" BorderLeftStyle="1" BorderLeftColor="33023" BorderRightStyle="1" BorderRightColor="33023" Left="3284.64" Top="36" Width="1320.48" Height="432" Text="TotalPrice" OutputFormat="$#,##0" Style="font-family: Arial Unicode MS" SummaryType="3" SummaryRunning="1" SummaryGroup="GroupHeader1" PaddingRight="2" />
+      <Control Type="AR.Field" Name="txtPretax" BorderLeftStyle="1" BorderLeftColor="33023" Left="7135.201" Top="36" Width="1339.2" Height="432" Text="Pretax" OutputFormat="$#,##0" Style="font-family: Arial Unicode MS" PaddingRight="2" />
+    </Section>
+  </Sections>
+  <ReportComponentTray />
+  <Script><![CDATA[const int PAGEROWS = 8;		
+private System.Drawing.Color myBackColor;	              
+private System.Drawing.Color myLineColor;
+int GroupCount;    
+int iCnt;		
+int mCnt;			
+int gCnt;			
+int MAX_mCnt;		
+int MAX_gCnt;		
+
+System.Data.DataSet myDataSet = new System.Data.DataSet();
+System.Data.DataRow myDataRow;
+
+public void ActiveReport_ReportStart()
+{
+
+	rpt.Document.Printer.PrinterName = "";
+	rpt.PageSettings.PaperKind = GrapeCity.ActiveReports.Printing.PaperKind.Custom;
+	rpt.PageSettings.PaperHeight = 11.69F;
+	rpt.PageSettings.PaperWidth = 8.27F;
+
+
+	this.txtYear.Value = DateTime.Today.Year;
+	this.txtMonth.Value = DateTime.Today.Month;
+	this.txtDay.Value = DateTime.Today.Day;       
+
+
+	myBackColor = this.lblTitle.BackColor;
+	myLineColor = this.lblTitle.ForeColor;
+
+
+	this.csbDetail.LineColor = myLineColor;
+	this.cslDetail1.LineColor = myLineColor;
+	this.cslDetail2.LineColor = myLineColor;
+	this.cslDetail3.LineColor = myLineColor;
+
+
+	lblTitle.Border.TopColor = myLineColor;
+	lblTitle.Border.BottomColor = myLineColor;
+
+
+	this.txtTotalPrice.Border.LeftColor = myLineColor;
+	this.txtTotalPrice.Border.RightColor = myLineColor;
+	this.txtTax.Border.LeftColor = myLineColor;
+	this.txtTax.Border.RightColor = myLineColor;
+	this.txtPretax.Border.LeftColor = myLineColor;
+	this.linBorder.LineColor = myLineColor;	
+	
+
+	String strMainSQL;
+	String strMainCn;
+
+	strMainSQL = "SELECT Estimate.EstimateID, Products.ProductName, Products.Price, [Quantity] & '／' & [Unit] AS QuantityPerUnit, Customers.PostalCode, Customers.Address, Customers.BuildingName, Customers.CompanyName, Customers.CustomerID, Products.ProductID FROM (Customers INNER JOIN Estimate ON Customers.CustomerID = Estimate.CustomerID) INNER JOIN Products ON Estimate.ProductID = Products.ProductID ORDER BY Estimate.EstimateID";
+	strMainCn = @"Data Source=..\\..\\..\\..\\..\\..\\..\\..\\Data\\Seikyu2.db;";
+
+	System.Data.SQLite.SQLiteConnection myConnection = new System.Data.SQLite.SQLiteConnection(strMainCn);
+	System.Data.SQLite.SQLiteDataAdapter MainDataAdapter = new System.Data.SQLite.SQLiteDataAdapter(strMainSQL, myConnection);
+	System.Data.SQLite.SQLiteDataAdapter CountDataAdapter = new System.Data.SQLite.SQLiteDataAdapter("SELECT Count(Estimate.AutoID) AS GroupCount FROM Estimate GROUP BY Estimate.EstimateID ORDER BY Estimate.EstimateID", myConnection);
+
+	MainDataAdapter.Fill(myDataSet, "tb_Main");
+	CountDataAdapter.Fill(myDataSet, "tb_Count");
+
+
+	MAX_mCnt = myDataSet.Tables["tb_Main"].Rows.Count;
+	MAX_gCnt = myDataSet.Tables["tb_Count"].Rows.Count;
+
+
+	myDataRow = myDataSet.Tables["tb_Count"].Rows[0];
+	GroupCount = int.Parse(myDataRow["GroupCount"].ToString());
+	gCnt = 1;
+
+
+	myDataRow = myDataSet.Tables["tb_Main"].Rows[0];	
+}
+
+public void ActiveReport_DataInitialize()
+{
+
+	rpt.Fields.Add("EstimateID");
+	rpt.Fields.Add("CustomerID");
+	rpt.Fields.Add("ProductName");
+	rpt.Fields.Add("Price");
+	rpt.Fields.Add("QuantityPerUnit");
+	rpt.Fields.Add("PostalCode");
+	rpt.Fields.Add("Address");
+	rpt.Fields.Add("BuildingName");
+	rpt.Fields.Add("CompanyName");
+	rpt.Fields.Add("ProductID");
+	
+}
+
+
+public bool ActiveReport_FetchData(bool eof)
+{
+	try
+	{
+
+		if (iCnt == 0)
+		{
+			rpt.Fields["EstimateID"].Value = myDataRow["EstimateID"];
+			rpt.Fields["CustomerID"].Value = myDataRow["CustomerID"];
+			rpt.Fields["PostalCode"].Value = myDataRow["PostalCode"];
+			rpt.Fields["Address"].Value = myDataRow["Address"];
+			rpt.Fields["BuildingName"].Value = myDataRow["BuildingName"];
+			rpt.Fields["CompanyName"].Value = myDataRow["CompanyName"];
+		}
+		
+	
+		if (iCnt < PAGEROWS)
+		{
+				
+
+			if (iCnt < GroupCount)
+			{
+	
+				myDataRow = myDataSet.Tables["tb_Main"].Rows[mCnt];
+				rpt.Fields["ProductName"].Value = myDataRow["ProductName"];
+				rpt.Fields["QuantityPerUnit"].Value = myDataRow["QuantityPerUnit"];
+				rpt.Fields["ProductID"].Value = myDataRow["ProductID"];
+				rpt.Fields["Price"].Value = myDataRow["Price"];
+
+		
+				if (MAX_mCnt > mCnt)
+				{	
+					mCnt++;
+				}
+			}
+			else
+			{
+		
+				rpt.Fields["ProductID"].Value = "";
+				rpt.Fields["ProductName"].Value = "";
+				rpt.Fields["QuantityPerUnit"].Value = "";
+				rpt.Fields["Price"].Value = "";
+			}
+				                
+		
+			iCnt++;
+			eof = false;
+		}
+		else
+		{
+		
+			if (MAX_gCnt > gCnt)
+			{
+	
+				if (PAGEROWS < GroupCount)
+				{
+					for (int i = PAGEROWS; i <= GroupCount - 1; i++)
+						mCnt += 1;
+				}
+				myDataRow = myDataSet.Tables["tb_Main"].Rows[mCnt];
+
+				rpt.Fields["EstimateID"].Value = myDataRow["EstimateID"];
+				rpt.Fields["CustomerID"].Value = myDataRow["CustomerID"];
+				rpt.Fields["PostalCode"].Value = myDataRow["PostalCode"];
+				rpt.Fields["Address"].Value = myDataRow["Address"];
+				rpt.Fields["BuildingName"].Value = myDataRow["BuildingName"];
+				rpt.Fields["CompanyName"].Value = myDataRow["CompanyName"];
+
+	
+				rpt.Fields["ProductName"].Value = myDataRow["ProductName"];
+				rpt.Fields["QuantityPerUnit"].Value = myDataRow["QuantityPerUnit"];
+				rpt.Fields["ProductID"].Value = myDataRow["ProductID"];
+				rpt.Fields["Price"].Value = myDataRow["Price"];
+
+
+				if (MAX_mCnt > mCnt)
+				{
+					mCnt += 1;
+				}
+
+				myDataRow = myDataSet.Tables["tb_Count"].Rows[gCnt];
+				GroupCount = (int) myDataRow["GroupCount"];
+				gCnt++;
+				iCnt = 1;
+				eof = false;
+			}
+			else
+			{
+				eof = true;
+			}
+                					
+		}
+				
+	}
+		
+	catch
+	{
+		eof = true;
+	}
+	return eof;
+}
+
+
+
+public void Detail_Format()
+{
+
+	if(iCnt % 2 == 0)
+		this.shpDetailBack.BackColor = System.Drawing.Color.White;   
+	else
+		this.shpDetailBack.BackColor = myBackColor;
+}
+
+public void GroupFooter1_Format()
+{
+
+	this.txtTax.Value = (int) ((double) txtTotalPrice.Value * 0.05);
+	this.txtPretax.Value = int.Parse(txtTotalPrice.Value.ToString()) + (int) txtTax.Value;	
+}
+
+]]></Script>
+  <PageSettings TopMargin="1152" BottomMargin="1152" PaperSize="1" PaperWidth="12240" PaperHeight="15840" PaperName="" />
+  <Parameters />
+</ActiveReportsLayout>
