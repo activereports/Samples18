@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ActiveReportsLayout Version="3.5" PrintWidth="9375" MaxPages="100" DocumentName="ActiveReports Document" ScriptLang="VB.NET" MasterReport="0" CompatibilityMode="CrossPlatform">
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ActiveReportsLayout Version="3.5" PrintWidth="9360" MaxPages="100" DocumentName="ActiveReports Document" ScriptLang="VB.NET" MasterReport="0" CompatibilityMode="CrossPlatform">
   <StyleSheet>
     <Style Name="Normal" Value="font-family: Arial; font-style: normal; text-decoration: none; font-weight: normal; font-size: 10pt; color: Black; ddo-char-set: 186" />
     <Style Name="Heading1" Value="font-family: Arial; font-size: 16pt; font-style: normal; font-weight: bold" />
@@ -41,7 +41,7 @@
       <Control Type="AR.Field" Name="totalTextBox" DataField="Total" Left="7920" Top="0" Width="1441.441" Height="285.0001" Text="Total" OutputFormat="$#,##0.00" Style="text-align: right" PaddingLeft="2" PaddingRight="2" />
     </Section>
     <Section Type="GroupFooter" Name="customerGroupFooter" Height="1440" BackColor="16777215" NewPage="2">
-      <Control Type="AR.Field" Name="grandTotalTextBox" Left="7920" Top="567.36" Width="1440" Height="288" Text="Grand Total" Style="text-align: right" PaddingLeft="2" PaddingRight="2" />
+      <Control Type="AR.Field" Name="grandTotalTextBox" Left="7920" Top="567.36" Width="1440" Height="288" Text="Grand Total" OutputFormat="$#,##0.00" Style="text-align: right" PaddingLeft="2" PaddingRight="2" />
       <Control Type="AR.Shape" Name="shape2" Left="6480" Top="2.879984" Width="2880" Height="864.0001" BackColor="16777215" RoundingRadius="9.99" />
       <Control Type="AR.Shape" Name="shape4" Left="6480" Top="0" Width="1440" Height="858.2401" BackColor="8267593" BackStyle="1" LineColor="16777215" RoundingRadius="9.99" />
       <Control Type="AR.Label" Name="freightLabel" Left="6480" Top="290.88" Width="1440" Height="288" Caption="Shipping:" Style="color: White; font-weight: bold; ddo-char-set: 1" PaddingLeft="2" PaddingRight="2" />
@@ -82,7 +82,7 @@ Public Sub customerGroupFooter_Format()
 	'Calculate the total based on values from textboxes in the group footer.
 	Dim subtotal As Double = Convert.ToDouble(subtotalTextBox.Value)
 	Dim freight As Double = Convert.ToDouble(freightTextBox.Value)
-	grandTotalTextBox.Value = String.Format("{0:C}", subtotal + freight)
+	grandTotalTextBox.Value = Convert.ToString(subtotal + freight)
 End Sub
 
 

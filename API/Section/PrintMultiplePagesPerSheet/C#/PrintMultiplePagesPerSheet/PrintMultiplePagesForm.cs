@@ -120,6 +120,7 @@ namespace ActiveReports.Samples.PrintMultiplePagesPerSheet
 			//Define and run the Invoice report
 			var rpt = new SectionReport();
 			rpt.LoadLayout(XmlReader.Create(Properties.Resources.Invoice));
+			rpt.Document.Printer.PrinterName = String.Empty;
 			((GrapeCity.ActiveReports.Data.DbDataSource)rpt.DataSource).ConnectionString = Properties.Resources.ConnectionString;						
 			rpt.Run(false);
 

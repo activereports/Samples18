@@ -144,11 +144,11 @@
   <data name="&gt;&gt;viewer.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <metadata name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="menuStrip.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>17, 17</value>
-  </metadata>
+  </data>
   <data name="openToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+O</value>
+    <value>Control+O</value>
   </data>
   <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 22</value>
@@ -163,7 +163,7 @@
     <value>False</value>
   </data>
   <data name="exportToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+E</value>
+    <value>Control+E</value>
   </data>
   <data name="exportToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 22</value>
@@ -172,7 +172,7 @@
     <value>Export</value>
   </data>
   <data name="closeToolStripMenuItem.ShortcutKeys" type="System.Windows.Forms.Keys, System.Windows.Forms">
-    <value>Ctrl+Q</value>
+    <value>Control+Q</value>
   </data>
   <data name="closeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>180, 22</value>
@@ -225,15 +225,15 @@
   <data name="&gt;&gt;menuStrip.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <metadata name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <data name="openFileDialog.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>125, 17</value>
-  </metadata>
+  </data>
   <data name="openFileDialog.Filter" xml:space="preserve">
     <value>All Reports (*.rpx,*.rdf,*.rdl,*.rdlx)|*.rpx;*.rdf;*.rdl;*.rdlx|Section Report Files (*.rpx,*.rdf)|*.rpx;*.rdf|Page Report Files (*.rdlx)|*.rdlx|RDLX Report Files (*.rdl,*.rdlx)|*.rdl;*.rdlx|All files (*.*)|*.*</value>
   </data>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+  <data name="$this.Localizable" type="System.Boolean, mscorlib">
     <value>True</value>
-  </metadata>
+  </data>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
     <value>96, 96</value>
   </data>

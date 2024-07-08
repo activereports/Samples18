@@ -4,7 +4,7 @@
     <Title>ActiveReports Sample</Title>
     <NeutralLanguage>en-US</NeutralLanguage>
     <Description>ActiveReports Sample</Description>
-    <Copyright>Â© MESCIUS inc. All rights reserved.</Copyright>
+    <Copyright>MESCIUS inc.</Copyright>
     <Product>ActiveReports Sample</Product>
   </PropertyGroup>
   <PropertyGroup>
@@ -69,7 +69,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MESCIUS.ActiveReports.Viewer.Win">
-      <Version>18.0.0</Version>
+      <Version>18.1.1</Version>
     </PackageReference>
     <PackageReference Include="System.Data.SQLite.Core">
       <Version>1.0.118</Version>

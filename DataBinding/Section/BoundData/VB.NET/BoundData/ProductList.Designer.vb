@@ -224,6 +224,10 @@ Partial Public Class ProductList
         CType(Me.textBoxUnitPrice, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.textBoxUnitsOnOrder, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
+        '
+        ' Printer settions
+        '
+        Document.Printer.PrinterName = String.Empty
 
     End Sub
     Private WithEvents Shape1 As GrapeCity.ActiveReports.SectionReportModel.Shape

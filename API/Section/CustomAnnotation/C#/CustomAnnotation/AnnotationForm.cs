@@ -2,6 +2,8 @@ using System;
 using System.Drawing;
 using System.Resources;
 using System.Windows.Forms;
+using GrapeCity.ActiveReports;
+using System.Xml;
 using GrapeCity.ActiveReports.Document.Section.Annotations;
 
 namespace ActiveReports.Samples.CustomAnnotation
@@ -27,7 +29,10 @@ namespace ActiveReports.Samples.CustomAnnotation
 			ts.Items.Add(tsbAnnotation);
 
 			//Load report layout and run report
-			arvMain.LoadDocument(Properties.Resources.FileName);
+			SectionReport report = new SectionReport();
+			report.LoadLayout(XmlReader.Create(Properties.Resources.FileName));
+			report.Document.Printer.PrinterName = String.Empty;	
+			arvMain.LoadDocument(report);
 		}
 
 		void tsbAnnotation_Click(object sender, EventArgs e)

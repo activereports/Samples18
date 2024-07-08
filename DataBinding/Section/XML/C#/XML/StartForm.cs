@@ -45,6 +45,7 @@ namespace ActiveReports.Samples.XML
 			{
 				var rpt = new SectionReport();
 				rpt.LoadLayout(XmlReader.Create(Properties.Resources.CustomersOrders));
+				rpt.Document.Printer.PrinterName = String.Empty;
 
 				XMLDataSource ds = rpt.DataSource as XMLDataSource;
 				if (ds == null)
@@ -94,6 +95,7 @@ namespace ActiveReports.Samples.XML
 				//OrdersLeveled rpt = new OrdersLeveled();
 				var rpt = new SectionReport();
 				rpt.LoadLayout(XmlReader.Create(Properties.Resources.OrdersLeveled));
+				rpt.Document.Printer.PrinterName = String.Empty;
 
 				XMLDataSource ds = rpt.DataSource as XMLDataSource;
 				if (ds == null)

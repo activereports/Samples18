@@ -35,6 +35,7 @@ Public Class BindIListToDataGridSample
         Dim rpt As SectionReport
         rpt = New SectionReport
         rpt.LoadLayout(XmlReader.Create("IlistReportSample.rpx"))
+        rpt.Document.Printer.PrinterName = String.Empty
         rpt.DataSource = productCollection
 
         ' Pass the document to show in the viewer form

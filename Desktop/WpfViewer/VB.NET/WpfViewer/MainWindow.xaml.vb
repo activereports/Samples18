@@ -1,6 +1,9 @@
 ﻿Imports System
+Imports System.IO
 Imports System.Windows
 Imports System.Windows.Controls
+Imports GrapeCity.ActiveReports
+Imports System.Xml
 
 Public Class MainWindow
 
@@ -39,28 +42,23 @@ Public Class MainWindow
 		End If
 
 		'Load Selected Report
-		Select Case _report.Content.ToString()
-			Case "Catalog.rdlx"
-				ReportViewer.LoadDocument(CurrentFileLocation + _report.Content.ToString())
+		LoadReport(_report.Content.ToString())
+	End Sub
+
+	Private Sub LoadReport(reportName As String)
+		Dim extension = Path.GetExtension(reportName)
+		Select Case extension
+			Case ".rpx"
+				Dim rpt As New SectionReport()
+				rpt.LoadLayout(XmlReader.Create(CurrentFileLocation + reportName))
+				rpt.Document.Printer.PrinterName = String.Empty
+				ReportViewer.LoadDocument(rpt)
 				Exit Select
-			Case "EmployeeSales.rdlx"
-				ReportViewer.LoadDocument(CurrentFileLocation + _report.Content.ToString())
-				Exit Select
-			Case "Invoice1.rdlx"
-				ReportViewer.LoadDocument(CurrentFileLocation + _report.Content.ToString())
-				Exit Select
-			Case "Invoice2.rpx"
-				ReportViewer.LoadDocument(CurrentFileLocation + _report.Content.ToString())
-				Exit Select
-			Case "LabelReport.rpx"
-				ReportViewer.LoadDocument(CurrentFileLocation + _report.Content.ToString())
-				Exit Select
-			Case "PaymentSlip.rpx"
-				ReportViewer.LoadDocument(CurrentFileLocation + _report.Content.ToString())
+			Case ".rdlx"
+				ReportViewer.LoadDocument(CurrentFileLocation + reportName)
 				Exit Select
 		End Select
 	End Sub
-
 	''' <summary>
 	'''In the SelectionChanged event of the combo box, disable 'Add Custom Button' checkbox and 'Preview' button, when no report is selected.
 	''' </summary>

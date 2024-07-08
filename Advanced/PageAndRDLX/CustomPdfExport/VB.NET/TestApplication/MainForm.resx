@@ -141,8 +141,14 @@
   <data name="RadioButton2.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
   </data>
+  <data name="RadioButton2.Text" xml:space="preserve">
+    <value>PDFsharp</value>
+  </data>
   <data name="&gt;&gt;RadioButton2.Name" xml:space="preserve">
     <value>RadioButton2</value>
+  </data>
+  <data name="&gt;&gt;RadioButton2.Type" xml:space="preserve">
+    <value>ActiveReports.Samples.Export.Rendering.MainForm+RenderingExtensionWrapper, ActiveReports.Samples.TestApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;RadioButton2.Parent" xml:space="preserve">
     <value>splitContainer1.Panel1</value>
@@ -162,8 +168,14 @@
   <data name="RadioButton1.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
   </data>
+  <data name="RadioButton1.Text" xml:space="preserve">
+    <value>AR PDF</value>
+  </data>
   <data name="&gt;&gt;RadioButton1.Name" xml:space="preserve">
     <value>RadioButton1</value>
+  </data>
+  <data name="&gt;&gt;RadioButton1.Type" xml:space="preserve">
+    <value>ActiveReports.Samples.Export.Rendering.MainForm+RenderingExtensionWrapper, ActiveReports.Samples.TestApplication, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
   <data name="&gt;&gt;RadioButton1.Parent" xml:space="preserve">
     <value>splitContainer1.Panel1</value>
@@ -486,6 +498,9 @@
   <data name="arViewer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <data name="arViewer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
   <data name="arViewer.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
@@ -500,6 +515,9 @@
   </data>
   <data name="&gt;&gt;arViewer.Name" xml:space="preserve">
     <value>arViewer</value>
+  </data>
+  <data name="&gt;&gt;arViewer.Type" xml:space="preserve">
+    <value>GrapeCity.ActiveReports.Viewer.Win.Viewer, MESCIUS.ActiveReports.Viewer.Win, Version=18.1.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff</value>
   </data>
   <data name="&gt;&gt;arViewer.Parent" xml:space="preserve">
     <value>splitContainer3.Panel1</value>
@@ -664,7 +682,7 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>96, 96</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>976, 614</value>

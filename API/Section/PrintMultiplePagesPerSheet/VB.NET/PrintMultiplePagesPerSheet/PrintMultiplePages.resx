@@ -127,10 +127,7 @@
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 4</value>
-  </data>
-  <data name="splitContainer1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>3, 3</value>
   </data>
   <data name="splitContainer1.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -138,23 +135,14 @@
   <data name="lblPagenumAPI.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lblPagenumAPI.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
-  <data name="lblPagenumAPI.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="lblPagenumAPI.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="lblPagenumAPI.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>5, 20</value>
   </data>
   <data name="lblPagenumAPI.Size" type="System.Drawing.Size, System.Drawing">
     <value>362, 20</value>
   </data>
   <data name="lblPagenumAPI.TabIndex" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>2</value>
   </data>
   <data name="lblPagenumAPI.Text" xml:space="preserve">
     <value>Select Number of Pages to Print on One Sheet:</value>
@@ -171,9 +159,6 @@
   <data name="&gt;&gt;lblPagenumAPI.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="cmbPageCountAPI.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
   <data name="cmbPageCountAPI.Items" xml:space="preserve">
     <value>2</value>
   </data>
@@ -184,16 +169,13 @@
     <value>8</value>
   </data>
   <data name="cmbPageCountAPI.Location" type="System.Drawing.Point, System.Drawing">
-    <value>375, 9</value>
-  </data>
-  <data name="cmbPageCountAPI.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>373, 17</value>
   </data>
   <data name="cmbPageCountAPI.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 28</value>
+    <value>121, 28</value>
   </data>
   <data name="cmbPageCountAPI.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
+    <value>1</value>
   </data>
   <data name="&gt;&gt;cmbPageCountAPI.Name" xml:space="preserve">
     <value>cmbPageCountAPI</value>
@@ -207,23 +189,14 @@
   <data name="&gt;&gt;cmbPageCountAPI.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="btnAPIprint.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
-  <data name="btnAPIprint.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
   <data name="btnAPIprint.Location" type="System.Drawing.Point, System.Drawing">
-    <value>532, 9</value>
-  </data>
-  <data name="btnAPIprint.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>500, 17</value>
   </data>
   <data name="btnAPIprint.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 30</value>
+    <value>96, 24</value>
   </data>
   <data name="btnAPIprint.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
+    <value>0</value>
   </data>
   <data name="btnAPIprint.Text" xml:space="preserve">
     <value>Print</value>
@@ -261,11 +234,8 @@
   <data name="apiViewer.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="apiViewer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
   <data name="apiViewer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1052, 694</value>
+    <value>840, 533</value>
   </data>
   <data name="apiViewer.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -295,13 +265,10 @@
     <value>1</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1052, 741</value>
+    <value>840, 583</value>
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="splitContainer1.SplitterWidth" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>46</value>
   </data>
   <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -313,7 +280,7 @@
     <value>System.Windows.Forms.SplitContainer, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;splitContainer1.Parent" xml:space="preserve">
-    <value>tbAPIPrint</value>
+    <value>tbAPIprint</value>
   </data>
   <data name="&gt;&gt;splitContainer1.ZOrder" xml:space="preserve">
     <value>0</value>
@@ -325,10 +292,7 @@
     <value>True</value>
   </data>
   <data name="splitContainer2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 4</value>
-  </data>
-  <data name="splitContainer2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>3, 3</value>
   </data>
   <data name="splitContainer2.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
@@ -336,17 +300,11 @@
   <data name="lblPagenum.AutoSize" type="System.Boolean, mscorlib">
     <value>True</value>
   </data>
-  <data name="lblPagenum.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
   <data name="lblPagenum.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="lblPagenum.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 13</value>
-  </data>
-  <data name="lblPagenum.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 0, 4, 0</value>
+    <value>5, 20</value>
   </data>
   <data name="lblPagenum.Size" type="System.Drawing.Size, System.Drawing">
     <value>362, 20</value>
@@ -369,9 +327,6 @@
   <data name="&gt;&gt;lblPagenum.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="cmbPageCount.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
   <data name="cmbPageCount.Items" xml:space="preserve">
     <value>2</value>
   </data>
@@ -388,13 +343,10 @@
     <value>10</value>
   </data>
   <data name="cmbPageCount.Location" type="System.Drawing.Point, System.Drawing">
-    <value>375, 9</value>
-  </data>
-  <data name="cmbPageCount.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>373, 17</value>
   </data>
   <data name="cmbPageCount.Size" type="System.Drawing.Size, System.Drawing">
-    <value>150, 28</value>
+    <value>121, 28</value>
   </data>
   <data name="cmbPageCount.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -411,20 +363,14 @@
   <data name="&gt;&gt;cmbPageCount.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
-  <data name="btnPrint.Font" type="System.Drawing.Font, System.Drawing">
-    <value>Microsoft Sans Serif, 10pt</value>
-  </data>
   <data name="btnPrint.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
     <value>NoControl</value>
   </data>
   <data name="btnPrint.Location" type="System.Drawing.Point, System.Drawing">
-    <value>532, 9</value>
-  </data>
-  <data name="btnPrint.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>500, 17</value>
   </data>
   <data name="btnPrint.Size" type="System.Drawing.Size, System.Drawing">
-    <value>120, 30</value>
+    <value>96, 24</value>
   </data>
   <data name="btnPrint.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -465,11 +411,8 @@
   <data name="arViewer.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="arViewer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
   <data name="arViewer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1052, 694</value>
+    <value>840, 533</value>
   </data>
   <data name="arViewer.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -499,13 +442,10 @@
     <value>1</value>
   </data>
   <data name="splitContainer2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1052, 741</value>
+    <value>840, 583</value>
   </data>
   <data name="splitContainer2.SplitterDistance" type="System.Int32, mscorlib">
-    <value>42</value>
-  </data>
-  <data name="splitContainer2.SplitterWidth" type="System.Int32, mscorlib">
-    <value>5</value>
+    <value>46</value>
   </data>
   <data name="splitContainer2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -523,22 +463,19 @@
     <value>0</value>
   </data>
   <metadata name="PrintDocument.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>240, 17</value>
+    <value>106, 17</value>
   </metadata>
   <metadata name="dlgPrint.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>374, 17</value>
+    <value>17, 17</value>
   </metadata>
   <data name="tbAPIPrint.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
-  </data>
-  <data name="tbAPIPrint.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>4, 29</value>
   </data>
   <data name="tbAPIPrint.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>3, 3, 3, 3</value>
   </data>
   <data name="tbAPIPrint.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1060, 749</value>
+    <value>846, 589</value>
   </data>
   <data name="tbAPIPrint.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -559,16 +496,13 @@
     <value>0</value>
   </data>
   <data name="tbClassicPrint.Location" type="System.Drawing.Point, System.Drawing">
-    <value>4, 25</value>
-  </data>
-  <data name="tbClassicPrint.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>4, 29</value>
   </data>
   <data name="tbClassicPrint.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+    <value>3, 3, 3, 3</value>
   </data>
   <data name="tbClassicPrint.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1060, 749</value>
+    <value>846, 589</value>
   </data>
   <data name="tbClassicPrint.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -594,14 +528,11 @@
   <data name="tabControl.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="tabControl.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
-  </data>
   <data name="tabControl.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1068, 778</value>
+    <value>854, 622</value>
   </data>
   <data name="tabControl.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>0</value>
   </data>
   <data name="&gt;&gt;tabControl.Name" xml:space="preserve">
     <value>tabControl</value>
@@ -618,14 +549,11 @@
   <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>120, 120</value>
-  </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1068, 778</value>
+    <value>854, 622</value>
   </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>4, 4, 4, 4</value>
+  <data name="$this.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Microsoft Sans Serif, 10pt</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Print Multiple Pages Per Sheet Sample</value>
@@ -643,7 +571,7 @@
     <value>System.Windows.Forms.PrintDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>PrintMultiplePages</value>
+    <value>PrintMultiplePagesForm</value>
   </data>
   <data name="&gt;&gt;$this.Type" xml:space="preserve">
     <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>

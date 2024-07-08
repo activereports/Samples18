@@ -20,6 +20,7 @@ namespace ActiveReports.Samples.LINQ
 			// To generate a report.
 			var rpt = new SectionReport();
 			rpt.LoadLayout(XmlReader.Create("..\\..\\..\\..\\rptLINQtoObject.rpx"));
+			rpt.Document.Printer.PrinterName = String.Empty;
 			// To run the report.
 			arvMain.LoadDocument(rpt);
 		}

@@ -1,0 +1,1204 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DeliverySlip_theme.rdlx</dd:Name>
+	<Body>
+		<Height>11in</Height>
+		<ReportItems>
+			<FixedPage Name="FixedPage1">
+				<Pages>
+					<Page>
+						<ReportItems>
+							<Textbox Name="lblTitle">
+								<Left>4.675591in</Left>
+								<Width>4.9515cm</Width>
+								<Height>1.4275cm</Height>
+								<Style>
+									<BackgroundColor>=Theme.Colors!Accent1</BackgroundColor>
+									<Color>White</Color>
+									<FontSize>16pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>30pt</PaddingLeft>
+									<PaddingRight>30pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Center</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+									<BorderColor>
+										<Default>=Theme.Colors!Accent2</Default>
+									</BorderColor>
+									<BorderWidth>
+										<Default>2pt</Default>
+									</BorderWidth>
+								</Style>
+								<ZIndex>3</ZIndex>
+								<Value>=Theme.Constants("EnText")</Value>
+							</Textbox>
+							<Textbox Name="TextBox2">
+								<Top>1.075in</Top>
+								<Left>0.8989606cm</Left>
+								<Width>6.6675cm</Width>
+								<Height>1.7cm</Height>
+								<Style>
+									<Format>""</Format>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<ZIndex>6</ZIndex>
+								<Value>=IIF(Fields!BuildingName.Value &lt;&gt; "", Fields!BuildingName.Value &amp; vbcrlf , "") &amp; IIF(Fields!Address.Value &lt;&gt; "", Fields!Address.Value &amp; vbcrlf, "") &amp; Fields!City.Value &amp; " " &amp; Fields!State.Value &amp; " " &amp; Fields!PostalCode.Value</Value>
+							</Textbox>
+							<Textbox Name="TextBox3">
+								<Top>2.116667cm</Top>
+								<Left>0.8989606cm</Left>
+								<Width>6.67cm</Width>
+								<Height>0.6063cm</Height>
+								<Style>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<ZIndex>7</ZIndex>
+								<Value>=Fields!CompanyName.Value</Value>
+							</Textbox>
+							<Textbox Name="lblCompanyAddress">
+								<Left>2.791667in</Left>
+								<Width>4.76cm</Width>
+								<Height>1.4275cm</Height>
+								<Style>
+									<FontSize>7pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<ZIndex>9</ZIndex>
+								<Value>720 4th Avenue, Suite 220
+Kirkland WA 98033
+Phone: (425) 828-4440
+fax: (425) 828-4441</Value>
+							</Textbox>
+							<Textbox Name="lblCustomerID">
+								<Top>1.75in</Top>
+								<Left>0.353921in</Left>
+								<Width>1.9cm</Width>
+								<Height>0.42cm</Height>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Left</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<ZIndex>14</ZIndex>
+								<Value>Customer ID</Value>
+							</Textbox>
+							<Textbox Name="txtCustomerID">
+								<Top>1.75in</Top>
+								<Left>1.103921in</Left>
+								<Width>1.61cm</Width>
+								<Height>0.42cm</Height>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Left</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<ZIndex>15</ZIndex>
+								<Value>=Fields!CustomerID.Value</Value>
+							</Textbox>
+							<Textbox Name="txtYear">
+								<Top>1.75in</Top>
+								<Left>3.228921in</Left>
+								<Width>2.9375cm</Width>
+								<Height>0.42cm</Height>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<ZIndex>16</ZIndex>
+								<Value>=System.DateTime.Today.Year &amp; "/" &amp; System.DateTime.Today.Month &amp; "/" &amp; System.DateTime.Today.Day</Value>
+							</Textbox>
+							<Textbox Name="txtEstimateID">
+								<Top>1.75in</Top>
+								<Left>5.353921in</Left>
+								<Width>2.305cm</Width>
+								<Height>0.42cm</Height>
+								<Style>
+									<FontSize>8pt</FontSize>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+									<TextAlign>Right</TextAlign>
+									<VerticalAlign>Middle</VerticalAlign>
+								</Style>
+								<ZIndex>23</ZIndex>
+								<Value>="No. " &amp; Fields!EstimateID.Value</Value>
+							</Textbox>
+							<Rectangle Name="Container3">
+								<Top>9.75in</Top>
+								<Left>0.8989568cm</Left>
+								<Width>15.24cm</Width>
+								<Height>0.97cm</Height>
+								<Style>
+									<BorderColor>
+										<Default>=Theme.Colors!Accent4</Default>
+									</BorderColor>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>1.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<ZIndex>24</ZIndex>
+								<dd:RoundingRadius xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+									<BottomLeft>0cm</BottomLeft>
+									<BottomRight>0cm</BottomRight>
+								</dd:RoundingRadius>
+								<ReportItems>
+									<Textbox Name="TextBox39">
+										<Width>3.4925cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<BackgroundColor>=Theme.Colors!Accent4</BackgroundColor>
+											<Color>White</Color>
+											<FontWeight>700</FontWeight>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Center</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+										</Style>
+										<ZIndex>2</ZIndex>
+										<Value>Total</Value>
+									</Textbox>
+									<Textbox Name="TextBox41">
+										<Left>1.885417in</Left>
+										<Width>2.831cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<FontSize>8.25pt</FontSize>
+											<Format>$#0</Format>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Right</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+											<BorderColor>
+												<Default>=Theme.Colors!Accent4</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Left>Solid</Left>
+												<Right>Solid</Right>
+											</BorderStyle>
+										</Style>
+										<ZIndex>4</ZIndex>
+										<Value>=Sum(Fields!ExtendedPrice.Value)</Value>
+									</Textbox>
+									<Textbox Name="TextBox43">
+										<Left>3.385417in</Left>
+										<Width>2.5135cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<FontSize>8.25pt</FontSize>
+											<Format>$#0</Format>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Right</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+											<BorderColor>
+												<Default>=Theme.Colors!Accent4</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Left>Solid</Left>
+												<Right>Solid</Right>
+											</BorderStyle>
+										</Style>
+										<ZIndex>6</ZIndex>
+										<Value>=Sum(Fields!ExtendedPrice.Value)*0.05</Value>
+									</Textbox>
+									<Textbox Name="TextBox45">
+										<Left>12.7cm</Left>
+										<Width>2.42cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<FontSize>8.25pt</FontSize>
+											<Format>$#0</Format>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Right</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+											<BorderColor>
+												<Default>=Theme.Colors!Accent4</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Left>Solid</Left>
+											</BorderStyle>
+										</Style>
+										<ZIndex>8</ZIndex>
+										<Value>=Sum(Fields!ExtendedPrice.Value) + (Sum(Fields!ExtendedPrice.Value)*0.05)</Value>
+									</Textbox>
+									<Textbox Name="TextBox44">
+										<Left>11.13896cm</Left>
+										<Width>1.5875cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<Color>=Theme.Colors!Accent4</Color>
+											<FontSize>8.25pt</FontSize>
+											<FontWeight>700</FontWeight>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Center</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+										</Style>
+										<ZIndex>7</ZIndex>
+										<Value>Grand Total</Value>
+									</Textbox>
+									<Textbox Name="TextBox42">
+										<Left>3.010417in</Left>
+										<Width>0.926cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<Color>=Theme.Colors!Accent4</Color>
+											<FontSize>8.25pt</FontSize>
+											<FontWeight>700</FontWeight>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Center</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+										</Style>
+										<ZIndex>5</ZIndex>
+										<Value>Tax</Value>
+									</Textbox>
+									<Textbox Name="TextBox40">
+										<Left>3.4925cm</Left>
+										<Width>1.27cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<Color>=Theme.Colors!Accent4</Color>
+											<FontSize>8.25pt</FontSize>
+											<FontWeight>700</FontWeight>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Center</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+										</Style>
+										<ZIndex>3</ZIndex>
+										<Value>Before Tax</Value>
+									</Textbox>
+								</ReportItems>
+							</Rectangle>
+							<Table Name="Table2">
+								<Top>7.5in</Top>
+								<Left>0.353921in</Left>
+								<Width>15.07828cm</Width>
+								<Height>1.22cm</Height>
+								<Style>
+									<BorderColor>
+										<Default>=Theme.Colors!Accent4</Default>
+									</BorderColor>
+								</Style>
+								<ZIndex>24</ZIndex>
+								<DataSetName>DataSet1</DataSetName>
+								<Header>
+									<TableRows>
+										<TableRow>
+											<Height>0.61cm</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox10">
+															<Style>
+																<BackgroundColor>=Theme.Colors!Accent4</BackgroundColor>
+																<Color>White</Color>
+																<FontSize>9pt</FontSize>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>=Theme.Colors!Accent4</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																	<Right>Solid</Right>
+																</BorderStyle>
+															</Style>
+															<Value>Product ID</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox11">
+															<Style>
+																<BackgroundColor>=Theme.Colors!Accent4</BackgroundColor>
+																<Color>White</Color>
+																<FontSize>9pt</FontSize>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>10pt</PaddingLeft>
+																<PaddingRight>10pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Center</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<dd:TextJustify xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DistributeAllLines</dd:TextJustify>
+																<BorderColor>
+																	<Default>=Theme.Colors!Accent4</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																	<Right>Solid</Right>
+																</BorderStyle>
+															</Style>
+															<Value>Product Name</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox12">
+															<Style>
+																<BackgroundColor>=Theme.Colors!Accent4</BackgroundColor>
+																<Color>White</Color>
+																<FontSize>9pt</FontSize>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>=Theme.Colors!Accent4</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																	<Right>Solid</Right>
+																</BorderStyle>
+															</Style>
+															<Value>Units</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox13">
+															<Style>
+																<BackgroundColor>=Theme.Colors!Accent4</BackgroundColor>
+																<Color>White</Color>
+																<FontSize>9pt</FontSize>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>10pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>=Theme.Colors!Accent4</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																</BorderStyle>
+															</Style>
+															<Value>Price</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Header>
+								<Details>
+									<TableRows>
+										<TableRow>
+											<Height>0.61cm</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox15">
+															<Style>
+																<BackgroundColor>=iif(RowNumber() Mod 2, "LightGrey", "White")</BackgroundColor>
+																<FontSize>9pt</FontSize>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>=iif(RowNumber() Mod 2, "LightGrey", "White")</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																</BorderStyle>
+															</Style>
+															<Value>=Fields!ProductID.Value</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox16">
+															<Style>
+																<BackgroundColor>=iif(RowNumber() Mod 2, "LightGrey", "White")</BackgroundColor>
+																<FontSize>9pt</FontSize>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>10pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>=iif(RowNumber() Mod 2, "LightGrey", "White")</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																</BorderStyle>
+															</Style>
+															<Value>=Fields!ProductName.Value &amp; "(" &amp; Fields!Quantity.Value &amp; " license pack)"</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox17">
+															<Style>
+																<BackgroundColor>=iif(RowNumber() Mod 2, "LightGrey", "White")</BackgroundColor>
+																<FontSize>9pt</FontSize>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>=iif(RowNumber() Mod 2, "LightGrey", "White")</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																</BorderStyle>
+															</Style>
+															<Value>=Fields!Unit.Value</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox18">
+															<Style>
+																<BackgroundColor>=iif(RowNumber() Mod 2, "LightGrey", "White")</BackgroundColor>
+																<FontSize>9pt</FontSize>
+																<Format>$#0</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>10pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>=iif(RowNumber() Mod 2, "LightGrey", "White")</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																</BorderStyle>
+															</Style>
+															<Value>=Fields!ExtendedPrice.Value</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Details>
+								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">5.5cm</dd:FixedHeight>
+								<dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">15.14cm</dd:FixedWidth>
+								<dd:RepeatToFill xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">true</dd:RepeatToFill>
+								<dd:RepeatBlankRows xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FillPage</dd:RepeatBlankRows>
+								<TableColumns>
+									<TableColumn>
+										<Width>1.83919cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>8.476589cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>2.2225cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>1in</Width>
+									</TableColumn>
+								</TableColumns>
+							</Table>
+							<Rectangle Name="Container1">
+								<Top>10.60979cm</Top>
+								<Left>0.925419cm</Left>
+								<Width>15.24cm</Width>
+								<Height>0.385in</Height>
+								<Style>
+									<BorderColor>
+										<Default>=Theme.Colors!Accent2</Default>
+									</BorderColor>
+									<BorderStyle>
+										<Default>Solid</Default>
+									</BorderStyle>
+									<BorderWidth>
+										<Default>1.5pt</Default>
+									</BorderWidth>
+								</Style>
+								<ZIndex>25</ZIndex>
+								<dd:RoundingRadius xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+									<BottomLeft>0cm</BottomLeft>
+									<BottomRight>0cm</BottomRight>
+								</dd:RoundingRadius>
+								<ReportItems>
+									<Textbox Name="lblTotal">
+										<Width>3.4925cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<BackgroundColor>=Theme.Colors!Accent2</BackgroundColor>
+											<Color>White</Color>
+											<FontWeight>700</FontWeight>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Center</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+										</Style>
+										<ZIndex>5</ZIndex>
+										<Value>Total</Value>
+									</Textbox>
+									<Textbox Name="txtTotalPrice">
+										<Left>4.7625cm</Left>
+										<Width>2.8575cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<FontSize>8.25pt</FontSize>
+											<Format>$#0</Format>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Right</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+											<BorderColor>
+												<Default>=Theme.Colors!Accent2</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Left>Solid</Left>
+												<Right>Solid</Right>
+											</BorderStyle>
+										</Style>
+										<ZIndex>6</ZIndex>
+										<Value>=Sum(Fields!ExtendedPrice.Value)</Value>
+									</Textbox>
+									<Textbox Name="txtTax">
+										<Left>8.5725cm</Left>
+										<Width>2.54cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<FontSize>8.25pt</FontSize>
+											<Format>$#0</Format>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Right</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+											<BorderColor>
+												<Default>=Theme.Colors!Accent2</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Left>Solid</Left>
+												<Right>Solid</Right>
+											</BorderStyle>
+										</Style>
+										<ZIndex>7</ZIndex>
+										<Value>=Sum(Fields!ExtendedPrice.Value)*0.05</Value>
+									</Textbox>
+									<Textbox Name="txtPretax">
+										<Left>12.7cm</Left>
+										<Width>2.42cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<FontSize>8.25pt</FontSize>
+											<Format>$#0</Format>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Right</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+											<BorderColor>
+												<Default>=Theme.Colors!Accent2</Default>
+											</BorderColor>
+											<BorderStyle>
+												<Left>Solid</Left>
+											</BorderStyle>
+										</Style>
+										<ZIndex>8</ZIndex>
+										<Value>=Sum(Fields!ExtendedPrice.Value) + (Sum(Fields!ExtendedPrice.Value)*0.05)</Value>
+									</Textbox>
+									<Textbox Name="TextBox6">
+										<Left>11.1125cm</Left>
+										<Width>1.5875cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<Color>=Theme.Colors!Accent2</Color>
+											<FontSize>8.25pt</FontSize>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Center</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+										</Style>
+										<ZIndex>1</ZIndex>
+										<Value>Grand Total</Value>
+									</Textbox>
+									<Textbox Name="lblTaxPrice1">
+										<Left>7.62cm</Left>
+										<Width>0.9525cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<Color>=Theme.Colors!Accent2</Color>
+											<FontSize>8.25pt</FontSize>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Center</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+										</Style>
+										<ZIndex>2</ZIndex>
+										<Value>Tax</Value>
+									</Textbox>
+									<Textbox Name="TextBox5">
+										<Left>3.488542cm</Left>
+										<Width>1.27cm</Width>
+										<Height>0.9525cm</Height>
+										<Style>
+											<Color>=Theme.Colors!Accent2</Color>
+											<FontSize>8.25pt</FontSize>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Center</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+										</Style>
+										<Value>Before Tax</Value>
+									</Textbox>
+								</ReportItems>
+							</Rectangle>
+							<Rectangle Name="Container2">
+								<Top>5.5in</Top>
+								<Width>6.625in</Width>
+								<Height>4.625in</Height>
+								<Style>
+									<BackgroundColor>WhiteSmoke</BackgroundColor>
+								</Style>
+								<ReportItems>
+									<Textbox Name="TextBox35">
+										<Left>4.625in</Left>
+										<Width>5.08cm</Width>
+										<Height>1.4275cm</Height>
+										<Style>
+											<BackgroundColor>=Theme.Colors!Accent3</BackgroundColor>
+											<Color>White</Color>
+											<FontSize>16pt</FontSize>
+											<FontWeight>700</FontWeight>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>30pt</PaddingLeft>
+											<PaddingRight>30pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Center</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+											<BorderColor>
+												<Default>=Theme.Colors!Accent4</Default>
+											</BorderColor>
+											<BorderWidth>
+												<Default>2pt</Default>
+											</BorderWidth>
+										</Style>
+										<ZIndex>3</ZIndex>
+										<Value>=Theme.Constants("EnText2")</Value>
+									</Textbox>
+									<Textbox Name="TextBox33">
+										<Left>2.75in</Left>
+										<Width>4.76cm</Width>
+										<Height>1.4275cm</Height>
+										<Style>
+											<FontSize>7pt</FontSize>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<VerticalAlign>Middle</VerticalAlign>
+										</Style>
+										<ZIndex>24</ZIndex>
+										<Value>720 4th Avenue, Suite 220
+Kirkland WA 98033
+Phone: (425) 828-4440
+fax: (425) 828-4441</Value>
+									</Textbox>
+									<Textbox Name="TextBox19">
+										<Top>1.75in</Top>
+										<Left>1.10392in</Left>
+										<Width>1.61cm</Width>
+										<Height>0.42cm</Height>
+										<Style>
+											<FontSize>8pt</FontSize>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Left</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+										</Style>
+										<ZIndex>15</ZIndex>
+										<Value>=Fields!CustomerID.Value</Value>
+									</Textbox>
+									<Textbox Name="TextBox21">
+										<Top>0.8229167in</Top>
+										<Left>0.35392in</Left>
+										<Width>6.67cm</Width>
+										<Height>0.5361cm</Height>
+										<Style>
+											<FontWeight>700</FontWeight>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<VerticalAlign>Middle</VerticalAlign>
+										</Style>
+										<ZIndex>7</ZIndex>
+										<Value>=Fields!CompanyName.Value</Value>
+									</Textbox>
+									<Textbox Name="TextBox22">
+										<Top>1.75in</Top>
+										<Left>5.35392in</Left>
+										<Width>2.305cm</Width>
+										<Height>0.42cm</Height>
+										<Style>
+											<FontSize>8pt</FontSize>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Right</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+										</Style>
+										<ZIndex>23</ZIndex>
+										<Value>="No. " &amp; Fields!EstimateID.Value</Value>
+									</Textbox>
+									<Textbox Name="TextBox24">
+										<Top>1.75in</Top>
+										<Left>3.22892in</Left>
+										<Width>2.9375cm</Width>
+										<Height>0.42cm</Height>
+										<Style>
+											<FontSize>8pt</FontSize>
+											<VerticalAlign>Middle</VerticalAlign>
+										</Style>
+										<ZIndex>16</ZIndex>
+										<Value>=System.DateTime.Today.Year &amp; "/" &amp; System.DateTime.Today.Month &amp; "/" &amp; System.DateTime.Today.Day</Value>
+									</Textbox>
+									<Textbox Name="TextBox26">
+										<Top>1.75in</Top>
+										<Left>0.35392in</Left>
+										<Width>1.9cm</Width>
+										<Height>0.42cm</Height>
+										<Style>
+											<FontSize>8pt</FontSize>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+											<TextAlign>Left</TextAlign>
+											<VerticalAlign>Middle</VerticalAlign>
+										</Style>
+										<ZIndex>14</ZIndex>
+										<Value>Customer ID</Value>
+									</Textbox>
+									<Textbox Name="TextBox27">
+										<Top>1.053976in</Top>
+										<Left>0.35392in</Left>
+										<Width>6.6675cm</Width>
+										<Height>1.7425cm</Height>
+										<Style>
+											<PaddingBottom>2pt</PaddingBottom>
+											<PaddingLeft>2pt</PaddingLeft>
+											<PaddingRight>2pt</PaddingRight>
+											<PaddingTop>2pt</PaddingTop>
+										</Style>
+										<ZIndex>6</ZIndex>
+										<Value>=IIF(Fields!BuildingName.Value &lt;&gt; "", Fields!BuildingName.Value &amp; vbcrlf , "") &amp; IIF(Fields!Address.Value &lt;&gt; "", Fields!Address.Value &amp; vbcrlf, "") &amp; Fields!City.Value &amp; " " &amp; Fields!State.Value &amp; " " &amp; Fields!PostalCode.Value</Value>
+									</Textbox>
+								</ReportItems>
+							</Rectangle>
+							<Table Name="Table1">
+								<Top>2.010417in</Top>
+								<Left>0.3541667in</Left>
+								<Width>6.010417in</Width>
+								<Height>0.4791667in</Height>
+								<Style>
+									<BorderColor>
+										<Default>=Theme.Colors!Accent4</Default>
+									</BorderColor>
+								</Style>
+								<ZIndex>24</ZIndex>
+								<DataSetName>DataSet1</DataSetName>
+								<Header>
+									<TableRows>
+										<TableRow>
+											<Height>0.61cm</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox1">
+															<Style>
+																<BackgroundColor>=Theme.Colors!Accent2</BackgroundColor>
+																<Color>White</Color>
+																<FontSize>9pt</FontSize>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>=Theme.Colors!Accent2</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																	<Right>Solid</Right>
+																</BorderStyle>
+															</Style>
+															<Value>Product ID</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox4">
+															<Style>
+																<BackgroundColor>=Theme.Colors!Accent2</BackgroundColor>
+																<Color>White</Color>
+																<FontSize>9pt</FontSize>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>10pt</PaddingLeft>
+																<PaddingRight>10pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Center</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<dd:TextJustify xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">DistributeAllLines</dd:TextJustify>
+																<BorderColor>
+																	<Default>=Theme.Colors!Accent2</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																	<Right>Solid</Right>
+																</BorderStyle>
+															</Style>
+															<Value>Product Name</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox7">
+															<Style>
+																<BackgroundColor>=Theme.Colors!Accent2</BackgroundColor>
+																<Color>White</Color>
+																<FontSize>9pt</FontSize>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>=Theme.Colors!Accent2</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																	<Right>Solid</Right>
+																</BorderStyle>
+															</Style>
+															<Value>Units</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox8">
+															<Style>
+																<BackgroundColor>=Theme.Colors!Accent2</BackgroundColor>
+																<Color>White</Color>
+																<FontSize>9pt</FontSize>
+																<FontWeight>700</FontWeight>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>10pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>=Theme.Colors!Accent2</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																</BorderStyle>
+															</Style>
+															<Value>Price</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Header>
+								<Details>
+									<TableRows>
+										<TableRow>
+											<Height>0.61cm</Height>
+											<TableCells>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox9">
+															<Style>
+																<BackgroundColor>=iif(RowNumber() Mod 2, "LightGrey", "White")</BackgroundColor>
+																<FontSize>9pt</FontSize>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>=iif(RowNumber() Mod 2, "LightGrey", "White")</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																</BorderStyle>
+															</Style>
+															<Value>=Fields!ProductID.Value</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox14">
+															<Style>
+																<BackgroundColor>=iif(RowNumber() Mod 2, "LightGrey", "White")</BackgroundColor>
+																<FontSize>9pt</FontSize>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>10pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>=iif(RowNumber() Mod 2, "LightGrey", "White")</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																</BorderStyle>
+															</Style>
+															<Value>=Fields!ProductName.Value &amp; "(" &amp; Fields!Quantity.Value &amp; " license pack)"</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox20">
+															<Style>
+																<BackgroundColor>=iif(RowNumber() Mod 2, "LightGrey", "White")</BackgroundColor>
+																<FontSize>9pt</FontSize>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>=iif(RowNumber() Mod 2, "LightGrey", "White")</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																</BorderStyle>
+															</Style>
+															<Value>=Fields!Unit.Value</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox23">
+															<Style>
+																<BackgroundColor>=iif(RowNumber() Mod 2, "LightGrey", "White")</BackgroundColor>
+																<FontSize>9pt</FontSize>
+																<Format>$#0</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>10pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Right</TextAlign>
+																<VerticalAlign>Middle</VerticalAlign>
+																<BorderColor>
+																	<Default>=iif(RowNumber() Mod 2, "LightGrey", "White")</Default>
+																</BorderColor>
+																<BorderStyle>
+																	<Default>Solid</Default>
+																</BorderStyle>
+															</Style>
+															<Value>=Fields!ExtendedPrice.Value</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+											</TableCells>
+										</TableRow>
+									</TableRows>
+								</Details>
+								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">5.5cm</dd:FixedHeight>
+								<dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">15.14cm</dd:FixedWidth>
+								<dd:RepeatToFill xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">true</dd:RepeatToFill>
+								<dd:RepeatBlankRows xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">FillPage</dd:RepeatBlankRows>
+								<TableColumns>
+									<TableColumn>
+										<Width>1.862143cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>8.582377cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>2.250237cm</Width>
+									</TableColumn>
+									<TableColumn>
+										<Width>1.012481in</Width>
+									</TableColumn>
+								</TableColumns>
+							</Table>
+						</ReportItems>
+					</Page>
+				</Pages>
+				<DataSetName>DataSet1</DataSetName>
+				<Grouping Name="FixedPage1_Group">
+					<GroupExpressions>
+						<GroupExpression>=Fields!EstimateID.Value</GroupExpression>
+					</GroupExpressions>
+				</Grouping>
+			</FixedPage>
+		</ReportItems>
+	</Body>
+	<BottomMargin>0.434055in</BottomMargin>
+	<LeftMargin>1in</LeftMargin>
+	<RightMargin>0.875in</RightMargin>
+	<TopMargin>0.434055in</TopMargin>
+	<PageHeight>11in</PageHeight>
+	<PageWidth>8.5in</PageWidth>
+	<Width>8.5in</Width>
+	<EmbeddedImages>
+		<EmbeddedImage Name="GCLogo2">
+			<ImageData>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</ImageData>
+			<MIMEType>image/png</MIMEType>
+		</EmbeddedImage>
+	</EmbeddedImages>
+	<DataSources>
+		<DataSource Name="DataSource1">
+			<ConnectionProperties>
+				<ConnectString>Data Source=..\\..\\..\\..\\..\\..\\..\\..\\Data\\Seikyu2.db</ConnectString>
+				<DataProvider>SQLITE</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="DataSet1">
+			<Fields>
+				<Field Name="EstimateID">
+					<DataField>EstimateID</DataField>
+				</Field>
+				<Field Name="ProductName">
+					<DataField>ProductName</DataField>
+				</Field>
+				<Field Name="Price">
+					<DataField>Price</DataField>
+				</Field>
+				<Field Name="QuantityPerUnit">
+					<DataField>QuantityPerUnit</DataField>
+				</Field>
+				<Field Name="Quantity">
+					<DataField>Quantity</DataField>
+				</Field>
+				<Field Name="Unit">
+					<DataField>Unit</DataField>
+				</Field>
+				<Field Name="ExtendedPrice">
+					<DataField>ExtendedPrice</DataField>
+				</Field>
+				<Field Name="PostalCode">
+					<DataField>PostalCode</DataField>
+				</Field>
+				<Field Name="Address">
+					<DataField>Address</DataField>
+				</Field>
+				<Field Name="BuildingName">
+					<DataField>BuildingName</DataField>
+				</Field>
+				<Field Name="City">
+					<DataField>City</DataField>
+				</Field>
+				<Field Name="State">
+					<DataField>State</DataField>
+				</Field>
+				<Field Name="CompanyName">
+					<DataField>CompanyName</DataField>
+				</Field>
+				<Field Name="CustomerID">
+					<DataField>CustomerID</DataField>
+				</Field>
+				<Field Name="ProductID">
+					<DataField>ProductID</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>SELECT Estimate.EstimateID, Products.ProductName, Products.Price, [Quantity] &amp; ' * ' &amp; [Unit] AS QuantityPerUnit,[Quantity], [Unit],  [Quantity]*Products.Price AS ExtendedPrice, Customers.PostalCode, Customers.Address, Customers.BuildingName, Customers.City, Customers.State, Customers.CompanyName, Customers.CustomerID, Products.ProductID FROM (Customers INNER JOIN Estimate ON Customers.CustomerID = Estimate.CustomerID) INNER JOIN Products ON Estimate.ProductID = Products.ProductID ORDER BY Estimate.EstimateID</CommandText>
+				<DataSourceName>DataSource1</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+	<dd:CollateBy xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">ValueIndex</dd:CollateBy>
+	<dd:ReportThemes xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">
+		<ThemeUri>Theme1.rdlx-theme</ThemeUri>
+		<ThemeUri>Theme2.rdlx-theme</ThemeUri>
+	</dd:ReportThemes>
+</Report>

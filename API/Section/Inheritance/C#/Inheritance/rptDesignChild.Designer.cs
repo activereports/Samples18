@@ -111,6 +111,11 @@ namespace ActiveReports.Samples.Inheritance
 			((System.ComponentModel.ISupportInitialize)(this.txtAddress1)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
+			// 
+			// Printer settings
+			//
+
+			Document.Printer.PrinterName = string.Empty;
 		}
 		#endregion
 

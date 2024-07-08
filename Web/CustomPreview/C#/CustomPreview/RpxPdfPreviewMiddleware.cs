@@ -26,6 +26,7 @@ public class RpxPdfPreviewMiddleware
 		rpt.ResourceLocator = new DefaultResourceLocator(new Uri(reportsPath + @"\"));
 		var xtr = new System.Xml.XmlTextReader(filePath);
 		rpt.LoadLayout(xtr);
+		rpt.Document.Printer.PrinterName = String.Empty;
 		xtr.Close();
 		try
 		{

@@ -42,6 +42,7 @@ namespace ActiveReports.Samples.CrossTabReport
 				//Create a report and display it in the Viewer.
 				var rpt = new SectionReport();
 				rpt.LoadLayout(XmlReader.Create(Properties.Resources.ProductWeeklySales));
+				rpt.Document.Printer.PrinterName = string.Empty;
 				arvMain.LoadDocument(rpt);
 			}
 			catch (Exception ex)

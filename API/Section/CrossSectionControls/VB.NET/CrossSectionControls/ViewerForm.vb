@@ -27,6 +27,7 @@ Public Class ViewerForm
     Private Sub LoadReport(ByVal rptType As ReportType)
         ' Instantiate a new Invoice report
         Dim report As New SectionReport
+        report.Document.Printer.PrinterName = String.Empty
         report.LoadLayout(XmlReader.Create(My.Resources.Invoice))
         report.MaxPages = 10
 

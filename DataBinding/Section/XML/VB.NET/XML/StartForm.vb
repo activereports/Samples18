@@ -33,7 +33,7 @@ Public Class StartForm
             'Dim rpt As New CustomersOrders()
             Dim rpt As New SectionReport()
             rpt.LoadLayout(XmlReader.Create(My.Resources.CustomersOrders))
-
+            rpt.Document.Printer.PrinterName = String.Empty
             CType(rpt.DataSource, Data.XMLDataSource).FileURL = My.Resources.ConnectionString
             If radioAll.Checked Then 'Show all data
                 CType(rpt.DataSource, Data.XMLDataSource).RecordsetPattern = "//CUSTOMER"
@@ -56,6 +56,7 @@ Public Class StartForm
     Private Sub btnCustomersLeveled_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnCustomersLeveled.Click
         Dim rpt As New SectionReport()
         rpt.LoadLayout(XmlReader.Create(My.Resources.OrdersLeveled))
+        rpt.Document.Printer.PrinterName = String.Empty
         CType(rpt.DataSource, Data.XMLDataSource).FileURL = My.Resources.ConnectionString
         rpt.Run()
         Dim frm As New ViewerForm()

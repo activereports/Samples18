@@ -124,6 +124,7 @@ namespace ActiveReports.Samples.BoundData
 			//
 			var rpt = new SectionReport();
 			rpt.LoadLayout(XmlReader.Create(System.IO.Path.Combine("..\\..\\..\\..\\",Properties.Resources.ReportName)));
+			rpt.Document.Printer.PrinterName = String.Empty;
 			rpt.DataSource = invoiceData;
 			rpt.DataMember = invoiceData.Tables[0].TableName;
 			//Run and view the report.
@@ -170,6 +171,7 @@ namespace ActiveReports.Samples.BoundData
 			//
 			var rpt = new SectionReport();
 			rpt.LoadLayout(XmlReader.Create(System.IO.Path.Combine("..\\..\\..\\..\\", Properties.Resources.ReportName)));
+			rpt.Document.Printer.PrinterName = String.Empty;
 			rpt.DataSource = invoiceData;
 			//Run and view the report.
 			//
@@ -229,6 +231,7 @@ namespace ActiveReports.Samples.BoundData
 			//
 			var rpt = new SectionReport();
 			rpt.LoadLayout(XmlReader.Create(System.IO.Path.Combine("..\\..\\..\\..\\",Properties.Resources.ReportName)));
+			rpt.Document.Printer.PrinterName = String.Empty;
 			rpt.DataSource = invoiceDataView;
 			//Run and view the report
 			//
@@ -264,6 +267,7 @@ namespace ActiveReports.Samples.BoundData
 			//
 			var rpt = new SectionReport();
 			rpt.LoadLayout(XmlReader.Create(System.IO.Path.Combine("..\\..\\..\\..\\",Properties.Resources.ReportName)));
+			rpt.Document.Printer.PrinterName = String.Empty;
 			rpt.DataSource = invoiceDataReader;
 			//Run and view the report
 			//
@@ -307,6 +311,7 @@ namespace ActiveReports.Samples.BoundData
 			//
 			var rpt = new SectionReport();
 			rpt.LoadLayout(XmlReader.Create(System.IO.Path.Combine("..\\..\\..\\..\\",Properties.Resources.ReportName)));
+			rpt.Document.Printer.PrinterName = String.Empty;
 			rpt.DataSource = db;
 			//Run and view the report
 			//
@@ -408,6 +413,7 @@ namespace ActiveReports.Samples.BoundData
 					//Create the report and assign the data source
 					var rpt = new SectionReport();
 					rpt.LoadLayout(XmlReader.Create(System.IO.Path.Combine("..\\..\\..\\..\\",Properties.Resources.ReportName)));
+					rpt.Document.Printer.PrinterName = String.Empty;
 					rpt.DataSource = xml;
 					//Run and view the report
 					arvMain.LoadDocument(rpt);

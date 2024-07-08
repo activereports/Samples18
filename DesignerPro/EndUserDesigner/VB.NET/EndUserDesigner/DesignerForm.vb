@@ -348,7 +348,7 @@ Partial Public Class DesignerForm
             Case DesignerReportType.Page
                 Return My.Resources.SaveRdlxFilter
             Case DesignerReportType.RdlMultiSection
-                Return If(isMaster, My.Resources.SaveRdlxMasterFilter, My.Resources.SaveRdlMultiSectionFilter)
+                Return If(isMaster, My.Resources.SaveRdlxMasterFilter, My.Resources.SaveRdlxMultiSectionFilter)
             Case DesignerReportType.RdlDashboard
                 Return My.Resources.SaveRdlxDashboardFilter
             Case Else

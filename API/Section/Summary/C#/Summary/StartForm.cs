@@ -35,6 +35,7 @@ namespace ActiveReports.Samples.CalculatedFields
 			var rpt = new SectionReport();
 			var reportPath = "..\\..\\..\\..\\" + (string)comboBox1.SelectedItem;
 			rpt.LoadLayout(XmlReader.Create(reportPath));
+			rpt.Document.Printer.PrinterName = String.Empty;
 			rpt.PrintWidth = 6.5F;
 			arvMain.LoadDocument(rpt);
 		}

@@ -1,0 +1,774 @@
+﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">ReelsTablix.rdlx</dd:Name>
+	<Body>
+		<Height>14in</Height>
+		<ReportItems>
+			<FixedPage Name="FixedPage1">
+				<Pages>
+					<Page>
+						<ReportItems>
+							<Textbox Name="TextBox13">
+								<Width>9.5515cm</Width>
+								<Height>1.3758cm</Height>
+								<Style>
+									<Color>DarkSlateBlue</Color>
+									<FontFamily>Arial Black</FontFamily>
+									<FontSize>28pt</FontSize>
+									<FontWeight>700</FontWeight>
+									<PaddingBottom>2pt</PaddingBottom>
+									<PaddingLeft>2pt</PaddingLeft>
+									<PaddingRight>2pt</PaddingRight>
+									<PaddingTop>2pt</PaddingTop>
+								</Style>
+								<ZIndex>1</ZIndex>
+								<Value>Sales Report</Value>
+							</Textbox>
+							<Tablix Name="Tablix1">
+								<TablixCorner>
+									<TablixCornerRows>
+										<TablixCornerRow>
+											<TablixCornerCell>
+												<CellContents>
+													<Textbox Name="TextBox1">
+														<Style>
+															<BackgroundColor>DarkSlateBlue</BackgroundColor>
+															<Color>White</Color>
+															<FontFamily>Times New Roman</FontFamily>
+															<FontSize>14pt</FontSize>
+															<FontStyle>Normal</FontStyle>
+															<FontWeight>700</FontWeight>
+															<PaddingBottom>2pt</PaddingBottom>
+															<PaddingLeft>2pt</PaddingLeft>
+															<PaddingRight>2pt</PaddingRight>
+															<PaddingTop>2pt</PaddingTop>
+															<Border>
+																<Style>Solid</Style>
+															</Border>
+														</Style>
+														<Value>Sales by Country, City, Media Type, Quarter, and Year</Value>
+													</Textbox>
+													<ColSpan>3</ColSpan>
+													<RowSpan>2</RowSpan>
+												</CellContents>
+											</TablixCornerCell>
+											<TablixCornerCell />
+											<TablixCornerCell />
+										</TablixCornerRow>
+										<TablixCornerRow>
+											<TablixCornerCell />
+											<TablixCornerCell />
+											<TablixCornerCell />
+										</TablixCornerRow>
+									</TablixCornerRows>
+								</TablixCorner>
+								<TablixBody>
+									<TablixColumns>
+										<TablixColumn>
+											<Width>2.332452cm</Width>
+										</TablixColumn>
+										<TablixColumn>
+											<Width>2.332452cm</Width>
+										</TablixColumn>
+										<TablixColumn>
+											<Width>2.337733cm</Width>
+										</TablixColumn>
+									</TablixColumns>
+									<TablixRows>
+										<TablixRow>
+											<Height>0.681337cm</Height>
+											<TablixCells>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox4">
+															<Style>
+																<BackgroundColor>=""</BackgroundColor>
+																<FontFamily>Times New Roman</FontFamily>
+																<FontSize>10pt</FontSize>
+																<FontStyle>Normal</FontStyle>
+																<FontWeight>400</FontWeight>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Center</TextAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox8">
+															<Style>
+																<BackgroundColor>=""</BackgroundColor>
+																<FontFamily>Times New Roman</FontFamily>
+																<FontSize>10pt</FontSize>
+																<FontStyle>Normal</FontStyle>
+																<FontWeight>400</FontWeight>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<TextAlign>Center</TextAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox26">
+															<Style>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+											</TablixCells>
+										</TablixRow>
+										<TablixRow>
+											<Height>0.681337cm</Height>
+											<TablixCells>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox14">
+															<Style>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox11">
+															<Style>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox23">
+															<Style>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+											</TablixCells>
+										</TablixRow>
+										<TablixRow>
+											<Height>0.6746466cm</Height>
+											<TablixCells>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox15">
+															<Style>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox20">
+															<Style>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox22">
+															<Style>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+											</TablixCells>
+										</TablixRow>
+										<TablixRow>
+											<Height>0.75cm</Height>
+											<TablixCells>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox24">
+															<Style>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox28">
+															<Style>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+												<TablixCell>
+													<CellContents>
+														<Textbox Name="TextBox29">
+															<Style>
+																<Format>$#,##0.00</Format>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+																<VerticalAlign>Middle</VerticalAlign>
+																<Border>
+																	<Style>Solid</Style>
+																</Border>
+															</Style>
+															<Value>=SUM(Fields!TotalOrder.Value)</Value>
+														</Textbox>
+													</CellContents>
+												</TablixCell>
+											</TablixCells>
+										</TablixRow>
+									</TablixRows>
+								</TablixBody>
+								<TablixColumnHierarchy>
+									<TablixMembers>
+										<TablixMember>
+											<Group Name="Tablix1_Years1">
+												<GroupExpressions>
+													<GroupExpression>=Fields!Years.Value</GroupExpression>
+												</GroupExpressions>
+											</Group>
+											<SortExpressions>
+												<SortExpression>
+													<Direction>Ascending</Direction>
+													<Value>=Fields!Years.Value</Value>
+												</SortExpression>
+											</SortExpressions>
+											<TablixHeader>
+												<Size>0.268244in</Size>
+												<CellContents>
+													<Textbox Name="TextBox2">
+														<Style>
+															<BackgroundColor>WhiteSmoke</BackgroundColor>
+															<FontFamily>Times New Roman</FontFamily>
+															<FontSize>10pt</FontSize>
+															<FontStyle>Normal</FontStyle>
+															<FontWeight>400</FontWeight>
+															<PaddingBottom>2pt</PaddingBottom>
+															<PaddingLeft>2pt</PaddingLeft>
+															<PaddingRight>2pt</PaddingRight>
+															<PaddingTop>2pt</PaddingTop>
+															<TextAlign>Center</TextAlign>
+															<Border>
+																<Style>Solid</Style>
+															</Border>
+														</Style>
+														<Value>=Fields!Years.Value</Value>
+													</Textbox>
+												</CellContents>
+											</TablixHeader>
+											<TablixMembers>
+												<TablixMember>
+													<Group Name="Tablix1_Quarters1">
+														<GroupExpressions>
+															<GroupExpression>=Fields!Quarters.Value</GroupExpression>
+														</GroupExpressions>
+													</Group>
+													<SortExpressions>
+														<SortExpression>
+															<Direction>Ascending</Direction>
+															<Value>=Fields!Quarters.Value</Value>
+														</SortExpression>
+													</SortExpressions>
+													<TablixHeader>
+														<Size>0.268244in</Size>
+														<CellContents>
+															<Textbox Name="TextBox5">
+																<Style>
+																	<BackgroundColor>WhiteSmoke</BackgroundColor>
+																	<FontFamily>Times New Roman</FontFamily>
+																	<FontSize>10pt</FontSize>
+																	<FontStyle>Normal</FontStyle>
+																	<FontWeight>400</FontWeight>
+																	<PaddingBottom>2pt</PaddingBottom>
+																	<PaddingLeft>2pt</PaddingLeft>
+																	<PaddingRight>2pt</PaddingRight>
+																	<PaddingTop>2pt</PaddingTop>
+																	<TextAlign>Center</TextAlign>
+																	<Border>
+																		<Style>Solid</Style>
+																	</Border>
+																</Style>
+																<Value>=Fields!Quarters.Value</Value>
+															</Textbox>
+														</CellContents>
+													</TablixHeader>
+												</TablixMember>
+												<TablixMember>
+													<TablixHeader>
+														<Size>0.268244in</Size>
+														<CellContents>
+															<Textbox Name="TextBox6">
+																<Style>
+																	<BackgroundColor>DarkSlateGray</BackgroundColor>
+																	<Color>White</Color>
+																	<FontFamily>Times New Roman</FontFamily>
+																	<FontSize>10pt</FontSize>
+																	<FontStyle>Normal</FontStyle>
+																	<FontWeight>700</FontWeight>
+																	<PaddingBottom>2pt</PaddingBottom>
+																	<PaddingLeft>2pt</PaddingLeft>
+																	<PaddingRight>2pt</PaddingRight>
+																	<PaddingTop>2pt</PaddingTop>
+																	<TextAlign>Center</TextAlign>
+																	<VerticalAlign>Middle</VerticalAlign>
+																	<Border>
+																		<Style>Solid</Style>
+																	</Border>
+																</Style>
+																<Value>Total for Year</Value>
+															</Textbox>
+														</CellContents>
+													</TablixHeader>
+												</TablixMember>
+											</TablixMembers>
+										</TablixMember>
+										<TablixMember>
+											<TablixHeader>
+												<Size>0.5361111in</Size>
+												<CellContents>
+													<Textbox Name="TextBox12">
+														<Style>
+															<BackgroundColor>DarkSlateBlue</BackgroundColor>
+															<Color>White</Color>
+															<FontFamily>Times New Roman</FontFamily>
+															<FontSize>10pt</FontSize>
+															<FontStyle>Normal</FontStyle>
+															<FontWeight>700</FontWeight>
+															<PaddingBottom>2pt</PaddingBottom>
+															<PaddingLeft>2pt</PaddingLeft>
+															<PaddingRight>2pt</PaddingRight>
+															<PaddingTop>2pt</PaddingTop>
+															<TextAlign>Center</TextAlign>
+															<VerticalAlign>Middle</VerticalAlign>
+															<Border>
+																<Style>Solid</Style>
+															</Border>
+														</Style>
+														<Value>Grand Total</Value>
+													</Textbox>
+												</CellContents>
+											</TablixHeader>
+										</TablixMember>
+									</TablixMembers>
+								</TablixColumnHierarchy>
+								<TablixRowHierarchy>
+									<TablixMembers>
+										<TablixMember>
+											<Group Name="Tablix1_Country1">
+												<GroupExpressions>
+													<GroupExpression>=Fields!Country.Value</GroupExpression>
+												</GroupExpressions>
+											</Group>
+											<TablixHeader>
+												<Size>0.918289in</Size>
+												<CellContents>
+													<Textbox Name="TextBox3">
+														<Style>
+															<BackgroundColor>WhiteSmoke</BackgroundColor>
+															<FontFamily>Times New Roman</FontFamily>
+															<FontSize>10pt</FontSize>
+															<FontStyle>Normal</FontStyle>
+															<FontWeight>400</FontWeight>
+															<PaddingBottom>2pt</PaddingBottom>
+															<PaddingLeft>2pt</PaddingLeft>
+															<PaddingRight>2pt</PaddingRight>
+															<PaddingTop>2pt</PaddingTop>
+															<TextAlign>Center</TextAlign>
+															<VerticalAlign>Middle</VerticalAlign>
+															<Border>
+																<Style>Solid</Style>
+															</Border>
+														</Style>
+														<Value>=Fields!Country.Value</Value>
+													</Textbox>
+												</CellContents>
+											</TablixHeader>
+											<TablixMembers>
+												<TablixMember>
+													<Group Name="Tablix1_City1">
+														<GroupExpressions>
+															<GroupExpression>=Fields!City.Value</GroupExpression>
+														</GroupExpressions>
+													</Group>
+													<TablixHeader>
+														<Size>0.918289in</Size>
+														<CellContents>
+															<Textbox Name="TextBox7">
+																<Style>
+																	<BackgroundColor>WhiteSmoke</BackgroundColor>
+																	<FontFamily>Times New Roman</FontFamily>
+																	<FontSize>10pt</FontSize>
+																	<FontStyle>Normal</FontStyle>
+																	<FontWeight>400</FontWeight>
+																	<PaddingBottom>2pt</PaddingBottom>
+																	<PaddingLeft>2pt</PaddingLeft>
+																	<PaddingRight>2pt</PaddingRight>
+																	<PaddingTop>2pt</PaddingTop>
+																	<TextAlign>Center</TextAlign>
+																	<Border>
+																		<Style>Solid</Style>
+																	</Border>
+																</Style>
+																<Value>=Fields!City.Value</Value>
+															</Textbox>
+														</CellContents>
+													</TablixHeader>
+													<TablixMembers>
+														<TablixMember>
+															<Group Name="Tablix1_MediaType1">
+																<GroupExpressions>
+																	<GroupExpression>=Fields!MediaType.Value</GroupExpression>
+																</GroupExpressions>
+															</Group>
+															<TablixHeader>
+																<Size>0.918289in</Size>
+																<CellContents>
+																	<Textbox Name="TextBox10">
+																		<Style>
+																			<BackgroundColor>WhiteSmoke</BackgroundColor>
+																			<FontFamily>Times New Roman</FontFamily>
+																			<FontSize>10pt</FontSize>
+																			<FontStyle>Normal</FontStyle>
+																			<FontWeight>400</FontWeight>
+																			<PaddingBottom>2pt</PaddingBottom>
+																			<PaddingLeft>2pt</PaddingLeft>
+																			<PaddingRight>2pt</PaddingRight>
+																			<PaddingTop>2pt</PaddingTop>
+																			<TextAlign>Center</TextAlign>
+																			<Border>
+																				<Style>Solid</Style>
+																			</Border>
+																		</Style>
+																		<Value>=Fields!MediaType.Value</Value>
+																	</Textbox>
+																</CellContents>
+															</TablixHeader>
+														</TablixMember>
+														<TablixMember>
+															<TablixHeader>
+																<Size>0.918289in</Size>
+																<CellContents>
+																	<Textbox Name="TextBox9">
+																		<Style>
+																			<BackgroundColor>DarkSeaGreen</BackgroundColor>
+																			<FontFamily>Times New Roman</FontFamily>
+																			<FontSize>10pt</FontSize>
+																			<FontStyle>Normal</FontStyle>
+																			<FontWeight>700</FontWeight>
+																			<PaddingBottom>2pt</PaddingBottom>
+																			<PaddingLeft>2pt</PaddingLeft>
+																			<PaddingRight>2pt</PaddingRight>
+																			<PaddingTop>2pt</PaddingTop>
+																			<TextAlign>Center</TextAlign>
+																			<VerticalAlign>Middle</VerticalAlign>
+																			<Border>
+																				<Style>Solid</Style>
+																			</Border>
+																		</Style>
+																		<Value>City Total</Value>
+																	</Textbox>
+																</CellContents>
+															</TablixHeader>
+														</TablixMember>
+													</TablixMembers>
+												</TablixMember>
+												<TablixMember>
+													<TablixHeader>
+														<Size>1.836578in</Size>
+														<CellContents>
+															<Textbox Name="TextBox16">
+																<Style>
+																	<BackgroundColor>DarkSlateGray</BackgroundColor>
+																	<Color>White</Color>
+																	<FontFamily>Times New Roman</FontFamily>
+																	<FontSize>10pt</FontSize>
+																	<FontStyle>Normal</FontStyle>
+																	<FontWeight>700</FontWeight>
+																	<PaddingBottom>2pt</PaddingBottom>
+																	<PaddingLeft>2pt</PaddingLeft>
+																	<PaddingRight>2pt</PaddingRight>
+																	<PaddingTop>2pt</PaddingTop>
+																	<VerticalAlign>Middle</VerticalAlign>
+																	<Border>
+																		<Style>Solid</Style>
+																	</Border>
+																</Style>
+																<Value>Country Total</Value>
+															</Textbox>
+														</CellContents>
+													</TablixHeader>
+												</TablixMember>
+											</TablixMembers>
+										</TablixMember>
+										<TablixMember>
+											<TablixHeader>
+												<Size>2.754167in</Size>
+												<CellContents>
+													<Textbox Name="TextBox21">
+														<Style>
+															<BackgroundColor>DarkSlateBlue</BackgroundColor>
+															<Color>White</Color>
+															<FontFamily>Times New Roman</FontFamily>
+															<FontSize>10pt</FontSize>
+															<FontStyle>Normal</FontStyle>
+															<FontWeight>700</FontWeight>
+															<PaddingBottom>2pt</PaddingBottom>
+															<PaddingLeft>2pt</PaddingLeft>
+															<PaddingRight>2pt</PaddingRight>
+															<PaddingTop>2pt</PaddingTop>
+															<VerticalAlign>Middle</VerticalAlign>
+															<Border>
+																<Style>Solid</Style>
+															</Border>
+														</Style>
+														<Value>Total</Value>
+													</Textbox>
+												</CellContents>
+											</TablixHeader>
+										</TablixMember>
+									</TablixMembers>
+								</TablixRowHierarchy>
+								<RepeatColumnHeaders>true</RepeatColumnHeaders>
+								<RepeatRowHeaders>true</RepeatRowHeaders>
+								<Top>1.6cm</Top>
+								<Width>14cm</Width>
+								<Height>4.15cm</Height>
+								<Style>
+									<Color>Black</Color>
+									<FontFamily>Times New Roman</FontFamily>
+									<FontSize>10pt</FontSize>
+									<FontStyle>Normal</FontStyle>
+									<FontWeight>400</FontWeight>
+									<Border>
+										<Style>Solid</Style>
+									</Border>
+								</Style>
+								<ZIndex>3</ZIndex>
+								<DataSetName>DataSet1</DataSetName>
+								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">28.8cm</dd:FixedHeight>
+								<dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">18.8cm</dd:FixedWidth>
+							</Tablix>
+						</ReportItems>
+					</Page>
+				</Pages>
+				<DataSetName>DataSet1</DataSetName>
+			</FixedPage>
+		</ReportItems>
+	</Body>
+	<BottomMargin>1in</BottomMargin>
+	<LeftMargin>0.5316223in</LeftMargin>
+	<RightMargin>0.5316223in</RightMargin>
+	<TopMargin>1in</TopMargin>
+	<PageHeight>14in</PageHeight>
+	<PageWidth>8.5in</PageWidth>
+	<Width>8.5in</Width>
+	<DataSources>
+		<DataSource Name="DataSource1">
+			<ConnectionProperties>
+				<ConnectString>Data Source=..\\..\\..\\..\\..\\..\\..\\..\\Data\\Reels.db</ConnectString>
+				<DataProvider>SQLITE</DataProvider>
+			</ConnectionProperties>
+		</DataSource>
+	</DataSources>
+	<DataSets>
+		<DataSet Name="DataSet1">
+			<Fields>
+				<Field Name="TotalOrder">
+					<DataField>TotalOrder</DataField>
+				</Field>
+				<Field Name="Years">
+					<DataField>Years</DataField>
+				</Field>
+				<Field Name="Quarters">
+					<DataField>Quarters</DataField>
+				</Field>
+				<Field Name="Months">
+					<DataField>Months</DataField>
+				</Field>
+				<Field Name="CustomerID">
+					<DataField>CustomerID</DataField>
+				</Field>
+				<Field Name="AccountNumber">
+					<DataField>AccountNumber</DataField>
+				</Field>
+				<Field Name="FirstName">
+					<DataField>FirstName</DataField>
+				</Field>
+				<Field Name="MiddleInitial">
+					<DataField>MiddleInitial</DataField>
+				</Field>
+				<Field Name="LastName">
+					<DataField>LastName</DataField>
+				</Field>
+				<Field Name="Address1">
+					<DataField>Address1</DataField>
+				</Field>
+				<Field Name="Address2">
+					<DataField>Address2</DataField>
+				</Field>
+				<Field Name="City">
+					<DataField>City</DataField>
+				</Field>
+				<Field Name="Region">
+					<DataField>Region</DataField>
+				</Field>
+				<Field Name="PostalCode">
+					<DataField>PostalCode</DataField>
+				</Field>
+				<Field Name="Country">
+					<DataField>Country</DataField>
+				</Field>
+				<Field Name="SalesID">
+					<DataField>SalesID</DataField>
+				</Field>
+				<Field Name="SaleDate">
+					<DataField>SaleDate</DataField>
+				</Field>
+				<Field Name="TaxPercent">
+					<DataField>TaxPercent</DataField>
+				</Field>
+				<Field Name="MediaType">
+					<DataField>MediaType</DataField>
+				</Field>
+				<Field Name="Title">
+					<DataField>Title</DataField>
+				</Field>
+				<Field Name="Quantity">
+					<DataField>Quantity</DataField>
+				</Field>
+				<Field Name="Price">
+					<DataField>Price</DataField>
+				</Field>
+				<Field Name="Discount">
+					<DataField>Discount</DataField>
+				</Field>
+			</Fields>
+			<Query>
+				<CommandText>SELECT *
+    , Quantity * Price AS TotalOrder
+    , strftime('%Y', SaleDate) AS Years
+    , case 
+        when 0 + strftime('%m', SaleDate) between  1 and  3 then 'Q1'
+        when 0 + strftime('%m', SaleDate) between  4 and  6 then 'Q2'
+        when 0 + strftime('%m', SaleDate) between  7 and  9 then 'Q3'
+        when 0 + strftime('%m', SaleDate) between 10 and 12 then 'Q4'
+    end AS Quarters
+    , strftime('%m', SaleDate) AS Months 
+FROM CustomerOrders 
+ORDER BY 
+    'Years ' DESC
+   ,'CustomerOrders '
+   ,'Months'
+   ,MediaType
+   ,Country
+   ,City
+   ,Title
+</CommandText>
+				<DataSourceName>DataSource1</DataSourceName>
+			</Query>
+		</DataSet>
+	</DataSets>
+</Report>

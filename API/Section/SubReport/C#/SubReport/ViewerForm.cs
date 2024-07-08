@@ -110,6 +110,7 @@ namespace ActiveReports.Samples.SubReport
 
 			var rpt = new SectionReport();
 			rpt.LoadLayout(XmlReader.Create(Properties.Resources.rptSimpleMain));
+			rpt.Document.Printer.PrinterName = String.Empty;
 			arvMain.LoadDocument(rpt);
 		}
 
@@ -119,6 +120,7 @@ namespace ActiveReports.Samples.SubReport
 
 			var rpt = new SectionReport();
 			rpt.LoadLayout(XmlReader.Create(Properties.Resources.rptNestedParent));
+			rpt.Document.Printer.PrinterName = String.Empty;
 			arvMain.LoadDocument(rpt);
 		}
 
@@ -129,6 +131,7 @@ namespace ActiveReports.Samples.SubReport
 			var myJoinedDS = new DataSet();
 			var rpt = new SectionReport();
 			rpt.LoadLayout(XmlReader.Create(Properties.Resources.rptDSRelationParent));
+			rpt.Document.Printer.PrinterName = String.Empty;
 
 			string cnnString = Properties.Resources.ConnectionString;
 
@@ -157,6 +160,7 @@ namespace ActiveReports.Samples.SubReport
 
 			var rpt = new SectionReport();
 			rpt.LoadLayout(XmlReader.Create(Properties.Resources.rptMasterMain));
+			rpt.Document.Printer.PrinterName = String.Empty;
 
 			arvMain.LoadDocument(rpt);
 
@@ -167,6 +171,8 @@ namespace ActiveReports.Samples.SubReport
 			// ***** Bookmark in sub-report *****
 			var rpt = new SectionReport();
 			rpt.LoadLayout(XmlReader.Create(Properties.Resources.rptBookmarkMain));
+			rpt.Document.Printer.PrinterName = String.Empty;
+
 			arvMain.LoadDocument(rpt);
 		}
 
@@ -176,6 +182,8 @@ namespace ActiveReports.Samples.SubReport
 
 			var rpt = new SectionReport();
 			rpt.LoadLayout(XmlReader.Create(Properties.Resources.rptParamMain));
+			rpt.Document.Printer.PrinterName = String.Empty;
+
 			arvMain.LoadDocument(rpt);
 		}
 
@@ -203,6 +211,8 @@ namespace ActiveReports.Samples.SubReport
 
 			var rpt = new SectionReport();
 			rpt.LoadLayout(XmlReader.Create(Properties.Resources.rptUnboundDSMain));
+			rpt.Document.Printer.PrinterName = String.Empty;
+
 			rpt.DataSource = DS;
 			rpt.DataMember = "Customers";
 			arvMain.LoadDocument(rpt);

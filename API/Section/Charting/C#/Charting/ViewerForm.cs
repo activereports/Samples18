@@ -89,6 +89,9 @@ namespace ActiveReports.Samples.Charting
 						break;
 				}
 
+				if(rpt.Document != null && rpt.Document.Printer != null)
+					rpt.Document.Printer.PrinterName = String.Empty;
+
 				arvMain.LoadDocument(rpt ?? new SectionReport());
 			}
 			catch (Exception ex)

@@ -1,6 +1,12 @@
-﻿using System;
+﻿using DocumentFormat.OpenXml.Wordprocessing;
+using GrapeCity.ActiveReports;
+using GrapeCity.ActiveReports.Extensibility.Rendering.Components;
+using GrapeCity.ActiveReports.Viewer.Wpf.View;
+using System;
+using System.IO;
 using System.Windows;
 using System.Windows.Controls;
+using System.Xml;
 
 namespace ActiveReports.Samples.WPFViewer
 {
@@ -48,25 +54,22 @@ namespace ActiveReports.Samples.WPFViewer
 			}
 
 			//Load Selected Report
-			switch (_report.Content.ToString())
+			LoadReport(_report.Content.ToString());
+		}
+
+		private void LoadReport(string reportName)
+		{
+			string extension = Path.GetExtension(reportName);
+			switch(extension)
 			{
-				case "Catalog.rdlx":
-					ReportViewer.LoadDocument(CurrentFileLocation + _report.Content);
+				case ".rpx":
+					SectionReport rpt = new SectionReport();
+					rpt.LoadLayout(XmlReader.Create(CurrentFileLocation + reportName));
+					rpt.Document.Printer.PrinterName = String.Empty;
+					ReportViewer.LoadDocument(rpt);
 					break;
-				case "EmployeeSales.rdlx":
-					ReportViewer.LoadDocument(CurrentFileLocation + _report.Content);
-					break;
-				case "Invoice1.rdlx":
-					ReportViewer.LoadDocument(CurrentFileLocation + _report.Content);
-					break;
-				case "Invoice2.rpx":
-					ReportViewer.LoadDocument(CurrentFileLocation + _report.Content);
-					break;
-				case "LabelReport.rpx":
-					ReportViewer.LoadDocument(CurrentFileLocation + _report.Content);
-					break;
-				case "PaymentSlip.rpx":
-					ReportViewer.LoadDocument(CurrentFileLocation + _report.Content);
+				case ".rdlx":
+					ReportViewer.LoadDocument(CurrentFileLocation + reportName);
 					break;
 			}
 		}

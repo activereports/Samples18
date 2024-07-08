@@ -19,6 +19,7 @@ Public Class ViewerForm
         Dim rpt As New SectionReport
         rpt = New SectionReport
         rpt.LoadLayout(XmlReader.Create("..\\..\\..\\..\\rptLINQtoObject.rpx"))
+        rpt.Document.Printer.PrinterName = String.Empty
 
         arvMain.LoadDocument(rpt)
     End Sub

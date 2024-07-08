@@ -8,13 +8,11 @@ namespace ActiveReports.Samples.Inheritance
 	{
 		public rptInheritChild()
 		{
-			//
-			// 
-			//
+			// This call is required by the ActiveReports designer
 			InitializeComponent();
-			//
-			// ActiveReports Designer support is required.
-			//
+
+			Document.Printer.PrinterName = string.Empty;
+
 			// Sets the path of the csv file.		   
 			CsvPath = "../../../../Customers.csv";
 		}

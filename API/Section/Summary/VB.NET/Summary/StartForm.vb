@@ -30,6 +30,7 @@ Public Class StartForm
         Dim rpt As New SectionReport
         Dim reportPath As String = "..\\..\\..\\..\\" + CType(comboBox1.SelectedItem, String)
         rpt.LoadLayout(XmlReader.Create(reportPath))
+        rpt.Document.Printer.PrinterName = String.Empty
         rpt.PrintWidth = 6.5!
         arvMain.LoadDocument(rpt)
     End Sub

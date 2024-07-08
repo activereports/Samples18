@@ -31,6 +31,7 @@ namespace ActiveReports.Samples.IListBinding
 			// Create new report object
 			var rpt = new SectionReport();
 			rpt.LoadLayout(XmlReader.Create("IlistReportSample.rpx"));
+			rpt.Document.Printer.PrinterName = String.Empty;
 			rpt.DataSource = _productCollection;
 			
 			// Pass the document to show in the viewer form

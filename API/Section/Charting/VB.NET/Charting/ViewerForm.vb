@@ -64,6 +64,11 @@ Public Class ViewerForm
                 Case 4  ' Stacked area chart 
                     rpt.LoadLayout(XmlReader.Create(My.Resources.rptStackedArea))
             End Select
+
+            If Not (rpt.Document Is Nothing) And Not (rpt.Document.Printer Is Nothing) Then
+                rpt.Document.Printer.PrinterName = String.Empty
+            End If
+
             arvMain.LoadDocument(DirectCast(rpt, SectionReport))
         Catch ex As Exception
             MessageBox.Show(ex.ToString)

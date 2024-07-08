@@ -48,6 +48,7 @@ public class RpxHandlerMiddleware
 			using var reader = XmlReader.Create(rpxFile);
 			report.ResourceLocator = new DefaultResourceLocator(new Uri(Path.GetDirectoryName(rpxFile) + @"\"));
 			report.LoadLayout(reader);
+			report.Document.Printer.PrinterName = String.Empty;
 			report.Run(false);
 			using (var html = new HtmlExport { IncludeHtmlHeader = true })
 				html.Export(report.Document, htmlHandler, "");

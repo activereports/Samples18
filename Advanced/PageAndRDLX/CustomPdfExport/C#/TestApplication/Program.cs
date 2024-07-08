@@ -16,7 +16,7 @@ namespace ActiveReports.Samples.Export.Rendering
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault(false);
 #if NET6_0_OR_GREATER
-			Application.SetHighDpiMode(HighDpiMode.DpiUnawareGdiScaled);
+			Application.SetHighDpiMode(HighDpiMode.SystemAware);
 #endif
 			Application.Run(new MainForm());
 		}

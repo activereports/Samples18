@@ -5,6 +5,7 @@ Imports GrapeCity.ActiveReports.Export.Pdf.Section
 Imports System.IO
 Imports System.Text
 Imports GrapeCity.ActiveReports
+Imports System.Xml
 
 Public Class PDFDigitalSignature
 	Public Sub New()
@@ -16,7 +17,10 @@ Public Class PDFDigitalSignature
 		' Set the default for in the 'Signature Format' combo box.
 		cmbVisibilityType.SelectedIndex = 3
 
-		arvMain.LoadDocument("..//..//..//..//Report//Invoice.rpx")
+		Dim report As New SectionReport
+		report.LoadLayout(XmlReader.Create("..//..//..//..//Report//Invoice.rpx"))
+		report.Document.Printer.PrinterName = String.Empty
+		arvMain.LoadDocument(DirectCast(report, SectionReport))
 	End Sub
 
 	Private Sub pdfExportButton_Click(sender As Object, e As EventArgs) Handles pdfExportButton.Click
@@ -40,10 +44,10 @@ Public Class PDFDigitalSignature
 			' Change the cursor.
 			Cursor = Cursors.WaitCursor
 			Application.DoEvents()
-			
+
 			' PAdES format
 			oPDFExport.Signature.SignatureFormat = SignatureFormat.ETSI_CAdES_detached
-			oPDFExport.Signature.SignatureDigestAlgorithm = SignatureDigestAlgorithm.SHA256				
+			oPDFExport.Signature.SignatureDigestAlgorithm = SignatureDigestAlgorithm.SHA256
 
 			' Sets the type of signature.
 			oPDFExport.Signature.VisibilityType = CType(cmbVisibilityType.SelectedIndex, VisibilityType)
@@ -75,7 +79,7 @@ Public Class PDFDigitalSignature
 			' Sets the password for the certificate and digital signature.
 			' For X509Certificate2 class, etc. Please refer to the site of Microsoft.
 			oPDFExport.Signature.Certificate = New X509Certificate2(Path.GetFullPath("..//..//..//..//certificate.pfx"), "test", X509KeyStorageFlags.Exportable)
-			
+
 			If chkTimeStamp.Checked Then
 				oPDFExport.Signature.TimeStamp = New TimeStamp("https://freetsa.org/tsr", "", "")
 			End If
@@ -87,7 +91,7 @@ Public Class PDFDigitalSignature
 
 			oPDFExport.Signature.Location = New SignatureField(Of String)("Pittsburgh", True)
 			' Export the file.
-			if File.Exists(sfd.FileName)
+			If File.Exists(sfd.FileName)Then
 				File.Delete(sfd.FileName)
 			End If
 			oPDFExport.Export(arvMain.Document, sfd.FileName)

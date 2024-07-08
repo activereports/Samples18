@@ -38,6 +38,7 @@ Public Class StyleSheetsForm
 
         Dim report As New SectionReport
         report.LoadLayout(xmlReader)
+        report.Document.Printer.PrinterName = String.Empty
         'Apply stylesheet on the report.
         Dim outputFolder As String
         outputFolder = New FileInfo(Me.GetType().Assembly.Location).DirectoryName & "\"

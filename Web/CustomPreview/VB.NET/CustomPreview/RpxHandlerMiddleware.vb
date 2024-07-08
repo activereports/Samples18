@@ -49,6 +49,7 @@ Public Class RpxHandlerMiddleware
                 Using reader As XmlReader = XmlReader.Create(rpxFile)
                     report.ResourceLocator = New DefaultResourceLocator(New Uri(Path.GetDirectoryName(rpxFile) + "\"))
                     report.LoadLayout(reader)
+                    report.Document.Printer.PrinterName = String.Empty
                     report.Run(False)
                     Using html = New HtmlExport With { .IncludeHtmlHeader = True }
                         html.Export(report.Document, htmlHandler, "")

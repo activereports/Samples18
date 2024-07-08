@@ -1,5 +1,6 @@
 using GrapeCity.ActiveReports.Document;
 using GrapeCity.ActiveReports.SectionReportModel;
+using System;
 
 namespace ActiveReports.Samples.BoundData
 {
@@ -232,6 +233,10 @@ namespace ActiveReports.Samples.BoundData
 			((System.ComponentModel.ISupportInitialize)(this.textBoxUnitsOnOrder)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
+			//
+			// Printer settings
+			//
+			Document.Printer.PrinterName = String.Empty;
 		}
 		#endregion
 

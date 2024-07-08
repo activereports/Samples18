@@ -109,6 +109,7 @@ Public Class MainForm
 		'
 		Dim rpt As New SectionReport()
 		rpt.LoadLayout(XmlReader.Create(System.IO.Path.Combine("..\\..\\..\\..\\", My.Resources.ReportName)))
+		rpt.Document.Printer.PrinterName = String.Empty
 		rpt.DataSource = invoiceData
 		rpt.DataMember = invoiceData.Tables(0).TableName
 
@@ -154,6 +155,7 @@ Public Class MainForm
 		'
 		Dim rpt As New SectionReport()
 		rpt.LoadLayout(XmlReader.Create(System.IO.Path.Combine("..\\..\\..\\..\\", My.Resources.ReportName)))
+		rpt.Document.Printer.PrinterName = String.Empty
 		rpt.DataSource = invoiceData
 		'Run and view the report
 		'
@@ -210,6 +212,7 @@ Public Class MainForm
 		'
 		Dim rpt As New SectionReport()
 		rpt.LoadLayout(XmlReader.Create(System.IO.Path.Combine("..\\..\\..\\..\\", My.Resources.ReportName)))
+		rpt.Document.Printer.PrinterName = String.Empty
 		rpt.DataSource = invoiceDataView
 		'Run and view the report
 		'
@@ -246,6 +249,7 @@ Public Class MainForm
 		'
 		Dim rpt As New SectionReport()
 		rpt.LoadLayout(XmlReader.Create(System.IO.Path.Combine("..\\..\\..\\..\\", My.Resources.ReportName)))
+		rpt.Document.Printer.PrinterName = String.Empty
 		rpt.DataSource = invoiceDataReader
 		'Run and view the report
 		'
@@ -288,6 +292,7 @@ Public Class MainForm
 		'
 		Dim rpt As New SectionReport()
 		rpt.LoadLayout(XmlReader.Create(System.IO.Path.Combine("..\\..\\..\\..\\", My.Resources.ReportName)))
+		rpt.Document.Printer.PrinterName = String.Empty
 		rpt.DataSource = db
 		'Run and view the report
 		'
@@ -389,6 +394,7 @@ Public Class MainForm
 				'
 				Dim rpt As New SectionReport()
 				rpt.LoadLayout(XmlReader.Create(System.IO.Path.Combine("..\\..\\..\\..\\", My.Resources.ReportName)))
+				rpt.Document.Printer.PrinterName = String.Empty
 				rpt.DataSource = xml
 				'Run and view the report
 				'

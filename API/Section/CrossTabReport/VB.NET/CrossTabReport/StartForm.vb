@@ -27,6 +27,7 @@ Public Class StartForm
             'Create a report and display it in the Viewer.
             Dim rpt As New SectionReport()
             rpt.LoadLayout(XmlReader.Create(My.Resources.ProductWeeklySales))
+            rpt.Document.Printer.PrinterName = String.Empty
             arvMain.LoadDocument(rpt)
         Catch ex As ReportException
             MessageBox.Show(ex.ToString(), Text)

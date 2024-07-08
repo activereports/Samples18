@@ -40,6 +40,7 @@ Public Class MainForm
         Dim rpt As New SectionReport
         rpt.AddAssembly(GetType(SQLiteConnection).Assembly)
         rpt.LoadLayout(XmlReader.Create(My.Resources.UnboundDSInvoice))
+        rpt.Document.Printer.PrinterName = String.Empty
         rpt.PrintWidth = 6.5!
         'Run and view the report
         arvMain.LoadDocument(rpt)
@@ -51,6 +52,7 @@ Public Class MainForm
         Dim rpt As New SectionReport
         rpt.AddAssembly(GetType(SQLiteConnection).Assembly)
         rpt.LoadLayout(XmlReader.Create(My.Resources.UnboundDRInvoice))
+        rpt.Document.Printer.PrinterName = String.Empty
         rpt.PrintWidth = 6.5!
         'Run and view the report.
         arvMain.LoadDocument(rpt)
@@ -61,6 +63,7 @@ Public Class MainForm
         'Create the report.
         Dim rpt As New SectionReport
         rpt.LoadLayout(XmlReader.Create(My.Resources.UnboundTFInvoice))
+        rpt.Document.Printer.PrinterName = String.Empty
         rpt.PrintWidth = 6.5!
         'Run and view the report.
         arvMain.LoadDocument(rpt)
@@ -71,6 +74,7 @@ Public Class MainForm
         'Create the report.
         Dim rpt As New SectionReport
         rpt.LoadLayout(XmlReader.Create(My.Resources.UnboundDAInvoice))
+        rpt.Document.Printer.PrinterName = String.Empty
         rpt.PrintWidth = 6.5!
         'Run and view the report.
         arvMain.LoadDocument(rpt)

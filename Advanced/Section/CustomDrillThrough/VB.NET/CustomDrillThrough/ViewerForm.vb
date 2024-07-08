@@ -42,6 +42,7 @@ Public Class ViewerForm
             ' Click on customer ID to open the drill through for that customer.
             Dim rpt2 As New SectionReport
             rpt2.LoadLayout(XmlReader.Create(My.Resources.DrillThrough1))
+            rpt2.Document.Printer.PrinterName = String.Empty
             Dim frm2 As New ViewerForm(False)
             rpt2.Parameters("customerID").Value = hyperlink
             frm2.arvMain.LoadDocument(rpt2)
@@ -50,6 +51,7 @@ Public Class ViewerForm
             ' Click order number to open the order details
             Dim rpt3 As New SectionReport
             rpt3.LoadLayout(XmlReader.Create(My.Resources.DrillThrough2))
+            rpt3.Document.Printer.PrinterName = String.Empty
             Dim frm3 As New ViewerForm(False)
             rpt3.Parameters("orderID").Value = hyperlink
             frm3.arvMain.LoadDocument(rpt3)
@@ -62,6 +64,7 @@ Public Class ViewerForm
         If _loadMainReport Then
             Dim rpt As New SectionReport
             rpt.LoadLayout(XmlReader.Create(My.Resources.DrillThroughMain))
+            rpt.Document.Printer.PrinterName = String.Empty
             arvMain.LoadDocument(rpt)
         End If
     End Sub 'Form1_Load

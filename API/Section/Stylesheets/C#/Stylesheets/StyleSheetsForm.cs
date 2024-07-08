@@ -27,6 +27,7 @@ namespace ActiveReports.Samples.StyleSheets
 
 			var report = new SectionReport();
 			report.LoadLayout(xmlReader);
+			report.Document.Printer.PrinterName = String.Empty;
 			// Apply stylesheet on the report.
 			// 
 			string outputFolder = new FileInfo(GetType().Assembly.Location).DirectoryName + "\\";

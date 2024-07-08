@@ -78,6 +78,7 @@ Public Class ViewerForm
 
         Dim rpt As New SectionReport()
         rpt.LoadLayout(XmlReader.Create(My.Resources.rptSimpleMain))
+        rpt.Document.Printer.PrinterName = String.Empty
         arvMain.LoadDocument(rpt)
 
     End Sub
@@ -88,6 +89,7 @@ Public Class ViewerForm
 
         Dim rpt As New SectionReport()
         rpt.LoadLayout(XmlReader.Create(My.Resources.rptNestedParent))
+        rpt.Document.Printer.PrinterName = String.Empty
         arvMain.LoadDocument(rpt)
 
     End Sub
@@ -98,6 +100,7 @@ Public Class ViewerForm
 
         Dim rpt As New SectionReport()
         rpt.LoadLayout(XmlReader.Create(My.Resources.rptDSRelationParent))
+        rpt.Document.Printer.PrinterName = String.Empty
         Dim myJoinedDS As New DataSet()
         Dim cnnString As String
         cnnString = My.Resources.ConnectionString
@@ -126,6 +129,7 @@ Public Class ViewerForm
 
         Dim rpt As New SectionReport()
         rpt.LoadLayout(XmlReader.Create(My.Resources.rptMasterMain))
+        rpt.Document.Printer.PrinterName = String.Empty
         arvMain.LoadDocument(rpt)
 
     End Sub
@@ -136,6 +140,7 @@ Public Class ViewerForm
 
         Dim rpt As New SectionReport()
         rpt.LoadLayout(XmlReader.Create(My.Resources.rptBookmarkMain))
+        rpt.Document.Printer.PrinterName = String.Empty
         arvMain.LoadDocument(rpt)
 
     End Sub
@@ -146,6 +151,7 @@ Public Class ViewerForm
 
         Dim rpt As New SectionReport()
         rpt.LoadLayout(XmlReader.Create(My.Resources.rptParamMain))
+        rpt.Document.Printer.PrinterName = String.Empty
         arvMain.LoadDocument(rpt)
 
     End Sub
@@ -174,6 +180,7 @@ Public Class ViewerForm
 
         Dim rpt As New SectionReport()
         rpt.LoadLayout(XmlReader.Create(My.Resources.rptUnboundDSMain))
+        rpt.Document.Printer.PrinterName = String.Empty
         rpt.DataSource = DS
         rpt.DataMember = "Customers"
         arvMain.LoadDocument(rpt)

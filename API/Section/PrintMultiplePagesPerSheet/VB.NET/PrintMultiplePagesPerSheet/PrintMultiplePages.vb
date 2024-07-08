@@ -42,6 +42,7 @@ Public Class PrintMultiplePages
         'Define and run the Invoice Report
         Dim rpt As New SectionReport
         rpt.LoadLayout(XmlReader.Create(My.Resources.Invoice))
+        rpt.Document.Printer.PrinterName = String.Empty
         CType(rpt.DataSource, Data.DbDataSource).ConnectionString = My.Resources.ConnectionString
         rpt.Run(False)
 

@@ -62,6 +62,7 @@ namespace ActiveReports.Samples.CustomDrillThrough
 				// Click on customer ID to open the drill through for that customer.
 				var rpt2 = new SectionReport();
 				rpt2.LoadLayout(XmlReader.Create(Properties.Resources.DrillThrough1));
+				rpt2.Document.Printer.PrinterName = string.Empty;
 				ViewerForm frm2 = new ViewerForm(false);
 				rpt2.Parameters["customerID"].Value = hyperlink;
 				frm2.arvMain.LoadDocument(rpt2);
@@ -72,6 +73,7 @@ namespace ActiveReports.Samples.CustomDrillThrough
 				// Click order number to open the order details
 				var rpt3 = new SectionReport();
 				rpt3.LoadLayout(XmlReader.Create(Properties.Resources.DrillThrough2));
+				rpt3.Document.Printer.PrinterName = string.Empty;
 				ViewerForm frm3 = new ViewerForm(false);
 				rpt3.Parameters["orderID"].Value = hyperlink;
 				frm3.arvMain.LoadDocument(rpt3);
@@ -88,6 +90,7 @@ namespace ActiveReports.Samples.CustomDrillThrough
 			{
 				var rpt = new SectionReport();
 				rpt.LoadLayout(XmlReader.Create(Properties.Resources.DrillThroughMain));
+				rpt.Document.Printer.PrinterName = string.Empty;
 				arvMain.LoadDocument(rpt);
 			}
 		}

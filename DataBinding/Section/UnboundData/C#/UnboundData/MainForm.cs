@@ -58,6 +58,7 @@ namespace ActiveReports.Samples.UnboundData
 			var rpt = new SectionReport();
 			rpt.AddAssembly(typeof(SQLiteConnection).Assembly);
 			rpt.LoadLayout(XmlReader.Create(Properties.Resources.UnboundDSInvoice));
+			rpt.Document.Printer.PrinterName = String.Empty;
 			//Run and view the report.
 			arvMain.LoadDocument(rpt);
 		}
@@ -71,6 +72,7 @@ namespace ActiveReports.Samples.UnboundData
 			var rpt = new SectionReport();
 			rpt.AddAssembly(typeof(SQLiteConnection).Assembly);
 			rpt.LoadLayout(XmlReader.Create(Properties.Resources.UnboundDRInvoice));
+			rpt.Document.Printer.PrinterName = String.Empty;
 			//Run and view the report
 			arvMain.LoadDocument(rpt);
 		}
@@ -84,6 +86,7 @@ namespace ActiveReports.Samples.UnboundData
 			//UnboundTFInvoice rpt = new UnboundTFInvoice();
 			var rpt = new SectionReport();
 			rpt.LoadLayout(XmlReader.Create(Properties.Resources.UnboundTFInvoice));
+			rpt.Document.Printer.PrinterName = String.Empty;
 			//Run and view the report
 			arvMain.LoadDocument(rpt);		
 		}
@@ -96,6 +99,7 @@ namespace ActiveReports.Samples.UnboundData
 			//Create the report
 			var rpt = new SectionReport();
 			rpt.LoadLayout(XmlReader.Create(Properties.Resources.UnboundDAInvoice));
+			rpt.Document.Printer.PrinterName = String.Empty;
 			//Run and view the report
 			arvMain.LoadDocument(rpt);
 		}

@@ -404,9 +404,9 @@ Namespace My.Resources
         '''<summary>
         '''  Looks up a localized string similar to RDLX MultiSection Report Files (*.rdlx)|*.rdlx.
         '''</summary>
-        Friend ReadOnly Property SaveRdlMultiSectionFilter() As String
+        Friend ReadOnly Property SaveRdlxMultiSectionFilter() As String
             Get
-                Return ResourceManager.GetString("SaveRdlMultiSectionFilter", resourceCulture)
+                Return ResourceManager.GetString("SaveRdlxMultiSectionFilter", resourceCulture)
             End Get
         End Property
 

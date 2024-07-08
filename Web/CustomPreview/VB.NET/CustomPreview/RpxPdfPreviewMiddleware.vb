@@ -24,6 +24,7 @@ Public Class RpxPdfPreviewMiddleware
         rpt.ResourceLocator = New DefaultResourceLocator(New Uri(reportsPath + "/"))
         Dim xtr As New XmlTextReader(filePath)
         rpt.LoadLayout(xtr)
+        rpt.Document.Printer.PrinterName = String.Empty
         xtr.Close()
         
         Dim reportException As String = Nothing

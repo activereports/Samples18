@@ -125,6 +125,9 @@
   <data name="splitContainer1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="splitContainer1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
   <data name="radioButton2.Anchor" type="System.Windows.Forms.AnchorStyles, System.Windows.Forms">
     <value>Top, Right</value>
   </data>
@@ -133,10 +136,13 @@
     <value>True</value>
   </data>
   <data name="radioButton2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>120, 41</value>
+    <value>188, 63</value>
+  </data>
+  <data name="radioButton2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="radioButton2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>72, 17</value>
+    <value>99, 24</value>
   </data>
   <data name="radioButton2.TabIndex" type="System.Int32, mscorlib">
     <value>12</value>
@@ -163,10 +169,13 @@
     <value>NoControl</value>
   </data>
   <data name="radioButton1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>12, 41</value>
+    <value>18, 63</value>
+  </data>
+  <data name="radioButton1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
   </data>
   <data name="radioButton1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>64, 17</value>
+    <value>86, 24</value>
   </data>
   <data name="radioButton1.TabIndex" type="System.Int32, mscorlib">
     <value>11</value>
@@ -196,13 +205,10 @@
     <value>NoControl</value>
   </data>
   <data name="saveAsButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 578</value>
-  </data>
-  <data name="saveAsButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>16, 889</value>
   </data>
   <data name="saveAsButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>181, 27</value>
+    <value>271, 42</value>
   </data>
   <data name="saveAsButton.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -226,13 +232,10 @@
     <value>Top, Left, Right</value>
   </data>
   <data name="reports.Location" type="System.Drawing.Point, System.Drawing">
-    <value>11, 11</value>
-  </data>
-  <data name="reports.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>16, 17</value>
   </data>
   <data name="reports.Size" type="System.Drawing.Size, System.Drawing">
-    <value>183, 21</value>
+    <value>271, 28</value>
   </data>
   <data name="reports.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -262,13 +265,10 @@
     <value>NoControl</value>
   </data>
   <data name="exportButton.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 546</value>
-  </data>
-  <data name="exportButton.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>15, 840</value>
   </data>
   <data name="exportButton.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 26</value>
+    <value>272, 40</value>
   </data>
   <data name="exportButton.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -292,13 +292,10 @@
     <value>Top, Bottom, Left, Right</value>
   </data>
   <data name="propertyGrid.Location" type="System.Drawing.Point, System.Drawing">
-    <value>10, 67</value>
-  </data>
-  <data name="propertyGrid.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>15, 103</value>
   </data>
   <data name="propertyGrid.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 463</value>
+    <value>272, 712</value>
   </data>
   <data name="propertyGrid.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -336,6 +333,9 @@
   <data name="splitContainer2.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="splitContainer2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
   <data name="splitContainer2.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
@@ -349,13 +349,10 @@
     <value>NoControl</value>
   </data>
   <data name="pdfTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>489, 9</value>
-  </data>
-  <data name="pdfTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>735, 14</value>
   </data>
   <data name="pdfTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>104, 23</value>
+    <value>15, 20</value>
   </data>
   <data name="pdfTime.TabIndex" type="System.Int32, mscorlib">
     <value>16</value>
@@ -382,13 +379,10 @@
     <value>NoControl</value>
   </data>
   <data name="arTime.Location" type="System.Drawing.Point, System.Drawing">
-    <value>122, 9</value>
-  </data>
-  <data name="arTime.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>183, 14</value>
   </data>
   <data name="arTime.Size" type="System.Drawing.Size, System.Drawing">
-    <value>113, 23</value>
+    <value>15, 20</value>
   </data>
   <data name="arTime.TabIndex" type="System.Int32, mscorlib">
     <value>15</value>
@@ -418,13 +412,10 @@
     <value>NoControl</value>
   </data>
   <data name="pdfLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>456, 9</value>
-  </data>
-  <data name="pdfLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>685, 14</value>
   </data>
   <data name="pdfLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>31, 13</value>
+    <value>45, 20</value>
   </data>
   <data name="pdfLabel.TabIndex" type="System.Int32, mscorlib">
     <value>14</value>
@@ -451,13 +442,10 @@
     <value>NoControl</value>
   </data>
   <data name="arLabel.Location" type="System.Drawing.Point, System.Drawing">
-    <value>81, 9</value>
-  </data>
-  <data name="arLabel.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 0, 2, 0</value>
+    <value>122, 14</value>
   </data>
   <data name="arLabel.Size" type="System.Drawing.Size, System.Drawing">
-    <value>42, 13</value>
+    <value>61, 20</value>
   </data>
   <data name="arLabel.TabIndex" type="System.Int32, mscorlib">
     <value>13</value>
@@ -495,26 +483,32 @@
   <data name="splitContainer3.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="splitContainer3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 5, 4, 5</value>
+  </data>
   <data name="splitContainer3.Orientation" type="System.Windows.Forms.Orientation, System.Windows.Forms">
     <value>Horizontal</value>
   </data>
   <data name="arViewer.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Fill</value>
   </data>
+  <data name="arViewer.Font" type="System.Drawing.Font, System.Drawing">
+    <value>Segoe UI, 9pt</value>
+  </data>
   <data name="arViewer.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="arViewer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
   <data name="arViewer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>675, 317</value>
+    <value>1013, 487</value>
   </data>
   <data name="arViewer.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
   </data>
   <data name="&gt;&gt;arViewer.Name" xml:space="preserve">
     <value>arViewer</value>
+  </data>
+  <data name="&gt;&gt;arViewer.Type" xml:space="preserve">
+    <value>GrapeCity.ActiveReports.Viewer.Win.Viewer, MESCIUS.ActiveReports.Viewer.Win, Version=18.1.0.0, Culture=neutral, PublicKeyToken=cc4967777c49a3ff</value>
   </data>
   <data name="&gt;&gt;arViewer.Parent" xml:space="preserve">
     <value>splitContainer3.Panel1</value>
@@ -540,11 +534,8 @@
   <data name="pdfViewer.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
-  <data name="pdfViewer.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
-  </data>
   <data name="pdfViewer.Size" type="System.Drawing.Size, System.Drawing">
-    <value>675, 249</value>
+    <value>1013, 384</value>
   </data>
   <data name="pdfViewer.TabIndex" type="System.Int32, mscorlib">
     <value>10</value>
@@ -574,13 +565,13 @@
     <value>1</value>
   </data>
   <data name="splitContainer3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>675, 572</value>
+    <value>1013, 880</value>
   </data>
   <data name="splitContainer3.SplitterDistance" type="System.Int32, mscorlib">
-    <value>317</value>
+    <value>487</value>
   </data>
   <data name="splitContainer3.SplitterWidth" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="splitContainer3.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -610,13 +601,13 @@
     <value>1</value>
   </data>
   <data name="splitContainer2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>675, 613</value>
+    <value>1013, 943</value>
   </data>
   <data name="splitContainer2.SplitterDistance" type="System.Int32, mscorlib">
-    <value>40</value>
+    <value>61</value>
   </data>
   <data name="splitContainer2.SplitterWidth" type="System.Int32, mscorlib">
-    <value>1</value>
+    <value>2</value>
   </data>
   <data name="splitContainer2.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -646,13 +637,13 @@
     <value>1</value>
   </data>
   <data name="splitContainer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>886, 613</value>
+    <value>1329, 943</value>
   </data>
   <data name="splitContainer1.SplitterDistance" type="System.Int32, mscorlib">
-    <value>205</value>
+    <value>307</value>
   </data>
   <data name="splitContainer1.SplitterWidth" type="System.Int32, mscorlib">
-    <value>6</value>
+    <value>9</value>
   </data>
   <data name="splitContainer1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -682,16 +673,13 @@
     <value>True</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>6, 13</value>
+    <value>96, 96</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>886, 613</value>
-  </data>
-  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>2, 2, 2, 2</value>
+    <value>1329, 943</value>
   </data>
   <data name="$this.MinimumSize" type="System.Drawing.Size, System.Drawing">
-    <value>902, 652</value>
+    <value>1345, 982</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>Custom PDF Export</value>

@@ -99,6 +99,11 @@ Partial Public Class rptDesignChild
 		CType(Me.txtAddress1, System.ComponentModel.ISupportInitialize).EndInit()
 		CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
+		'
+		'Printer settings
+		'
+		Me.Document.Printer.PrinterName = String.Empty
+
 	End Sub
 #End Region
 	Friend WithEvents txtCustomerID1 As GrapeCity.ActiveReports.SectionReportModel.TextBox

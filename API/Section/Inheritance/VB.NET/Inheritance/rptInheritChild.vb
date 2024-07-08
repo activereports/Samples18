@@ -6,6 +6,8 @@ Public Class rptInheritChild
 		' This call is required by the ActiveReports designer.
 		InitializeComponent()
 
+		Document.Printer.PrinterName = String.Empty
+
 		'Add any initialization after the call () InitializeComponent.
 		AddHandler DataInitialize, AddressOf BaseReport_DataInitialize
 

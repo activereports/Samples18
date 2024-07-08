@@ -36,7 +36,7 @@ namespace ActiveReports.Samples.CrossSectionControls
 			// Instantiate a new Invoice report
 			var report = new SectionReport();
 			report.LoadLayout(XmlReader.Create(Properties.Resources.Invoice));
-
+			report.Document.Printer.PrinterName = String.Empty;
 			report.MaxPages = 10;
 
 			// Set the connection string to the sample database.

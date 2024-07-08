@@ -7,6 +7,8 @@ using GrapeCity.ActiveReports.Export.Pdf.Section.Signing;
 using GrapeCity.ActiveReports.Export.Pdf.Section;
 using System.Resources;
 using System.Diagnostics;
+using GrapeCity.ActiveReports;
+using System.Xml;
 
 namespace ActiveReports.Samples.DigitalSignaturePro
 {
@@ -22,7 +24,11 @@ namespace ActiveReports.Samples.DigitalSignaturePro
 			// Set the default for in the 'Signature Format' combo box.
 			cmbVisibilityType.SelectedIndex = 3;
 
-			arvMain.LoadDocument("..//..//..//..//Report//Invoice.rpx");
+			SectionReport report = new SectionReport();
+			report.LoadLayout(XmlReader.Create("..//..//..//..//Report//Invoice.rpx"));
+			report.Document.Printer.PrinterName = String.Empty;
+
+			arvMain.LoadDocument(report);
 		}
 
 		private void pdfExportButton_Click(object sender, EventArgs e)

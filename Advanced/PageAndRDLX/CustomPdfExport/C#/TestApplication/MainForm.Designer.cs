@@ -229,7 +229,7 @@ namespace ActiveReports.Samples.Export.Rendering
 			// MainForm
 			// 
 			resources.ApplyResources(this, "$this");
-			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
 			this.Controls.Add(this.splitContainer1);
 			this.Name = "MainForm";
 			this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
