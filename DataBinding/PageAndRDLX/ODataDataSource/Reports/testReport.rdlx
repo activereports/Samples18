@@ -1,16 +1,17 @@
 ﻿<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2005/01/reportdefinition">
-	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">testReport.rdlx</dd:Name>
+	<dd:Name xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">testReport</dd:Name>
 	<Body>
-		<Height>11in</Height>
+		<Height>11.69in</Height>
 		<ReportItems>
 			<FixedPage Name="FixedPage1">
 				<Pages>
 					<Page>
 						<ReportItems>
 							<Textbox Name="TextBox1">
-								<Height>0.375in</Height>
+								<Top>0.25in</Top>
 								<Left>0.375in</Left>
-								<Value>=Fields!CustomerID.Value</Value>
+								<Width>4in</Width>
+								<Height>0.375in</Height>
 								<Style>
 									<FontSize>14pt</FontSize>
 									<FontStyle>Italic</FontStyle>
@@ -19,52 +20,58 @@
 									<PaddingRight>2pt</PaddingRight>
 									<PaddingTop>2pt</PaddingTop>
 								</Style>
-								<Top>0.25in</Top>
-								<Width>4in</Width>
+								<Value>=Fields!Id.Value</Value>
 							</Textbox>
-							<Table Name="Table2">
+							<Table Name="Table1">
+								<Top>0.8in</Top>
+								<Width>7.384583in</Width>
+								<Height>2.159001cm</Height>
+								<Style>
+									<FontFamily>Arial</FontFamily>
+								</Style>
+								<ZIndex>1</ZIndex>
 								<DataSetName>DataSet1</DataSetName>
 								<Header>
 									<TableRows>
 										<TableRow>
-											<Height>0.8cm</Height>
+											<Height>0.635001cm</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
-														<Textbox Name="TextBox4">
+														<Textbox Name="TextBox2">
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
 															<Value>Company Name</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox3">
 															<Style>
 																<PaddingBottom>2pt</PaddingBottom>
 																<PaddingLeft>2pt</PaddingLeft>
 																<PaddingRight>2pt</PaddingRight>
 																<PaddingTop>2pt</PaddingTop>
 															</Style>
-														</Textbox>
-													</ReportItems>
-												</TableCell>
-												<TableCell>
-													<ReportItems>
-														<Textbox Name="TextBox7">
 															<Value>Contact Name</Value>
-															<Style>
-																<PaddingBottom>2pt</PaddingBottom>
-																<PaddingLeft>2pt</PaddingLeft>
-																<PaddingRight>2pt</PaddingRight>
-																<PaddingTop>2pt</PaddingTop>
-															</Style>
 														</Textbox>
 													</ReportItems>
 												</TableCell>
 												<TableCell>
 													<ReportItems>
-														<Textbox Name="TextBox8">
-															<Value>Address</Value>
+														<Textbox Name="TextBox4">
 															<Style>
 																<PaddingBottom>2pt</PaddingBottom>
 																<PaddingLeft>2pt</PaddingLeft>
 																<PaddingRight>2pt</PaddingRight>
 																<PaddingTop>2pt</PaddingTop>
 															</Style>
+															<Value>Address</Value>
 														</Textbox>
 													</ReportItems>
 												</TableCell>
@@ -75,44 +82,47 @@
 								<Details>
 									<TableRows>
 										<TableRow>
-											<Height>0.31496in</Height>
+											<Height>0.6in</Height>
 											<TableCells>
 												<TableCell>
 													<ReportItems>
-														<Textbox Name="TextBox9">
+														<Textbox Name="TextBox5">
+															<Style>
+																<PaddingBottom>2pt</PaddingBottom>
+																<PaddingLeft>2pt</PaddingLeft>
+																<PaddingRight>2pt</PaddingRight>
+																<PaddingTop>2pt</PaddingTop>
+															</Style>
+															<DataElementName>CompanyName</DataElementName>
 															<Value>=Fields!CompanyName.Value</Value>
+														</Textbox>
+													</ReportItems>
+												</TableCell>
+												<TableCell>
+													<ReportItems>
+														<Textbox Name="TextBox6">
 															<Style>
 																<PaddingBottom>2pt</PaddingBottom>
 																<PaddingLeft>2pt</PaddingLeft>
 																<PaddingRight>2pt</PaddingRight>
 																<PaddingTop>2pt</PaddingTop>
 															</Style>
-														</Textbox>
-													</ReportItems>
-												</TableCell>
-												<TableCell>
-													<ReportItems>
-														<Textbox Name="TextBox10">
+															<DataElementName>ContactName</DataElementName>
 															<Value>=Fields!ContactName.Value</Value>
-															<Style>
-																<PaddingBottom>2pt</PaddingBottom>
-																<PaddingLeft>2pt</PaddingLeft>
-																<PaddingRight>2pt</PaddingRight>
-																<PaddingTop>2pt</PaddingTop>
-															</Style>
 														</Textbox>
 													</ReportItems>
 												</TableCell>
 												<TableCell>
 													<ReportItems>
-														<Textbox Name="TextBox11">
-															<Value>=Fields!Address.Value</Value>
+														<Textbox Name="TextBox7">
 															<Style>
 																<PaddingBottom>2pt</PaddingBottom>
 																<PaddingLeft>2pt</PaddingLeft>
 																<PaddingRight>2pt</PaddingRight>
 																<PaddingTop>2pt</PaddingTop>
 															</Style>
+															<DataElementName>Address</DataElementName>
+															<Value>=Fields!Address.Value</Value>
 														</Textbox>
 													</ReportItems>
 												</TableCell>
@@ -120,33 +130,31 @@
 										</TableRow>
 									</TableRows>
 								</Details>
-								<Height>1.6cm</Height>
 								<dd:FixedHeight xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">8.75in</dd:FixedHeight>
-								<dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">0cm</dd:FixedWidth>
+								<dd:FixedWidth xmlns:dd="http://schemas.datadynamics.com/reporting/2005/02/reportdefinition">0in</dd:FixedWidth>
 								<TableColumns>
 									<TableColumn>
-										<Width>6.812017cm</Width>
+										<Width>5.82125cm</Width>
 									</TableColumn>
 									<TableColumn>
-										<Width>6.11447cm</Width>
+										<Width>4.058193cm</Width>
 									</TableColumn>
 									<TableColumn>
-										<Width>2.293132in</Width>
+										<Width>3.495038in</Width>
 									</TableColumn>
 								</TableColumns>
-								<Top>2cm</Top>
-								<Width>7.3823in</Width>
-								<ZIndex>2</ZIndex>
 							</Table>
 						</ReportItems>
+						<PaperOrientation>Portrait</PaperOrientation>
+						<Width>8.27in</Width>
+						<Height>11.69in</Height>
+						<LeftMargin>0.4895833in</LeftMargin>
+						<TopMargin>0.3125in</TopMargin>
+						<RightMargin>0.3958333in</RightMargin>
+						<BottomMargin>1in</BottomMargin>
 					</Page>
 				</Pages>
 				<DataSetName>DataSet1</DataSetName>
-				<Grouping Name="FixedPage1_Group">
-					<GroupExpressions>
-						<GroupExpression>=Fields!CustomerID.Value</GroupExpression>
-					</GroupExpressions>
-				</Grouping>
 			</FixedPage>
 		</ReportItems>
 	</Body>
@@ -154,7 +162,9 @@
 	<LeftMargin>0.4895833in</LeftMargin>
 	<RightMargin>0.3958333in</RightMargin>
 	<TopMargin>0.3125in</TopMargin>
-	<Width>8.5in</Width>
+	<PageHeight>11.69in</PageHeight>
+	<PageWidth>8.27in</PageWidth>
+	<Width>8.27in</Width>
 	<DataSources>
 		<DataSource Name="DataSource1">
 			<ConnectionProperties>

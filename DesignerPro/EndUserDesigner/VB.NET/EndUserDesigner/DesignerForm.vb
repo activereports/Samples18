@@ -29,8 +29,8 @@ Partial Public Class DesignerForm
 
     Public Sub New()
         InitializeComponent()
-        Font = DefaultFontFactory.DefaultWinFormsFont
-        arPropertyGrid.Font = DefaultFontFactory.DefaultWinFormsFont
+        Font = DefaultFontFactory.ApplicationDefaultFont
+        arPropertyGrid.Font = DefaultFontFactory.ApplicationDefaultFont
         Icon = My.Resources.App
         arDesigner.Toolbox = arToolbox
         AddHandler arDesigner.LayoutChanged, AddressOf OnDesignerLayoutChanged
@@ -70,7 +70,7 @@ Partial Public Class DesignerForm
     Private Sub InitializeMenuStrip()
         Dim menuStrip As ToolStrip = arDesigner.CreateToolStrips(DesignerToolStrips.Menu)(0)
         menuStrip.Items.Add(CreateHelpMenu())
-        menuStrip.Font = DefaultFontFactory.DefaultWinFormsFont
+        menuStrip.Font = DefaultFontFactory.ApplicationDefaultFont
         CreateFileMenu(CType(menuStrip.Items(0), ToolStripDropDownItem))
         AppendToolStrips(0, {menuStrip})
     End Sub
@@ -511,6 +511,7 @@ Partial Public Class DesignerForm
             Case DesignerReportType.Section
                 Return My.Resources.DefaultReportNameRpx
             Case DesignerReportType.Page, DesignerReportType.RdlMultiSection, DesignerReportType.RdlDashboard
+                If GetIsMaster() Then Return My.Resources.DefaultReportNameRdlxMaster
                 Return My.Resources.DefaultReportNameRdlx
         End Select
 

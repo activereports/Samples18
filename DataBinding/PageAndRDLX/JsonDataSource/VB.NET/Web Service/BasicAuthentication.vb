@@ -7,11 +7,11 @@ Imports Microsoft.Extensions.Options
 
 Public Class BasicAuthentication
 	Inherits AuthenticationHandler(Of BasicAuthenticationSchemeOptions)
-	
-	Sub New(options As IOptionsMonitor(Of BasicAuthenticationSchemeOptions), logger As ILoggerFactory, encoder As UrlEncoder, clock As ISystemClock)
-		MyBase.New(options, logger, encoder, clock)
+
+	Sub New(options As IOptionsMonitor(Of BasicAuthenticationSchemeOptions), logger As ILoggerFactory, encoder As UrlEncoder)
+		MyBase.New(options, logger, encoder)
 	End Sub
-	
+
 	Protected Overrides Function HandleAuthenticateAsync() As Task(Of AuthenticateResult)
 		Dim authHeader = Request.Headers("Authorization").ToString()
 		
@@ -25,7 +25,7 @@ Public Class BasicAuthentication
 		
 		Dim token = authHeader.Substring("Basic ".Length)
 		Dim credentials = Encoding.UTF8.GetString(Convert.FromBase64String(token)).Split(":")
-		Dim claims As Claim()
+		Dim claims As Claim() = Nothing
 		If Not IsAuthenticated(credentials, claims)
 			Return Task.FromResult(AuthenticateResult.Fail("Invalid login or password"))
 		End If

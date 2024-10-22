@@ -1,19 +1,19 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Report xmlns="http://cdn.grapecity.com/ActiveReports/reporting/2022/01/reportdefinition">
+﻿<Report xmlns="http://cdn.grapecity.com/ActiveReports/reporting/2023/08/reportdefinition">
+	<Name>OleDBReport.rdlx</Name>
 	<ReportSections>
 		<ReportSection Name="ReportSection1">
 			<Body>
-				<Height>1.5in</Height>
+				<Height>1.4in</Height>
 				<ReportItems>
 					<Table Name="Table1">
-						<Width>16.2cm</Width>
-						<Height>0.75in</Height>
+						<Width>6.2in</Width>
+						<Height>0.7in</Height>
 						<DataSetName>MovieDataSet</DataSetName>
 						<Header>
 							<RepeatOnNewPage>true</RepeatOnNewPage>
 							<TableRows>
 								<TableRow>
-									<Height>0.25in</Height>
+									<Height>0.232639in</Height>
 									<TableCells>
 										<TableCell>
 											<ReportItems>
@@ -71,7 +71,7 @@
 						<Details>
 							<TableRows>
 								<TableRow>
-									<Height>0.635cm</Height>
+									<Height>0.590903cm</Height>
 									<TableCells>
 										<TableCell>
 											<ReportItems>
@@ -123,7 +123,7 @@
 						<Footer>
 							<TableRows>
 								<TableRow>
-									<Height>0.25in</Height>
+									<Height>0.232639in</Height>
 									<TableCells>
 										<TableCell>
 											<ReportItems>
@@ -173,13 +173,13 @@
 						</Footer>
 						<TableColumns>
 							<TableColumn>
-								<Width>11.2cm</Width>
+								<Width>10.88385cm</Width>
 							</TableColumn>
 							<TableColumn>
-								<Width>2.4cm</Width>
+								<Width>2.332253cm</Width>
 							</TableColumn>
 							<TableColumn>
-								<Width>1.023622in</Width>
+								<Width>0.994727in</Width>
 							</TableColumn>
 						</TableColumns>
 					</Table>
@@ -192,7 +192,7 @@
 					<PrintOnLastPage>true</PrintOnLastPage>
 					<ReportItems>
 						<Textbox Name="TextBox14">
-							<Left>0.5625in</Left>
+							<Left>0.65625in</Left>
 							<Width>5.1875in</Width>
 							<Height>0.3in</Height>
 							<Style>
@@ -210,13 +210,13 @@
 					</ReportItems>
 				</PageHeader>
 				<PageFooter>
-					<Height>0.5in</Height>
+					<Height>0.55in</Height>
 					<PrintOnFirstPage>true</PrintOnFirstPage>
 					<PrintOnLastPage>true</PrintOnLastPage>
 					<ReportItems>
 						<Textbox Name="TextBox15">
-							<Top>0.25in</Top>
-							<Left>2.4375in</Left>
+							<Top>0.3in</Top>
+							<Left>2.5in</Left>
 							<Width>1.5in</Width>
 							<Height>0.25in</Height>
 							<Style>
@@ -231,12 +231,16 @@
 						</Textbox>
 					</ReportItems>
 				</PageFooter>
+				<PaperOrientation>Portrait</PaperOrientation>
+				<PageHeight>11.69in</PageHeight>
+				<PageWidth>8.27in</PageWidth>
 				<TopMargin>1in</TopMargin>
 				<BottomMargin>1in</BottomMargin>
 				<LeftMargin>1in</LeftMargin>
 				<RightMargin>1in</RightMargin>
 			</Page>
-			<Width>6.377953in</Width>
+			<Width>6.2in</Width>
+			<DataElementName>ReportSection1</DataElementName>
 		</ReportSection>
 	</ReportSections>
 	<DataSources>

@@ -255,18 +255,6 @@
   <data name="radioEmail.Text" xml:space="preserve">
     <value>Show All Data with an E-Mail address</value>
   </data>
-  <data name="&gt;&gt;radioEmail.Name" xml:space="preserve">
-    <value>radioEmail</value>
-  </data>
-  <data name="&gt;&gt;radioEmail.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioEmail.Parent" xml:space="preserve">
-    <value>customersOrdersGroup</value>
-  </data>
-  <data name="&gt;&gt;radioEmail.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
   <data name="radioID.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 111</value>
   </data>
@@ -282,18 +270,6 @@
   <data name="radioID.Text" xml:space="preserve">
     <value>Show Report where ID = 2301</value>
   </data>
-  <data name="&gt;&gt;radioID.Name" xml:space="preserve">
-    <value>radioID</value>
-  </data>
-  <data name="&gt;&gt;radioID.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioID.Parent" xml:space="preserve">
-    <value>customersOrdersGroup</value>
-  </data>
-  <data name="&gt;&gt;radioID.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
   <data name="radioAll.Location" type="System.Drawing.Point, System.Drawing">
     <value>20, 74</value>
   </data>
@@ -308,18 +284,6 @@
   </data>
   <data name="radioAll.Text" xml:space="preserve">
     <value>Show All Data</value>
-  </data>
-  <data name="&gt;&gt;radioAll.Name" xml:space="preserve">
-    <value>radioAll</value>
-  </data>
-  <data name="&gt;&gt;radioAll.Type" xml:space="preserve">
-    <value>System.Windows.Forms.RadioButton, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;radioAll.Parent" xml:space="preserve">
-    <value>customersOrdersGroup</value>
-  </data>
-  <data name="&gt;&gt;radioAll.ZOrder" xml:space="preserve">
-    <value>2</value>
   </data>
   <data name="btnCustomersLeveled.Location" type="System.Drawing.Point, System.Drawing">
     <value>320, 315</value>

@@ -39,8 +39,8 @@ namespace ActiveReports.Samples.Designer
 		public DesignerForm()
 		{
 			InitializeComponent();
-			Font = DefaultFontFactory.DefaultWinFormsFont;
-			arPropertyGrid.Font = DefaultFontFactory.DefaultWinFormsFont;
+			Font = DefaultFontFactory.ApplicationDefaultFont;
+			arPropertyGrid.Font = DefaultFontFactory.ApplicationDefaultFont;
             Icon = Resources.App;
 
 			//Create new report instance and assign to Report Explorer
@@ -115,7 +115,7 @@ namespace ActiveReports.Samples.Designer
 		{
 			ToolStrip menuStrip = arDesigner.CreateToolStrips(DesignerToolStrips.Menu)[0];
 			menuStrip.Items.Add(CreateHelpMenu());
-			menuStrip.Font = DefaultFontFactory.DefaultWinFormsFont;
+			menuStrip.Font = DefaultFontFactory.ApplicationDefaultFont;
 			CreateFileMenu((ToolStripDropDownItem)menuStrip.Items[0]);
 			AppendToolStrips(0, new[] { menuStrip });
 		}
@@ -669,7 +669,7 @@ namespace ActiveReports.Samples.Designer
 				case DesignerReportType.Page:
 				case DesignerReportType.RdlMultiSection:
 				case DesignerReportType.RdlDashboard:
-					return Resources.DefaultReportNameRdlx;
+					return GetIsMaster() ? Resources.DefaultReportNameRdlxMaster : Resources.DefaultReportNameRdlx;
 			}
 
 			throw new ApplicationException("Unsupported report type: " + reportType);

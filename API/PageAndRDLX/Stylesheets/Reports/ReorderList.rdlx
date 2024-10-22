@@ -294,6 +294,9 @@
 						</Textbox>
 					</ReportItems>
 				</PageFooter>
+				<PaperOrientation>Portrait</PaperOrientation>
+				<PageHeight>29.7cm</PageHeight>
+				<PageWidth>21cm</PageWidth>
 				<TopMargin>0.75in</TopMargin>
 				<BottomMargin>0.75in</BottomMargin>
 				<LeftMargin>0.75in</LeftMargin>

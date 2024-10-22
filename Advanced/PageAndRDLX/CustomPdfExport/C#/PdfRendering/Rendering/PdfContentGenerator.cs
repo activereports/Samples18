@@ -271,9 +271,11 @@ namespace ActiveReports.Samples.Export.Rendering.PdfSharp
 
 		public static XStringFormat GetFormat(StringFormatEx stringFormat)
 		{
-			var format = new XStringFormat();
-			format.Alignment = (XStringAlignment)Enum.Parse(typeof(XStringAlignment), stringFormat.Alignment.ToString());
-			format.LineAlignment = (XLineAlignment)Enum.Parse(typeof(XLineAlignment), stringFormat.LineAlignment.ToString());
+			var format = new XStringFormat
+			{
+				Alignment = (XStringAlignment)stringFormat.Alignment,
+				LineAlignment = (XLineAlignment)stringFormat.LineAlignment
+			};
 			return format;
 		}
 
