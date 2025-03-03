@@ -35,10 +35,10 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="MESCIUS.ActiveReports.Export.Pdf">
-      <Version>18.2.0</Version>
+      <Version>18.2.2</Version>
     </PackageReference>
     <PackageReference Include="MESCIUS.ActiveReports.Viewer.Win">
-      <Version>18.2.0</Version>
+      <Version>18.2.2</Version>
     </PackageReference>
     <PackageReference Include="System.Data.SQLite.Core">
       <Version>1.0.118</Version>

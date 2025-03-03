@@ -69,28 +69,28 @@
     <PackageReference Include="DS.Documents.Imaging" Version="7.2.2" />
     <PackageReference Include="DS.Documents.Barcode" Version="7.2.2" />
     <PackageReference Include="MESCIUS.ActiveReports.Export.Excel">
-      <Version>18.2.0</Version>
+      <Version>18.2.2</Version>
     </PackageReference>
     <PackageReference Include="MESCIUS.ActiveReports.Export.Html">
-      <Version>18.2.0</Version>
+      <Version>18.2.2</Version>
     </PackageReference>
     <PackageReference Include="MESCIUS.ActiveReports.Export.Image">
-      <Version>18.2.0</Version>
+      <Version>18.2.2</Version>
     </PackageReference>
     <PackageReference Include="MESCIUS.ActiveReports.Export.Pdf">
-      <Version>18.2.0</Version>
+      <Version>18.2.2</Version>
     </PackageReference>
     <PackageReference Include="MESCIUS.ActiveReports.Export.Word">
-      <Version>18.2.0</Version>
+      <Version>18.2.2</Version>
     </PackageReference>
     <PackageReference Include="MESCIUS.ActiveReports.Export.Xml">
-      <Version>18.2.0</Version>
+      <Version>18.2.2</Version>
     </PackageReference>
     <PackageReference Include="MESCIUS.ActiveReports.Design.Win">
-      <Version>18.2.0</Version>
+      <Version>18.2.2</Version>
     </PackageReference>
     <PackageReference Include="MESCIUS.ActiveReports.Core.DataProviders.Excel">
-      <Version>1.1.1</Version>
+      <Version>1.1.2</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="5.0.0" />
     <PackageReference Include="System.Data.SQLite.Core">

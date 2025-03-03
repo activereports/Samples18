@@ -14,13 +14,13 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="MESCIUS.ActiveReports.Export.Html">
-      <Version>18.2.0</Version>
+      <Version>18.2.2</Version>
     </PackageReference>
     <PackageReference Include="MESCIUS.ActiveReports.Export.Pdf">
-      <Version>18.2.0</Version>
+      <Version>18.2.2</Version>
     </PackageReference>
     <PackageReference Include="MESCIUS.ActiveReports">
-      <Version>18.2.0</Version>
+      <Version>18.2.2</Version>
     </PackageReference>
     <PackageReference Include="System.Data.SQLite.Core">
       <Version>1.0.118</Version>
